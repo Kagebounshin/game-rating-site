@@ -18,8 +18,9 @@ mongo = PyMongo(app)
 
 
 @app.route("/")
-def hello():
-    return "Hello world"
+@app.route("/get_backlog")
+def ():
+    return 
 
 
 if __name__ == "__main__":
