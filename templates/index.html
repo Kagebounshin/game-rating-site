@@ -1,3 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
+
+<div class="row hero-container valign-wrapper">
+    <div class="col l8 s12">
+        <h1>
+            Ready to<br>
+            start your<br>
+            Backlog?
+        </h1>
+    </div>
+</div>
+
+<div class="row about-container left-align">
+    <div class="col l4 offset-l4 s12">
+        <h3>Keep track on your unfinshed or ongoing games.<br> If you're in search for inner peace, start clearing out your backlog!</h3>
+    </div>
+</div>
+
+<div class="row info-container center-align">
+    <div class="col l12 m12 s12">
+        <h1 class="center-align">Register here!</h1>
+        <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large center-align">register</a>
+        <p>Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
+    </div>
+</div>
+
 {% endblock %}
