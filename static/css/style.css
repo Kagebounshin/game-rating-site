@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
 body {
-    background-color: #fafafa;
+    background-color: black;
     font-family: 'Roboto', sans-serif;
+    padding: 0 auto;
+    margin: 0 auto;
 }
  
 /* BACKGROUND COLORS */
 
 .bg-color-navbar {
+    background-color: black;
+}
+
+.bg-color-footer {
     background-color: black;
 }
 
@@ -26,22 +32,103 @@ nav .brand-logo {
     padding: 0;
 }
 
+i.fas.fa-gamepad {
+    font-size: 3rem;
+}
+
 /* CONTAINERS */
 
 .hero-container {
     background-color: rgb(0, 0, 0);
-    min-height: 50vh;
+    min-height: 90vh;
     color: white;
+    margin-bottom: 0;
 }
 
-.about-container {
+.hero-container p {
+   
+}
+
+.quote-container {
     min-height: 50vh;
+    background-color: #d0a6ff;
+    margin-bottom: 0;
 }
 
 .info-container {
     min-height: 50vh;
+    background-color: white;
+    color: black;
+    margin-bottom: 0;
+    padding-bottom: 3rem;
 }
 
+.login-container {
+    min-height: 90vh;
+}
+
+.footer-container {
+   color: white;
+}
 
 /* MEDIA BREAKPOINTS */
 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .hero-container h1{
+        font-size: 7rem;
+    }
+
+    .hero-container p {
+        font-size: 2rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .hero-container h1{
+        font-size: 10rem;
+    }
+
+    .hero-container p {
+        font-size: 3rem;
+    }
+
+    nav .brand-logo {
+        margin-left: 2rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* ADDITIONAL STYLING */
+
+.btn, .btn-large, .btn-small {
+    color: black;
+    background-color: #d0a6ff;
+}
+
+/* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
+
+blockquote::before {
+    content: open-quote;
+  }
+  blockquote::after {
+    content: close-quote;
+  }
+  blockquote {
+    quotes: "“" "”" "‘" "’";
+  }
