@@ -160,6 +160,14 @@ nav ul li:hover {
     color: #c395f7;
 }
 
+.flashes h4 {
+    color: white;
+}
+
+.fadein {
+    opacity:0;
+}
+
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
 
 blockquote::before {

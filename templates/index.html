@@ -7,31 +7,29 @@
             
             THE BACKLOG
         </h1>
-        <p>Keep track on your unfinshed or ongoing games.<br>
+        <p>Keep track of your unfinshed or ongoing games.<br>
         Start clearing your backlog today!</p>
-    </div>
-</div>
-
-
-
-<div class="row info-container center-align">
-    <div class="col l12 m12 s12">
-
-        <h1>
-            Ready to<br>
-            start your<br>
-            Backlog?
-        </h1>
-        <h1 class="center-align">Register here!</h1>
-        <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-large center-align">register</a>
-        <p>Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
     </div>
 </div>
 
 <div class="row quote-container valign-wrapper">
     <div class="col l4 offset-l4 s12">
-        <h3><blockquote>If you're in search for inner peace, start clearing out your backlog!</blockquote><br>
+        <h3 class="fadein"><blockquote>If you're in search for inner peace, start clearing out your backlog!</blockquote><br>
             <cite>- Gamer God</cite></h3>
+    </div>
+</div>
+
+<div class="row info-container center-align">
+    <div class="col l12 m12 s12">
+
+        <h1 class="fadein">
+            Ready to<br>
+            start your<br>
+            Backlog?
+        </h1>
+        <h1 class="center-align fadein">Register here!</h1>
+        <a href="{{ url_for('register') }}" class="btn waves-effect waves-light btn-large center-align fadein">register</a>
+        <p class="fadein">Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
     </div>
 </div>
 {% endblock %}
