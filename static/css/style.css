@@ -109,9 +109,15 @@ nav ul li:hover {
     font-family: 'Press Start 2P', sans-serif;
 }
 
+.about-container {
+    min-height: 100vh;
+    color: white;
+}
+
 .quote-container {
     min-height: 50vh;
     background-color: #d0a6ff;
+    padding-bottom: 3rem;
     margin-bottom: 0;
 }
 
@@ -148,7 +154,6 @@ nav ul li:hover {
         font-size: 2rem;
     }
 
-
     .hero-container img {
         width: 2rem;
         height: 2rem;
@@ -157,6 +162,9 @@ nav ul li:hover {
         margin-bottom: .2rem;
      }
 
+     .about-container p {
+         font-size: 2rem;
+     }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -165,7 +173,6 @@ nav ul li:hover {
         font-size: 2.5rem;
     }
 
-
     .hero-container img {
         width: 2.5rem;
         height: 2.5rem;
@@ -173,6 +180,10 @@ nav ul li:hover {
         margin-right: -2rem;
         margin-bottom: .2rem;
      }
+
+     .about-container p {
+        font-size: 2rem;
+    }
 
 }
 
@@ -190,7 +201,8 @@ nav ul li:hover {
         margin-bottom: .6rem;
      }
 
-    .hero-container p {
+    .hero-container p, 
+    .about-container p {
         font-size: 2rem;
     }
 }
@@ -220,7 +232,7 @@ nav ul li:hover {
         font-size: 7rem;
     }
 
-    .hero-container img {
+    .hero-container img{
         width: 7rem;
         height: 7rem;
         margin-left: -7rem;
@@ -230,6 +242,10 @@ nav ul li:hover {
 
     .hero-container p {
         font-size: 3rem;
+    }
+
+    .about-container h1{
+        font-size: 5rem;
     }
 
     nav .brand-logo {
@@ -289,6 +305,10 @@ nav ul li:hover {
 }
 
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
+
+blockquote {
+    border-left: 5px solid #fff;
+}
 
 blockquote::before {
     content: open-quote;

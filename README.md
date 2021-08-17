@@ -2,7 +2,7 @@
 
 [View the live project here.]()
 
-On this site you will be able to keep track onyour gameing, add the games you haven't played yet, or start rating the games you have played, share your thoughts about the games. Register an account and start adding to your own list. 
+On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start rating the games you have played, share your thoughts about the games. Register an account and start adding to your own list. 
 
 <h2 align="center"><img src=""></h2>
 
