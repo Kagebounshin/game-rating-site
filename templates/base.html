@@ -16,7 +16,7 @@
         <nav class="nav-extended bg-color-navbar container navbar-fixed">
             <div class="nav-wrapper">
               <a href="{{ url_for('index') }}" class="brand-logo"><i class="fas fa-gamepad"></i></a>
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fa fa-bars"></i></a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
               <ul class="right hide-on-med-and-down">
                   <li><a href="{{ url_for('index') }}">Home</a></li>
                   <li><a href="{{ url_for('profile') }}">Profile</a></li>
@@ -30,13 +30,19 @@
 
         <!-- MOBILE SIDENAV -->
           <ul class="sidenav" id="mobile-demo">
+            <h3 class="sidenav-header">THE 
+              BACKL <img class =" pacman-sidenav"src="static/img/pacman.png" alt="picture of pacman instead of the letter O"> G </h3>
+            <hr class="hr-navbar">
               <li><a href="{{ url_for('index') }}">Home</a></li>
               <li><a href="{{ url_for('profile') }}">Profile</a></li>
               <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
               <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
               <li><a href="{{ url_for('log_in') }}">Log In</a></li>
               <li><a href="{{ url_for('register') }}">Register</a></li>
+              <hr class="hr-navbar">
+              <p class="sidenav-copyright">© <span id="copyright"></span> Kagebounshin</p>
           </ul>
+          
     </header>
 
     <section>
