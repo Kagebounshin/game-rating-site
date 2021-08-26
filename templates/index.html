@@ -11,26 +11,31 @@
         Start clearing your backlog today!</p>
     </div>
 </div>
-
-<div class="row about-container">
-    <div class="col s12 m6 offset-m3">
+<!-- 
+<div class="row about-container container">
+    <div class="col l6 s12 ">
     <h1 class="valign-wrapper fadeinleft">Why <br>Backlog?</h1>
-    <p class="valign-wrapper fadein">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro ab, ducimus consequuntur rem quam eos architecto! Quidem numquam sequi animi, ut placeat, soluta aut dignissimos perspiciatis distinctio alias quas.Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro ab, ducimus consequuntur rem quam eos architecto! Quidem numquam sequi animi, ut placeat, soluta aut dignissimos perspiciatis distinctio alias quas.</p>
+    <p class="valign-wrapper fadein">
+        When the recent pandemic started, the gaming industry got a real hit. Games got pushed forward, shortages of the new console that where coming out.<br>
+        So when there was no new games that I liked to play, I started to lock back on erlier releases. And I hade missed alot of them, so I started writing my backlog,
+        on a piece of paper. Wich with my handwriting was hard to read when returning to the list. So during my studies to become an webdeveloper. I got the idea to 
+        do my own backlog site.  
+        </p>
 </div>
-</div>
+</div> -->
 
-<div class="row quote-container valign-wrapper">
-    <div class="col s12 m6 offset-m3">
+<!-- <div class="row quote-container valign-wrapper">
+    <div class="col s12 m4 offset-m3">
         <h3 class="fadein"><blockquote>If you're in search for inner peace, start clearing out your backlog!</blockquote><br>
             <cite>- God Gamer</cite></h3>
     </div>
 </div>
 <div class="row quote-container valign-wrapper">
-    <div class="col s12 m6 offset-m3">
+    <div class="col s12 m4 offset-m6">
         <h3 class="fadein"><blockquote>I'm a gamer. Not because I don't have a life. But because I choose to have many.</blockquote><br>
             <cite>- Unknown</cite></h3>
     </div>
-</div>
+</div> -->
 
 
 <div class="row info-container center-align">
@@ -40,9 +45,29 @@
             start your<br>
             Backlog?
         </h1>
-        <h1 class="center-align fadein">Register here!</h1>
         <a href="{{ url_for('register') }}" class="btn waves-effect waves-light btn-large center-align fadein">register</a>
         <p class="fadein">Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
+    </div>
+</div>
+
+<div class="row about-container center-align bg-color-about">
+    <div class="col s12 m4 offset-m2">
+        <i class="fas fa-inbox fadein"></i>
+        <h1 class="fadein">
+            Track your backlog
+        </h1>
+        <p class="fadein">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias accusantium facere voluptas corporis fuga adipisci unde voluptatibus laborum voluptatem amet provident, deserunt similique error veniam nisi ullam reprehenderit ipsam odit?
+        </p>
+    </div>
+    <div class="col s12 m4">
+        <i class="fas fa-star fadein"></i>
+        <h1 class="fadein">
+            Review your games
+        </h1>
+        <p class="fadein">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis tenetur nam quisquam at officiis quos nulla pariatur dignissimos quis reiciendis laboriosam doloremque sint, ipsa non cupiditate blanditiis debitis officia modi. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore quidem quasi quo distinctio accusamus inventore soluta, voluptatibus fugiat hic aliquam quibusdam quis rerum porro, fugit, magnam ex molestiae voluptatem voluptatum.
+        </p>
     </div>
 </div>
 {% endblock %}
