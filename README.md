@@ -1,4 +1,4 @@
-<h1 align="center">Game Rating Site</h1>
+<h1 align="center">The Backlog site</h1>
 
 [View the live project here.]()
 
