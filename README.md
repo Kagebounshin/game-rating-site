@@ -42,6 +42,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - Review
     - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
+    - The reviews will be stored in mongoDB.
 - My page
     - At this page you will store your backlog in a list. 
     - Also displayed in a list would be yor finished games.
@@ -53,6 +54,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - Add to Backlog
     - At this page you will add games to your backlog.
     - You type in the name of your game, and it will be stores in your backlog.
+    - The backlog will be stored in mongoDB
+
+
 - ### Skeleton
     *   ### Wireframes
     - Desktop
