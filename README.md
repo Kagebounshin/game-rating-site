@@ -6,6 +6,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 <h2 align="center"><img src=""></h2>
 
+---
+
 ## User Experience (UX)
 
 -   ### User stories
@@ -30,8 +32,13 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - ### Strategy
     - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companys has delayed there games. So there hasn't been to many new games that has been released. So by shortage of something to play, I started my backlog. I looked at the games I missed or didn't have time to finish. And I made my own list. So the reason for this website to even exist is for you to keep track on your own perosnal backlog. And when you are done with the game, you can leave a short review of your experience, for other users to see.
+
+---
+
 - ### Scope
     - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy the games. 
+
+---
 
 - ### Structure
 - Navbar
@@ -54,8 +61,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - Add to Backlog
     - At this page you will add games to your backlog.
     - You type in the name of your game, and it will be stores in your backlog.
-    - The backlog will be stored in mongoDB
+    - The backlog will be stored in mongoDB.
 
+---
 
 - ### Skeleton
     *   ### Wireframes
@@ -73,12 +81,16 @@ On this site you will be able to keep track on your gaming, add the games you ha
         - [Log in](static/img/img-readme/mobileLog.png)
         - [Add](static/img/img-readme/mobileAdd.png)
 
+---
+
 - ### Surface
 
 -   ### Design
     -   #### Colour Scheme
     -   #### Typography
     -   #### Imagery
+
+---
 
 ## Features
 
