@@ -20,16 +20,15 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
     -   #### Frequent User Goals
         1. I would like the login process to be a button click away. 
-        2. I want to add games to my lists easily. 
+        2. I want to add new games to my lists easily. 
         3. I want to review my finshed game, and let others see my reviews. 
         4. I would like to see what other users have review
-        5. I want to see other users backlog. 
-        6. I would want to add pictures to my review. 
+        5. I would want to add pictures to my review.  
+        6. I want to see other users backlog. 
 
 ---
 
 - ### Strategy
-
     - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companys has delayed there games. So there hasn't been to many new games that has been released. So by shortage of something to play, I started my backlog. I looked at the games I missed or didn't have time to finish. And I made my own list. So the reason for this website to even exist is for you to keep track on your own perosnal backlog. And when you are done with the game, you can leave a short review of your experience, for other users to see.
 - ### Scope
     - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy the games. 
@@ -46,14 +45,14 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - My page
     - At this page you will store your backlog in a list. 
     - Also displayed in a list would be yor finished games.
-    - Underneath your own reviews, from newest to oldest.
+    - Underneath those lists you can see your own reviews, in an order from newest to oldest.
 - Register
     - A easyly understanable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
 - Log In
     - Just enter your nickname and password and your are good to go. Will have simular styling as the register page. 
 - Add to Backlog
     - At this page you will add games to your backlog.
-    - You type in the name of your game, and it will be stores in your backlog. 
+    - You type in the name of your game, and it will be stores in your backlog.
 - ### Skeleton
     *   ### Wireframes
     - Desktop
