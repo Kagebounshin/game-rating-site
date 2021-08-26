@@ -35,21 +35,47 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy the games. 
 
 - ### Structure
-    -
+- Navbar
+    - At the top of the page I will have a navbar so you can easily navigate around the site. 
+    - On smaller devices the navbar links will collapse into a toggler menu. With a button to reveal the links in a good looking [sidenav](static/img/img-readme/mobileSidenav.png).
+- Home
+    - At first you will see the page header, A short description on what the site is about, and then you can choose to Register an account or Log in. 
+
+- Review
+    - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
+- My page
+    - At this page you will store your backlog in a list. 
+    - Also displayed in a list would be yor finished games.
+    - Underneath your own reviews, from newest to oldest.
+- Register
+    - A easyly understanable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
+- Log In
+    - Just enter your nickname and password and your are good to go. Will have simular styling as the register page. 
+- Add to Backlog
+    - At this page you will add games to your backlog.
+    - You type in the name of your game, and it will be stores in your backlog. 
 - ### Skeleton
-    -
+    *   ### Wireframes
+    - Desktop
+        - [Home Page](static/img/img-readme/home.png)
+        - [My Page](static/img/img-readme/myPage.png)
+        - [Reviews](static/img/img-readme/reviews.png)
+        - [Register](static/img/img-readme/signUp.png)
+    - Mobile
+        - [Home](static/img/img-readme/mobileHome.png)
+        - [Sidenav](static/img/img-readme/mobileSidenav.png)
+        - [Register](static/img/img-readme/mobileSign.png)
+        - [Review](static/img/img-readme/mobileReview.png)
+        - [My page](static/img/img-readme/mobileMy.png)
+        - [Log in](static/img/img-readme/mobileLog.png)
+        - [Add](static/img/img-readme/mobileAdd.png)
+
 - ### Surface
-    -
-
-
-
 
 -   ### Design
     -   #### Colour Scheme
     -   #### Typography
     -   #### Imagery
-
-*   ### Wireframes
 
 ## Features
 
