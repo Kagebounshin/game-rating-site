@@ -14,29 +14,29 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
     -   #### First Time Visitor Goals
 
-        1. I would like to get a clear instructions on what the site is about, what I can do, and how to do it. 
-        2. I would like to easily navigate my way through the site. For example, if I would like to register to the site, I should find it easily.  
-        3. I want the registration process to be smooth.
-        4. I would like to search for a specific game review. 
-        5. I would like to know where I could purchase a copy of a game. 
+        1. I would like to get a clear instructions on what the site is about, what I can do. 
+        2. I would like to easily navigate my way through the site.  
+        3. I want the registration process to be smooth and availible. 
 
     -   #### Frequent User Goals
         1. I would like the login process to be a button click away. 
-        2. I want to add new games to my lists easily. 
+        2. I want to add new games to my backlog easily, maybe add multiple games at once. 
         3. I want to review my finshed game, and let others see my reviews. 
-        4. I would like to see what other users have review
+        4. I would like to search for a specific game review, to see other users thought on that game.
         5. I would want to add pictures to my review.  
         6. I want to see other users backlog. 
+        7. I would like to know where I could purchase a copy of a game.
 
 ---
 
 - ### Strategy
-    - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companys has delayed there games. So there hasn't been to many new games that has been released. So by shortage of something to play, I started my backlog. I looked at the games I missed or didn't have time to finish. And I made my own list. So the reason for this website to even exist is for you to keep track on your own perosnal backlog. And when you are done with the game, you can leave a short review of your experience, for other users to see.
+    - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So the reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a short review of your experience, for other users to see.
 
 ---
 
 - ### Scope
-    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy the games. 
+    
+    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews and backlogs. More features will be to add a link to where you can buy the games. 
 
 ---
 
@@ -46,19 +46,22 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - On smaller devices the navbar links will collapse into a toggler menu. With a button to reveal the links in a good looking [sidenav](static/img/img-readme/mobileSidenav.png).
 - Home
     - At first you will see the page header, A short description on what the site is about, and then you can choose to Register an account or Log in. 
-
-- Review
-    - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
-    - The reviews will be stored in mongoDB.
+- Review Page
+    - At the review page you will see other users reviews as well as our own, displaying from newest to oldest post. 
+    - 
 - My page
     - At this page you will store your backlog in a list. 
     - Also displayed in a list would be yor finished games.
     - Underneath those lists you can see your own reviews, in an order from newest to oldest.
+    - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
+    - The reviews will be stored in mongoDB.
 - Register
-    - A easyly understanable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
+    - A easily understanable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
 - Log In
+    - Will have the same estetics as the register page. 
     - Just enter your nickname and password and your are good to go. Will have simular styling as the register page. 
 - Add to Backlog
+    - Will have the same estetics as the register page.
     - At this page you will add games to your backlog.
     - You type in the name of your game, and it will be stores in your backlog.
     - The backlog will be stored in mongoDB.
@@ -112,7 +115,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
-
 
 -   #### Returning Visitor Goals
 
