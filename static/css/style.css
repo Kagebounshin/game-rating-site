@@ -12,10 +12,16 @@ body {
 /* BACKGROUND COLORS */
 
 .bg-color-hero,
-.bg-color-about,
-.bg-color-footer,
 .bg-color-info {
     background-color: #f9f9f9;
+}
+
+.bg-color-about {
+    background-color: #f7f7f7;
+}
+
+.bg-color-footer {
+    background-color: #1f1f1f;
 }
 
 .bg-color-navbar {
@@ -46,11 +52,11 @@ nav ul li {
 }
 
 nav ul li:hover {
-    background-color: rgba(255, 255, 255, .1);
+    background-color: none;
 }
 
 nav ul a {
-    color: black;
+    color: #1f1f1f;
 }
 
 .sidenav {
@@ -58,7 +64,7 @@ nav ul a {
 }
 
 .sidenav li>a {
-    color: black!important;
+    color: #1f1f1f!important;
     font-size: 2rem;
     padding: .5rem;
     padding-left: 1rem;
@@ -86,7 +92,7 @@ nav ul a {
 }
 
 a.sidenav-trigger.left {
-    color: black;
+    color: #1f1f1f;
 }
 
 .pacman-sidenav {
@@ -106,7 +112,7 @@ a.sidenav-trigger.left {
 
 .hero-container {
     min-height: 50vh;
-    color: black;
+    color: #1f1f1f;
     margin-bottom: 0;
     user-select: none;
     padding-top: 3rem;
@@ -121,11 +127,12 @@ a.sidenav-trigger.left {
 }
 
 .info-container {
+    min-height: 40vh;
     margin-bottom: 0;
 }
 
 .about-container {
-    color: black;
+    color: #1f1f1f;
     padding-top: 5rem;
     padding-bottom: 5rem;
     margin-bottom: 0;
@@ -154,7 +161,7 @@ a.sidenav-trigger.left {
 }
 
 .footer-container {
-   color: white;
+   color: #f9f9f9;
 }
 
 /* MEDIA BREAKPOINTS */
@@ -166,14 +173,14 @@ a.sidenav-trigger.left {
     }
 
     .hero-container h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .hero-container img {
-        width: 2rem;
-        height: 2rem;
-        margin-left: -2rem;
-        margin-right: -1.6rem;
+        width: 3rem;
+        height: 3rem;
+        margin-left: -3rem;
+        margin-right: -2.6rem;
         margin-bottom: .2rem;
     }
 
@@ -181,10 +188,6 @@ a.sidenav-trigger.left {
     .about-container i {
         font-size: 3rem;
     }
-
-    
-
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -205,7 +208,6 @@ a.sidenav-trigger.left {
     .about-container i {
         font-size: 3rem;
     }
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -278,7 +280,7 @@ a.sidenav-trigger.left {
 .btn, .btn-large, .btn-small {
     text-decoration: none;
     color: white;
-    background-color: #000000;
+    background-color: #1f1f1f;
     text-align: center;
     letter-spacing: .5px;
     -webkit-transition: background-color .2s ease-out;
@@ -291,28 +293,28 @@ a.sidenav-trigger.left {
     background-color: #000000ab;
 }
 
-  /* label color */
-  .input-field label {
-    color: #000;
-  }
-  /* label focus color */
-  .input-field input[type=text]:focus + label,
-  .input-field input[type=password]:focus + label {
-    color: #000000!important;
-  }
-  /* label underline focus color */
-  .input-field input[type=text]:focus,
-  .input-field input[type=password]:focus {
-    border-bottom: 1px solid #000000!important;
-    box-shadow: 0 1px 0 0 #000000!important;
-  }
+/* label color */
+.input-field label {
+    color: #1f1f1f;
+}
+/* label focus color */
+.input-field input[type=text]:focus + label,
+.input-field input[type=password]:focus + label {
+    color: #1f1f1f!important;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus,
+.input-field input[type=password]:focus {
+    border-bottom: 1px solid #1f1f1f!important;
+    box-shadow: 0 1px 0 0 #1f1f1f!important;
+}
 
 .input-field .prefix.active {
     color: #000000ab;
 }
 
 .flashes h4 {
-    color: white;
+    color: #1f1f1f;
 }
 
 .fadein {
@@ -325,6 +327,27 @@ a.sidenav-trigger.left {
     max-width: 100%;
 }
 
+a {
+    color: #7b7b7b;
+}
+
+.info-container a:last-child:hover,
+.footer-container a:hover,
+.register-container a:hover{
+    color: #ffcc00;
+    transition: 300ms ease-in-out;
+}
+
+.fa-star:hover,
+.fa-inbox:hover {
+    color: #ffcc00;
+    transition: 300ms ease-in-out;
+}
+
+#copyright {
+    color: #7b7b7b;
+}
+
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
 
 blockquote {
@@ -333,10 +356,12 @@ blockquote {
 
 blockquote::before {
     content: open-quote;
-  }
-  blockquote::after {
+}
+
+blockquote::after {
     content: close-quote;
-  }
-  blockquote {
+}
+
+blockquote {
     quotes: "“" "”" "‘" "’";
-  }
+}
