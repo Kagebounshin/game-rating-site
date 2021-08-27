@@ -16,13 +16,13 @@
         <nav class="nav-extended bg-color-navbar container navbar-fixed">
             <div class="nav-wrapper">
               <a href="{{ url_for('index') }}" class="brand-logo"><i class="fas fa-gamepad"></i></a>
-              <div class="center">
+              <!-- <div class="center">
                 <input id="search" placeholder="Search" type="search">
-              </div>
+              </div> -->
               
               <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
               
-              <ul class="left hide-on-med-and-down">
+              <ul class="right hide-on-med-and-down">
                   <li><a href="{{ url_for('index') }}">Home</a></li>
                   <li><a href="{{ url_for('profile') }}">Profile</a></li>
                   <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
