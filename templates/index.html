@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-<div class="row hero-container valign-wrapper container">
+<div class="row hero-container center-align bg-color-hero">
     <div class="col l12 s12">
         <h1> 
             
@@ -11,42 +11,11 @@
         Start clearing your backlog today!</p>
     </div>
 </div>
-<!-- 
-<div class="row about-container container">
-    <div class="col l6 s12 ">
-    <h1 class="valign-wrapper fadeinleft">Why <br>Backlog?</h1>
-    <p class="valign-wrapper fadein">
-        When the recent pandemic started, the gaming industry got a real hit. Games got pushed forward, shortages of the new console that where coming out.<br>
-        So when there was no new games that I liked to play, I started to lock back on erlier releases. And I hade missed alot of them, so I started writing my backlog,
-        on a piece of paper. Wich with my handwriting was hard to read when returning to the list. So during my studies to become an webdeveloper. I got the idea to 
-        do my own backlog site.  
-        </p>
-</div>
-</div> -->
-
-<!-- <div class="row quote-container valign-wrapper">
-    <div class="col s12 m4 offset-m3">
-        <h3 class="fadein"><blockquote>If you're in search for inner peace, start clearing out your backlog!</blockquote><br>
-            <cite>- God Gamer</cite></h3>
-    </div>
-</div>
-<div class="row quote-container valign-wrapper">
-    <div class="col s12 m4 offset-m6">
-        <h3 class="fadein"><blockquote>I'm a gamer. Not because I don't have a life. But because I choose to have many.</blockquote><br>
-            <cite>- Unknown</cite></h3>
-    </div>
-</div> -->
-
-
-<div class="row info-container center-align">
-    <div class="col l12 m12 s12">
-        <h1 class="fadein">
-            Ready to<br>
-            start your<br>
-            Backlog?
-        </h1>
-        <a href="{{ url_for('register') }}" class="btn waves-effect waves-light btn-large center-align fadein">register</a>
-        <p class="fadein">Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
+<div class="row info-container center-align bg-color-info">
+    <div class="col l12 s12">
+        
+        <a href="{{ url_for('register') }}" class="btn waves-effect waves-light btn-large">register</a>
+        <p>Already a member? <a href="{{ url_for('log_in') }}">Log In</a></p>
     </div>
 </div>
 
