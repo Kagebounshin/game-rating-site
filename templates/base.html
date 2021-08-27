@@ -16,15 +16,22 @@
         <nav class="nav-extended bg-color-navbar container navbar-fixed">
             <div class="nav-wrapper">
               <a href="{{ url_for('index') }}" class="brand-logo"><i class="fas fa-gamepad"></i></a>
+              <div class="center">
+                <input id="search" placeholder="Search" type="search">
+              </div>
+              
               <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
-              <ul class="right hide-on-med-and-down">
+              
+              <ul class="left hide-on-med-and-down">
                   <li><a href="{{ url_for('index') }}">Home</a></li>
                   <li><a href="{{ url_for('profile') }}">Profile</a></li>
                   <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                   <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
                   <li><a href="{{ url_for('log_in') }}">Log In</a></li>
                   <li><a href="{{ url_for('register') }}">Register</a></li>
+                  
               </ul>
+              
             </div>
         </nav>
 
@@ -40,7 +47,7 @@
               <li><a href="{{ url_for('log_in') }}">Log In</a></li>
               <li><a href="{{ url_for('register') }}">Register</a></li>
               <hr class="hr-navbar">
-              <p class="sidenav-copyright">© <span id="copyright"></span> Kagebounshin</p>
+              <p class="sidenav-copyright">© <span class="copyright"></span> Kagebounshin</p>
           </ul>
           
     </header>
@@ -71,7 +78,7 @@
           </div>
           <div class="col l4 offset-l2 s12">
             <h5>Links</h5>
-            <ul>
+            <ul class="a-yellow">
               <li><a href="#!">Link 1</a></li>
               <li><a href="#!">Link 2</a></li>
               <li><a href="#!">Link 3</a></li>
@@ -82,7 +89,7 @@
       </div>
       <div class="footer-copyright">
         <div class="container">
-        © <span id="copyright"></span> Kagebounshin
+        © <span class="copyright"></span> Kagebounshin
         </div>
       </div>
     </footer>
