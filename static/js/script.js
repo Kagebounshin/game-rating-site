@@ -3,8 +3,9 @@ $(document).ready(function(){
   });
 
 // Copyright year
-$('#copyright').text(new Date().getFullYear());
-
+$(document).ready(function(){
+  $('.copyright').text(new Date().getFullYear());
+});
 
 // Fade in elements on sroll 
 // Code by https://vincoding.com/fade-in-elements-scroll-jquery/
