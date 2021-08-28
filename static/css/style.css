@@ -15,7 +15,8 @@ body {
 .bg-color-info,
 .bg-color-register,
 .bg-color-login,
-.bg-color-profile {
+.bg-color-profile,
+.bg-color-flashes {
     background-color: #f5f5f5;
 }
 
@@ -318,6 +319,10 @@ a.sidenav-trigger.left {
 
 .input-field .prefix.active {
     color: #000000ab;
+}
+
+.flashes {
+    margin-bottom: 0px;
 }
 
 .flashes h4 {
