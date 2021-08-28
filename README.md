@@ -127,6 +127,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs
 
+- So the first bug iv'e encounterd was when opening the sidenav on mobile view, when I was logged in as a user. The pacman image in the log was like [this](static/img/img-readme/bug01.png). Only the alt text is showing
+
+
+
 ## Deployment
 
 ### GitHub Pages
