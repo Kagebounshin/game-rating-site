@@ -23,41 +23,10 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/profile")
-def profile():
-    return render_template("profile.html")
-
-
 @app.route("/reviews")
 def reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
-
-
-@app.route("/log_in", methods=["GET", "POST"])
-def log_in():
-    if request.method == "POST":
-        existing_user = mongo.db.users.find_one(
-            {"username": request.form.get("username").lower()})
-
-        if existing_user:
-            if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
-            else:
-                flash("Incorrect Username and/or Password")
-                return redirect(url_for("log_in"))
-
-        else:
-            flash("Incorrect Username and/or Password")
-            return redirect(url_for("log_in"))
-    return render_template("login.html")
-
-
-@app.route("/log_out")
-def log_out():
-    return render_template("logout.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -78,7 +47,44 @@ def register():
 
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
+
+
+@app.route("/log_in", methods=["GET", "POST"])
+def log_in():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            if check_password_hash(
+                existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
+            else:
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for("log_in"))
+
+        else:
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for("log_in"))
+    return render_template("login.html")
+
+
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
+
+
+@app.route("/log_out")
+def log_out():
+    return render_template("logout.html")
+
 
 
 if __name__ == "__main__":

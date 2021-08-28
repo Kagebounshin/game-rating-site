@@ -14,7 +14,8 @@ body {
 .bg-color-hero,
 .bg-color-info,
 .bg-color-register,
-.bg-color-login {
+.bg-color-login,
+.bg-color-profile {
     background-color: #f5f5f5;
 }
 
@@ -156,14 +157,10 @@ a.sidenav-trigger.left {
     margin-bottom: 0;
 } */
 
-.login-container,
-.register-container {
-    min-height: 90vh;
-}
-
 .register-container,
 .login-container {
-    padding-top: 8rem;
+    padding-top: 5rem;
+    padding-bottom:5rem;
 }
 
 .footer-container {

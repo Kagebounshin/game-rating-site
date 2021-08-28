@@ -24,7 +24,7 @@
               
               <ul class="right hide-on-med-and-down">
                   <li><a href="{{ url_for('index') }}">Home</a></li>
-                  <li><a href="{{ url_for('profile') }}">Profile</a></li>
+                  <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
                   <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
                   <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
                   <li><a href="{{ url_for('log_in') }}">Log In</a></li>
@@ -41,7 +41,7 @@
               BACKL <img class =" pacman-sidenav"src="static/img/pacman.png" alt="picture of pacman instead of the letter O"> G </h3>
             <hr class="hr-navbar">
               <li><a href="{{ url_for('index') }}">Home</a></li>
-              <li><a href="{{ url_for('profile') }}">Profile</a></li>
+              <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
               <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
               <li><a href="{{ url_for('log_out') }}">Log Out</a></li>
               <li><a href="{{ url_for('log_in') }}">Log In</a></li>
