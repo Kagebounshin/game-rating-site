@@ -2,17 +2,53 @@
 {% block content %}
 
 <div class="row reviews-container bg-color-reviews">
-    <div class="col s12">
+    <div class="col s12 m8 offset-m2">
         
-        {% for review in reviews%}
-            {{ review.review_name }}<br>
-            {{ review.genre }}<br>
-            {{ review.developer }} <br>
-            {{ review.duration }} <br>
-            {{ review.review}}
-        {% endfor %}
+        <div class="card-panel">
+                <div class="row">
 
-    </div>
+                    <div class="col s12">
+                        <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
+                    </div>
+                    {% for review in reviews %}
+                    <div class="col s12">
+                        <h4>{{ review.review_name }}</h4>
+                <p class="inline">
+                    <span>
+                        Platform:
+                    </span> 
+                        {{ review.platform }} 
+                    <span>|</span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Genre:
+                    </span>
+                        {{ review.genre }} 
+                    <span>|</span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Developer:
+                    </span> 
+                        {{ review.developer }} 
+                    <span>|</span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Duration:
+                    </span> 
+                        {{ review.duration }} 
+                </p>
+                <p> {{ review.review}}</p>
+                <p><span>By: </span> KageBousnhin</p>
+                {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+</div>
 </div>
 
 {% endblock %}

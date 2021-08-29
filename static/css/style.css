@@ -172,6 +172,24 @@ a.sidenav-trigger.left {
    color: #f9f9f9;
 }
 
+.reviews-container {
+
+}
+
+.reviews-container span {
+    font-weight: 700;
+}
+
+.reviews-container h4 {
+    font-weight: 700;
+}
+
+.reviews-container img {
+    width: 30%;
+    height: auto;
+ }
+ 
+
 /* MEDIA BREAKPOINTS */
 
 /* Extra small devices (phones, 600px and down) */
@@ -196,6 +214,12 @@ a.sidenav-trigger.left {
     .about-container i {
         font-size: 3rem;
     }
+
+    .reviews-container img {
+        width: 100%;
+        height: auto;
+     }
+     
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -363,6 +387,10 @@ hr {
 
 #copyright {
     color: #7b7b7b;
+}
+
+.inline {
+    display: inline;
 }
 
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
