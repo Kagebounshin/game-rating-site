@@ -3,6 +3,14 @@
 
 <div class="row reviews-container bg-color-reviews">
     <div class="col s12">
+        
+        {% for review in reviews%}
+            {{ review.review_name }}<br>
+            {{ review.genre }}<br>
+            {{ review.developer }} <br>
+            {{ review.duration }} <br>
+            {{ review.review}}
+        {% endfor %}
 
     </div>
 </div>
