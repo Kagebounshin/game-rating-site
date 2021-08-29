@@ -7,6 +7,9 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 
 app = Flask(__name__)
