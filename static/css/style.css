@@ -348,6 +348,11 @@ a {
     color: #7b7b7b;
 }
 
+hr {
+    border-bottom: 5px solid #1f1f1f;
+    width: 80%;
+}
+
 .info-container a:last-child:hover,
 .footer-container a:hover,
 .register-container a:hover,
