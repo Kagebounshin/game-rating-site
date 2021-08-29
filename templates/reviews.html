@@ -2,15 +2,17 @@
 {% block content %}
 
 <div class="row reviews-container bg-color-reviews">
+    
     <div class="col s12 m8 offset-m2">
-        
+
         <div class="card-panel">
+            {% for review in reviews %}
                 <div class="row">
 
                     <div class="col s12">
                         <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
                     </div>
-                    {% for review in reviews %}
+                    
                     <div class="col s12">
                         <h4>{{ review.review_name }}</h4>
                 <p class="inline">
@@ -42,6 +44,7 @@
                 </p>
                 <p> {{ review.review}}</p>
                 <p><span>By: </span> KageBousnhin</p>
+                <hr>
                 {% endfor %}
                     </div>
 
