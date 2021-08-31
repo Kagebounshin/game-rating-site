@@ -96,6 +96,11 @@ def log_out():
     return render_template("logout.html")
 
 
+@app.route("/add_backlog")
+def add_backlog():
+    return render_template("add_backlog.html")
+
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
