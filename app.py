@@ -105,6 +105,7 @@ def add_backlog():
         mongo.db.backlog.insert_one(add_backlog)
         flash("Game Successfully Added")
         redirect(url_for("add_backlog"))
+        # NEED TO ADD SO THAT THE ADDED GAME COMES TO THE USERS BACKLOG
     backlog = mongo.db.backlog.find().sort("backlog_name", 1)
     return render_template("add_backlog.html", backlog=backlog)
 
