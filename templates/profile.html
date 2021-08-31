@@ -11,15 +11,22 @@
         </div>
     </div>
 
-    <div class="row backlog-container bg-color-backlog">
-        <div class="col s12 m8 offset-m2">
+    <div class="row backlog-container bg-color-backlog center-align ">
+        <div class="col s12 m4 offset-m2">
+          
                   <div class="card-panel">
-                    <span class="white-text">I am a very simple card. I am good at containing small bits of information.
-                    I am convenient because I require little markup to use effectively. I am similar to what is called a panel in other frameworks.
-                    </span>
+                    <p>Wolfenstien 3</p><br>
+                    <p>Kingdom Hearts 3</p><br>
+                    <p>God Of War</p><br>
+                    <p>Twelve Minutes</p><br>
+                    <p>Return of the Obra Dinn</p><br>
+                    <p>Outer Wilds</p><br>
+                    <p>Super Mario Sunshine</p><br>
                   </div>
+
+                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+
         </div>
     </div>
-
 
 {% endblock %}
