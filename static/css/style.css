@@ -50,7 +50,7 @@ nav .brand-logo {
     padding: 0;
 }
 
-i.fas.fa-gamepad {
+.brand-logo i {
     font-size: 3rem;
 }
 
@@ -191,7 +191,7 @@ a.sidenav-trigger.left {
 .backlog-container a{
     margin-top: 3rem;
 }
- 
+
 
 /* MEDIA BREAKPOINTS */
 

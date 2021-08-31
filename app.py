@@ -96,10 +96,17 @@ def log_out():
     return render_template("logout.html")
 
 
-@app.route("/add_backlog")
+@app.route("/add_backlog", methods=["GET", "POST"])
 def add_backlog():
-    return render_template("add_backlog.html")
-
+    if request.method == "POST":
+        add_backlog = {
+            "backlog_name": request.form.get("backlog_name")
+        }
+        mongo.db.backlog.insert_one(add_backlog)
+        flash("Game Successfully Added")
+        redirect(url_for("add_backlog"))
+    backlog = mongo.db.backlog.find().sort("backlog_name", 1)
+    return render_template("add_backlog.html", backlog=backlog)
 
 
 if __name__ == "__main__":
