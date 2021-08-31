@@ -151,13 +151,6 @@ a.sidenav-trigger.left {
     font-weight: 700;
     margin-top: -.1rem;
 }
-/* 
-.quote-container {
-    min-height: 50vh;
-    background-color: #d0a6ff;
-    padding-bottom: 3rem;
-    margin-bottom: 0;
-} */
 
 .register-container,
 .login-container, 
@@ -182,12 +175,14 @@ a.sidenav-trigger.left {
 
 .reviews-container h4 {
     font-weight: 700;
+    margin-top: 0;
 }
 
 .reviews-container img {
-    width: 30%;
+    width: 100%;
     height: auto;
- }
+    margin-bottom: 0;
+}
  
 
 /* MEDIA BREAKPOINTS */
@@ -375,8 +370,8 @@ a {
 hr {
     border-bottom: 2px solid #f5f5f5;
     width: 100%;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top:0;
+    margin-bottom:0;
 }
 
 .info-container a:last-child:hover,
@@ -385,6 +380,13 @@ hr {
 .login-container a:hover{
     color: #ffcc00;
     transition: 300ms ease-in-out;
+}
+
+.info-container a:last-child,
+.footer-container a,
+.register-container a,
+.login-container a{
+    font-weight: 400;
 }
 
 #copyright {
