@@ -5,21 +5,20 @@
         <div class="col s12 m8 offset-m2">
             <h1 class="center-align">
                 {{ username }}'s Profile
-
-                <hr>
             </h1>
         </div>
     </div>
 
     <div class="row backlog-container bg-color-backlog center-align">
         <div class="col s12 m4 offset-m2">
-            {% for backlog in backlogs %}
-                  <div class="card-panel left-align">
-                      {{ backlog.backlog_name }}
-                  </div>
-            {% endfor %}
-                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
 
+            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+                  <div class="card-panel left-align">
+                    {% for backlog in backlogs %}
+                      {{ backlog.backlog_name }}<br>
+                      {% endfor %}
+                  </div>
+                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Edit Backlog</a>
         </div>
     </div>
 

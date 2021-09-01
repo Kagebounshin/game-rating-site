@@ -83,7 +83,9 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        backlogs = list(mongo.db.backlog.find({"added_by": username}))
+        return render_template(
+            "profile.html", username=username, backlogs=backlogs)
     
     return redirect(url_for("log_in"))
 
@@ -100,14 +102,15 @@ def log_out():
 def add_backlog():
     if request.method == "POST":
         add_backlog = {
-            "backlog_name": request.form.get("backlog_name")
+            "backlog_name": request.form.get("backlog_name"),
+            "added_by": session["user"]
         }
         mongo.db.backlog.insert_one(add_backlog)
         flash("Game Successfully Added")
-        redirect(url_for("add_backlog"))
+        redirect(url_for("profile", username=session["user"]))
         # NEED TO ADD SO THAT THE ADDED GAME COMES TO THE USERS BACKLOG
-    backlog = mongo.db.backlog.find().sort("backlog_name", 1)
-    return render_template("add_backlog.html", backlog=backlog)
+    backlogs = mongo.db.backlog.find().sort("backlog_name", 1)
+    return render_template("add_backlog.html", backlogs=backlogs)
 
 
 if __name__ == "__main__":
