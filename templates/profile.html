@@ -7,19 +7,30 @@
                 {{ username }}'s Profile
             </h1>
         </div>
+   </div>
+<!-- Show this if you havn't added to your list -->
+{% if backlogs|length == 0 %}
+    <div class="row backlog-container bg-color-backlog center-align">
+        <div class="col s12 m8 offset-m2">
+            <p>You havn't started on your backlog yet!</p>
+            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+        </div>
     </div>
-
+{% endif %}
+<!-- Show this if you have added to your list -->
+{% if backlogs|length != 0 %}
     <div class="row backlog-container bg-color-backlog center-align">
         <div class="col s12 m4 offset-m2">
 
-            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
-                  <div class="card-panel left-align">
+            
+                  <div class="card-panel center-align">
                     {% for backlog in backlogs %}
-                      {{ backlog.backlog_name }}<br>
+                        <a href="">{{ backlog.backlog_name }}</a><br>
                       {% endfor %}
                   </div>
                   <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Edit Backlog</a>
+                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
     </div>
-
+    {% endif %}
 {% endblock %}
