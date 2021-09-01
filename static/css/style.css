@@ -194,6 +194,9 @@ a.sidenav-trigger.left {
     margin-top: 3rem;
 }
 
+.profile-container h1 {
+    font-family: 'Press Start 2P', sans-serif;
+}
 
 /* MEDIA BREAKPOINTS */
 
