@@ -182,15 +182,9 @@ a.sidenav-trigger.left {
    color: #f9f9f9;
 }
 
-
-
+.reviews-container h4,
 .reviews-container span {
     font-weight: 700;
-}
-
-.reviews-container h4 {
-    font-weight: 700;
-    margin-top: 1rem;
 }
 
 .reviews-container img {
@@ -240,7 +234,7 @@ a.sidenav-trigger.left {
     .profile-container h1 {
         font-size: 1.5rem;
     }
-     
+    
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -260,6 +254,10 @@ a.sidenav-trigger.left {
     .about-container h1,
     .about-container i {
         font-size: 3rem;
+    }
+
+    .reviews-container h4 {
+        margin-top: 1rem;
     }
 }
 
@@ -298,6 +296,10 @@ a.sidenav-trigger.left {
 
     .hero-container p {
         font-size: 2rem;
+    }
+
+    .reviews-container h4 {
+        margin-top: 0rem;
     }
 }
 
