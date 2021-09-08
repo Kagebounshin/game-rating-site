@@ -27,7 +27,7 @@
             
                   <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
-                        <p><a href="">{{ backlog.backlog_name }}</a></p><br>
+                        <p><a href="">{{ backlog.backlog_name }}</a><i class="fas fa-times "></i><i class="fas fa-check "></i></p><br>
                       {% endfor %}
                   </div>
                   <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Edit Backlog</a>

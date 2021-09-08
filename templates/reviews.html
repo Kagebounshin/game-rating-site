@@ -4,8 +4,14 @@
 <div class="row reviews-container bg-color-reviews">
     
     <div class="col s12 m8 offset-m2">
+        <h1 class="center-align">
+            Reviews
+        </h1>
+    </div>
+    {% if review|length == 0 %}
+    <div class="col s12 m8 offset-m2">
 
-        <div class="card-panel">
+        <div class="card-panel fadeinleftstart">
             {% for review in reviews %}
                 <div class="row">
 
@@ -50,7 +56,10 @@
 
                 </div>
             </div>
+           
         </div>
+        {% endif %}
+        
 </div>
 </div>
 

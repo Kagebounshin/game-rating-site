@@ -179,9 +179,7 @@ a.sidenav-trigger.left {
    color: #f9f9f9;
 }
 
-.reviews-container {
 
-}
 
 .reviews-container span {
     font-weight: 700;
@@ -235,6 +233,10 @@ a.sidenav-trigger.left {
         width: 100%;
         height: auto;
      }
+    
+    .profile-container h1 {
+        font-size: 1.5rem;
+    }
      
 }
 
@@ -383,11 +385,14 @@ a.sidenav-trigger.left {
     opacity:0;
 }
 
-.fadeinleft {
+.fadeinleft,
+.fadeinleftstart {
     opacity: 0;
     margin-left: -300px;
     max-width: 100%;
 }
+
+
 
 a {
     color: #7b7b7b;
@@ -428,6 +433,14 @@ hr {
     letter-spacing: .5rem;
 }
 
+.backlog i {
+    float: right;
+    padding: .5rem;
+}
+
+.hide {
+    opacity: 0;
+}
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
 
 blockquote {
