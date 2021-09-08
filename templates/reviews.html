@@ -15,11 +15,11 @@
             {% for review in reviews %}
                 <div class="row">
 
-                    <div class="col s12 l4">
-                        <img class="inine" src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
+                    <div class="col s12 m12 l6">
+                        <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
                     </div>
                     
-                    <div class="col s12 l8">
+                    <div class="col s12 m12 l6 ">
                         <h4>{{ review.review_name }}</h4>
                 <p class="inline">
                     <span>
@@ -48,19 +48,16 @@
                     </span> 
                         {{ review.duration }} 
                 </p>
-                <p> {{ review.review}}</p>
+                <p class="review-text"> {{ review.review}}</p>
                 <p><span>By: </span> KageBousnhin</p>
                 <hr>
                 {% endfor %}
                     </div>
-
                 </div>
             </div>
-           
         </div>
         {% endif %}
-        
-</div>
+    </div>
 </div>
 
 {% endblock %}

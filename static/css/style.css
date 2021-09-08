@@ -9,7 +9,9 @@ body {
     margin: 0 auto;
     overflow-x: hidden;
     scroll-behavior: smooth;
+    min-height: 100vh;
 }
+
  
 /* BACKGROUND COLORS */
 
@@ -161,16 +163,17 @@ a.sidenav-trigger.left {
 .reviews-container,
 .profile-container,
 .add-container {
+    min-height: 80vh;
     padding-top: 5rem;
     padding-bottom:5rem;
     margin-bottom: 0;
 }
 
-
 .backlog-container {
     padding-bottom: 5rem;
     margin-bottom: 0;
 }
+
 .backlog-container .btn {
     margin: 1rem;
 }
@@ -187,7 +190,7 @@ a.sidenav-trigger.left {
 
 .reviews-container h4 {
     font-weight: 700;
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
 .reviews-container img {
@@ -200,7 +203,7 @@ a.sidenav-trigger.left {
     margin-top: 3rem;
 }
 
-.profile-container h1 {
+.profile-container h1:first-child {
     font-family: 'Press Start 2P', sans-serif;
 }
 
@@ -447,6 +450,11 @@ hr {
 .uppercase {
     text-transform: uppercase;
 }
+
+.review-text {
+    text-align: justify;
+}
+
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
 
 blockquote {

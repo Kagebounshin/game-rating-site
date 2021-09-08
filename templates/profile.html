@@ -1,16 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
     <div class="row profile-container bg-color-profile">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
             <h1 class="center-align capitilize">
                 {{ username }}'s Profile
             </h1>
         </div>
-   </div>
+  
 <!-- Show this if you havn't added to your list -->
 {% if backlogs|length == 0 %}
     <div class="row backlog-container bg-color-backlog center-align">
-        <div class="col s12 m8 offset-m2">
+        <div class="col s12 m10 offset-m1 l8 offset-l2">
             <p>You havn't started on your backlog yet!</p>
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
@@ -19,10 +19,10 @@
 <!-- Show this if you have added to your list -->
 {% if backlogs|length != 0 %}
     <div class="row backlog-container bg-color-backlog center-align">
-        <div class="col s12 m4 offset-m2">
-            <h1 class="center-align">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <h2 class="center-align">
                 Backlog
-            </h1>
+            </h2>
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
                         <p class="capitilize">
@@ -41,10 +41,10 @@
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
         {% if finished|length != 0 %}
-        <div class="col s12 m4">
-            <h1 class="center-align">
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <h2 class="center-align">
                 Finished
-            </h1>
+            </h2>
                 <div class="card-panel left-align backlog">
                     {% for finish in finished %}
                     {% endfor %}
@@ -52,5 +52,6 @@
         </div>
         {% endif %}
     </div>
+</div>
     {% endif %}
 {% endblock %}
