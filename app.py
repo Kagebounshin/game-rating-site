@@ -77,6 +77,14 @@ def log_in():
     return render_template("login.html")
 
 
+@app.route("/log_out")
+def log_out():
+    flash("You have been logged out")
+    session.pop("user")
+    return redirect(url_for("log_in"))
+    return render_template("logout.html")
+
+
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
     username = mongo.db.users.find_one(
@@ -90,26 +98,26 @@ def profile(username):
     return redirect(url_for("log_in"))
 
 
-@app.route("/log_out")
-def log_out():
-    flash("You have been logged out")
-    session.pop("user")
-    return redirect(url_for("log_in"))
-    return render_template("logout.html")
-
-
 @app.route("/add_backlog", methods=["GET", "POST"])
 def add_backlog():
     if request.method == "POST":
-        add_backlog = {
+        backlog = {
             "backlog_name": request.form.get("backlog_name"),
             "added_by": session["user"]
         }
-        mongo.db.backlog.insert_one(add_backlog)
+        mongo.db.backlog.insert_one(backlog)
         flash("Game Successfully Added")
         redirect(url_for("profile", username=session["user"]))
     backlogs = mongo.db.backlog.find().sort("backlog_name", 1)
     return render_template("add_backlog.html", backlogs=backlogs)
+
+
+@app.route("/edit_backlog/<backlog_id>", methods=["GET", "POST"])
+def edit_backlog(backlog_id):
+    backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+
+    backlogs = mongo.db.backlog.find().sort("backlog_name", 1)
+    return render_template("edit_backlog.html", backlog=backlog, backlogs=backlogs)
 
 
 if __name__ == "__main__":

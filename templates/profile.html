@@ -24,14 +24,21 @@
             <h1 class="center-align">
                 Backlog
             </h1>
-            
-                  <div class="card-panel left-align backlog">
+                <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
-                        <p><a href="">{{ backlog.backlog_name }}</a><i class="fas fa-times "></i><i class="fas fa-check "></i></p><br>
-                      {% endfor %}
-                  </div>
-                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Edit Backlog</a>
-                  <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+                        <p><a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}</a><i class="fas fa-times "></i><i class="fas fa-check "></i></p><br>
+                    {% endfor %}
+                </div>
+            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+        </div>
+
+        <div class="col s12 m4">
+            <h1 class="center-align">
+                Finished
+            </h1>
+                <div class="card-panel left-align backlog">
+                   
+                </div>
         </div>
     </div>
     {% endif %}
