@@ -41,15 +41,18 @@
                 </div>
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
-
+        {% if finished|length != 0 %}
         <div class="col s12 m4">
             <h1 class="center-align">
                 Finished
             </h1>
+            
                 <div class="card-panel left-align backlog">
-                   
+                    {% for finish in finished %}
+                    {% endfor %}
                 </div>
         </div>
+        {% endif %}
     </div>
     {% endif %}
 {% endblock %}
