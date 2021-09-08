@@ -15,18 +15,16 @@
                     <div class="row">
                       <div class="input-field col s10 offset-s1">
                         <input id="backlog_name" name="backlog_name"
-                          type="text" class="validate" required>
+                          value="{{ backlog.backlog_name }}" type="text" class="validate" required>
                         <label for="backlog_name">Game title</label>
                       </div>
                     </div>
-                <!-- ADD BUTTON -->
+                <!-- Edit  BUTTON -->
                 <div class="row center-align">
                     <button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
-                        Edit <i class="fas fa-edit right"></i>
+                        Edit
                     </button>
-                    <div class="row center-align">
-                        <p>Done adding? <a href="{{ url_for('profile', username=session['user']) }}">Check your Backlog</a></p>
-                      </div>
+                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>
                 </div>
             </div>
           </form>
