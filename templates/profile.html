@@ -26,7 +26,17 @@
             </h1>
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
-                        <p><a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}</a><i class="fas fa-times "></i><i class="fas fa-check "></i></p><br>
+                        <p>
+                            <a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
+                            </a>
+                            <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}">
+                                <i class="fas fa-times "></i>
+                            </a>
+                            <a href="">
+                                <i class="fas fa-check "></i>
+                            </a>
+                        </p>
+                        <br>
                     {% endfor %}
                 </div>
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>

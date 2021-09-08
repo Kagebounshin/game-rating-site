@@ -128,5 +128,12 @@ def edit_backlog(backlog_id):
         "edit_backlog.html", backlog=backlog, backlogs=backlogs)
 
 
+@app.route("/delete_backlog/<backlog_id>")
+def delete_backlog(backlog_id):
+    mongo.db.backlog.remove({"_id": ObjectId(backlog_id)})
+    flash("Game Successfully Deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
