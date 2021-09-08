@@ -19,13 +19,16 @@
                         <label for="backlog_name">Game title</label>
                       </div>
                     </div>
-                <!-- Edit  BUTTON -->
+                <!-- EDIT  BUTTON -->
+                {% if session.user|lower == backlog.added_by|lower %}
                 <div class="row center-align">
                     <button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
                         Edit
                     </button>
+                <!-- CANCEL BUTTON -->
                     <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>
                 </div>
+                {% endif %}
             </div>
           </form>
     </div>

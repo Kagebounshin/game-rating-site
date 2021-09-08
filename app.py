@@ -114,10 +114,18 @@ def add_backlog():
 
 @app.route("/edit_backlog/<backlog_id>", methods=["GET", "POST"])
 def edit_backlog(backlog_id):
-    backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+    if request.method == "POST":
+        submit = {
+            "backlog_name": request.form.get("backlog_name"),
+            "added_by": session["user"]
+        }
+        mongo.db.backlog.update({"_id": ObjectId(backlog_id)},submit)
+        flash("Game Successfully Updated")
 
+    backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
     backlogs = mongo.db.backlog.find().sort("backlog_name", 1)
-    return render_template("edit_backlog.html", backlog=backlog, backlogs=backlogs)
+    return render_template(
+        "edit_backlog.html", backlog=backlog, backlogs=backlogs)
 
 
 if __name__ == "__main__":
