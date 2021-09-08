@@ -119,7 +119,7 @@ def edit_backlog(backlog_id):
             "backlog_name": request.form.get("backlog_name"),
             "added_by": session["user"]
         }
-        mongo.db.backlog.update({"_id": ObjectId(backlog_id)},submit)
+        mongo.db.backlog.update({"_id": ObjectId(backlog_id)}, submit)
         flash("Game Successfully Updated")
 
     backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
@@ -130,8 +130,30 @@ def edit_backlog(backlog_id):
 
 @app.route("/delete_backlog/<backlog_id>")
 def delete_backlog(backlog_id):
-    mongo.db.backlog.remove({"_id": ObjectId(backlog_id)})
+    mongo.db.backlog.remove(
+        {"_id": ObjectId(backlog_id)})
     flash("Game Successfully Deleted")
+    return redirect(url_for("profile", username=session["user"]))
+
+# WHEN FINSHED I WANT TO ADD
+# THIS TO ANOTHER COLLECTION,
+# AND THE REMOVE IT FROM THE CURRENT ONE
+# IT GET REMOVED, BUT NOT INSERTED
+# TO THE OTHER COLLECTION
+
+@app.route("/finished_backlog/<backlog_id>", methods=["GET", "POST"])
+def finished_backlog(backlog_id):
+    if request.method == "POST":
+        finish = {
+            "backlog_name": request.form.get("backlog_name"),
+            "added_by": session["user"]
+        }
+        mongo.db.finished.insert_one(
+            {"_id": ObjectId(backlog_id)}, finish)
+
+    mongo.db.backlog.remove(
+        {"_id": ObjectId(backlog_id)})
+    flash("Congratulations on finshing the game")
     return redirect(url_for("profile", username=session["user"]))
 
 

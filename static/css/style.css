@@ -392,8 +392,6 @@ a.sidenav-trigger.left {
     max-width: 100%;
 }
 
-
-
 a {
     color: #7b7b7b;
 }
@@ -440,6 +438,14 @@ hr {
 
 .hide {
     opacity: 0;
+}
+
+.capitilize {
+    text-transform: capitalize;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
 

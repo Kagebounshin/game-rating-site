@@ -1,9 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-
     <div class="row profile-container bg-color-profile">
         <div class="col s12 m8 offset-m2">
-            <h1 class="center-align">
+            <h1 class="center-align capitilize">
                 {{ username }}'s Profile
             </h1>
         </div>
@@ -26,13 +25,13 @@
             </h1>
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
-                        <p>
+                        <p class="capitilize">
                             <a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
                             </a>
                             <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}">
                                 <i class="fas fa-times "></i>
                             </a>
-                            <a href="">
+                            <a href="{{ url_for('finished_backlog',  backlog_id=backlog._id ) }}">
                                 <i class="fas fa-check "></i>
                             </a>
                         </p>
@@ -46,7 +45,6 @@
             <h1 class="center-align">
                 Finished
             </h1>
-            
                 <div class="card-panel left-align backlog">
                     {% for finish in finished %}
                     {% endfor %}
