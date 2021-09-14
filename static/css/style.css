@@ -187,6 +187,10 @@ a.sidenav-trigger.left {
     font-weight: 700;
 }
 
+.reviews-container h1 {
+    font-family: 'Press Start 2P', sans-serif;
+}
+
 .reviews-container img {
     width: 100%;
     height: auto;
@@ -455,6 +459,10 @@ hr {
 
 .review-text {
     text-align: justify;
+}
+
+.mb {
+    margin-bottom: 3rem;
 }
 
 /* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */

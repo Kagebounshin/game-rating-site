@@ -2,11 +2,12 @@
 {% block content %}
 
 <div class="row reviews-container bg-color-reviews">
-    
-    <div class="col s12 m8 offset-m2">
-        <h1 class="center-align">
+    <div class="col s12 m8 offset-m2 center-align">
+        <h1>
             Reviews
         </h1>
+        <p class="mb">Here are the latest user reviews</p>
+        <hr class="mb">
     </div>
     {% if review|length == 0 %}
     {% for review in reviews %}
