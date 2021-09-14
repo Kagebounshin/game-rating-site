@@ -92,8 +92,10 @@ def profile(username):
 
     if session["user"]:
         backlogs = list(mongo.db.backlog.find({"added_by": username}))
+        finish = list(mongo.db.finished.find({"finished_by": username}))
         return render_template(
-            "profile.html", username=username, backlogs=backlogs)
+            "profile.html", username=username,
+            backlogs=backlogs, finish=finish)
     
     return redirect(url_for("log_in"))
 
@@ -141,20 +143,20 @@ def delete_backlog(backlog_id):
 # IT GET REMOVED, BUT NOT INSERTED
 # TO THE OTHER COLLECTION
 
+
 @app.route("/finished_backlog/<backlog_id>", methods=["GET", "POST"])
 def finished_backlog(backlog_id):
-    if request.method == "POST":
-        finish = {
-            "backlog_name": request.form.get("backlog_name"),
-            "added_by": session["user"]
-        }
-        mongo.db.finished.insert_one(
-            {"_id": ObjectId(backlog_id)}, finish)
+    move = {
+        "finished_name": request.form.get("backlog_name"),
+        "finished_by": session["user"]
+    }
+    mongo.db.finished.insert(move, {"_id": ObjectId(backlog_id)})
 
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
-    flash("Congratulations on finshing the game")
-    return redirect(url_for("profile", username=session["user"]))
+    flash("Congratulations on finishing the game")
+    return redirect(
+        url_for("profile", username=session["user"]))
 
 
 if __name__ == "__main__":

@@ -11,7 +11,7 @@
 {% if backlogs|length == 0 %}
     <div class="row backlog-container bg-color-backlog center-align">
         <div class="col s12 m10 offset-m1 l8 offset-l2">
-            <p>You havn't started on your backlog yet!</p>
+            <p>You dont have any games in your backlog!</p>
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
     </div>
@@ -38,18 +38,19 @@
                 </div>
             <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
         </div>
-        {% if finished|length != 0 %}
+        {% endif %}
+        
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <h2 class="center-align">
                 Finished
             </h2>
                 <div class="card-panel left-align backlog">
-                    {% for finish in finished %}
+                    {% for finished in finish %}
+                        {{ finished.finished_name }}<br>
                     {% endfor %}
                 </div>
         </div>
-        {% endif %}
+       
     </div>
 </div>
-    {% endif %}
 {% endblock %}
