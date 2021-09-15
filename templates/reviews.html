@@ -9,40 +9,42 @@
         <p class="mb">Here are the latest user reviews</p>
         <hr class="mb">
     </div>
-    {% if review|length == 0 %}
-    {% for review in reviews %}
+{% if review|length == 0 %}
+{% for review in reviews %}
     <div class="col s12 m8 offset-m2">
-        
         <div class="card-panel fadeinleftstart">
-            
-                <div class="row">
-
-                    <div class="col s12 m12 l12 xl6">
-                        {{ review.image }} <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
-                    </div>
-                    
-                    <div class="col s12 m12 l12 xl6">
-                        <h4>{{ review.review_name }}</h4>
+            <div class="row">
+                <div class="col s12 m12 l12 xl6">
+                    {{ review.image }} <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
+                </div>
+                <div class="col s12 m12 l12 xl6">
+                    <h4>{{ review.review_name }}</h4>
                 <p class="inline">
                     <span>
                         Platform:
                     </span> 
                         {{ review.platform }} 
-                    <span>|</span>
+                    <span>
+                        |
+                    </span>
                 </p>
                 <p class="inline">
                     <span>
                         Genre:
                     </span>
                         {{ review.genre }} 
-                    <span>|</span>
+                    <span>
+                        |
+                    </span>
                 </p>
                 <p class="inline">
                     <span>
                         Developer:
                     </span> 
                         {{ review.developer }} 
-                    <span>|</span>
+                    <span>
+                        |
+                    </span>
                 </p>
                 <p class="inline">
                     <span>
@@ -50,18 +52,22 @@
                     </span> 
                         {{ review.duration }} 
                 </p>
-                <p class="review-text"> {{ review.review }}</p>
-                <p><span>By: </span> {{ review.review_by }}</p>
+                <p class="review-text">
+                    {{ review.review }}
+                </p>
+                <p>
+                    <span>
+                        By: 
+                    </span> 
+                    {{ review.review_by }}
+                </p>
                 <hr>
-                
-                    </div>
-                    
                 </div>
-                
             </div>
         </div>
+    </div>
         {% endfor %}
         {% endif %}
-    </div>
+</div>
 
 {% endblock %}
