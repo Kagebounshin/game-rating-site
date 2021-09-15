@@ -21,34 +21,28 @@
     {% endif %}
 <!-- Show this if you have added to your list -->
     {% if backlogs|length != 0 %}
-        <div class="row center-align">
+        <div class="row backlog-container center-align">
             <div class="col s12 m8 offset-m2 l6 offset-l3">
-                <div class="card-panel left-align backlog">
+                <div class="card-panel center-align backlog">
                     {% for backlog in backlogs %}
                         <p class="capitilize games">
                             <a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
                             </a>
-                            <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}">
-                                <i class="fas fa-times "></i>
-                            </a>
+                            
+                            <br>
                             <a href="{{ url_for('finished_backlog',  backlog_id=backlog._id ) }}">
                                 <i class="fas fa-check "></i>
                             </a>
+                            <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}">
+                                <i class="fas fa-times "></i>
+                            </a>
                         </p>
+                        <hr class="hr-backlog">
                         <br>
+
                     {% endfor %}
                 </div>
                 <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
-            </div>
-        </div>
-    {% endif %}
-<!-- Show this if you havn't fiished any games -->
-    {% if finish|length == 0 %}
-        <div class="row center-align">
-            <div class="col s12 m10 offset-m1 l8 offset-l2">
-                <p>
-                    You havn't finished a any games yet!
-                </p>
             </div>
         </div>
     {% endif %}

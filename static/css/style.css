@@ -12,7 +12,6 @@ body {
     min-height: 100vh;
 }
 
- 
 /* BACKGROUND COLORS */
 
 .bg-color-hero,
@@ -119,6 +118,7 @@ a.sidenav-trigger.left {
     width: 90%;
     margin-top: 2rem;
 }
+
 /* CONTAINERS */
 
 .hero-container {
@@ -269,6 +269,13 @@ a.sidenav-trigger.left {
     .reviews-container h4 {
         margin-top: 1rem;
     }
+
+    .backlog p,
+    .finished-backlog p {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    margin: 0rem;
+}
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -418,11 +425,24 @@ hr {
     margin-bottom:0;
 }
 
+.hr-backlog {
+    border-bottom: 2px solid #f5f5f5;
+    width: 70%;
+    margin: 0 auto;
+    margin-top:0;
+    margin-bottom:0;
+}
+
 .info-container a:last-child:hover,
 .footer-container a:hover,
 .register-container a:hover,
-.login-container a:hover{
+.login-container a:hover {
     color: #ffcc00;
+    transition: 300ms ease-in-out;
+}
+
+.profile-container a:hover {
+    color: #464646;
     transition: 300ms ease-in-out;
 }
 
@@ -441,14 +461,8 @@ hr {
     display: inline;
 }
 
-.backlog p,
-.finished-backlog p {
-    font-size: 2rem;
-    letter-spacing: .2rem;
-}
-
 .backlog i {
-    float: right;
+    /* float: right; */
     padding: .5rem;
 }
 
@@ -472,20 +486,13 @@ hr {
     margin-bottom: 3rem;
 }
 
-/* https://css-tricks.com/quoting-in-html-quotations-citations-and-blockquotes/ */
-
-blockquote {
-    border-left: 5px solid #fff;
+i.fas.fa-check:hover {
+    color: rgb(62, 145, 62);
+    transition: 200ms ease-in-out;
 }
 
-blockquote::before {
-    content: open-quote;
+i.fas.fa-times:hover {
+    color: rgb(180, 32, 32);
+    transition: 200ms ease-in-out;
 }
 
-blockquote::after {
-    content: close-quote;
-}
-
-blockquote {
-    quotes: "“" "”" "‘" "’";
-}
