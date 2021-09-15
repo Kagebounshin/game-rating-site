@@ -92,7 +92,7 @@ def profile(username):
 
     if session["user"]:
         backlogs = list(mongo.db.backlog.find({"added_by": username}))
-        finish = list(mongo.db.finished.find({"finished_by": username}))
+        finish = list(mongo.db.finished.find({"added_by": username}))
         return render_template(
             "profile.html", username=username,
             backlogs=backlogs, finish=finish)
@@ -144,14 +144,10 @@ def delete_backlog(backlog_id):
 # TO THE OTHER COLLECTION
 
 
-@app.route("/finished_backlog/<backlog_id>", methods=["GET", "POST"])
+@app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
-    move = {
-        "finished_name": request.form.get("backlog_name"),
-        "finished_by": session["user"]
-    }
-    mongo.db.finished.insert(move, {"_id": ObjectId(backlog_id)})
-
+    move = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+    mongo.db.finished.insert(move)
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
     flash("Congratulations on finishing the game")
