@@ -6,21 +6,23 @@
                 {{ username }}'s Backlog
             </h1>
         </div>
-  
 <!-- Show this if you havn't added to your list -->
-{% if backlogs|length == 0 %}
-    <div class="row backlog-container bg-color-backlog center-align">
-        <div class="col s12 m10 offset-m1 l8 offset-l2">
-            <p>You dont have any games in your backlog!</p>
-            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+    {% if backlogs|length == 0 %}
+        <div class="row backlog-container bg-color-backlog center-align">
+            <div class="col s12 m10 offset-m1 l8 offset-l2">
+                <p>
+                    You dont have any games in your backlog!
+                </p>
+                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">
+                    Add to Backlog
+                </a>
+            </div>
         </div>
-    </div>
-{% endif %}
+    {% endif %}
 <!-- Show this if you have added to your list -->
-{% if backlogs|length != 0 %}
-    <div class="row backlog-container bg-color-backlog center-align">
-        <div class="col s12 m8 offset-m2 l6 offset-l3">
-            
+    {% if backlogs|length != 0 %}
+        <div class="row center-align">
+            <div class="col s12 m8 offset-m2 l6 offset-l3">
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
                         <p class="capitilize games">
@@ -36,21 +38,42 @@
                         <br>
                     {% endfor %}
                 </div>
-            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">Add to Backlog</a>
+            </div>
         </div>
-        {% endif %}
-        
+    {% endif %}
+<!-- Show this if you havn't fiished any games -->
+    {% if finish|length == 0 %}
+        <div class="row center-align">
+            <div class="col s12 m10 offset-m1 l8 offset-l2">
+                <p>
+                    You havn't finished a any games yet!
+                </p>
+            </div>
+        </div>
+    {% endif %}
+<!-- Show this if you have finshed a game -->
+    {% if finish|length != 0 %}
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <h2 class="center-align">
                 Finished
             </h2>
-                <div class="card-panel left-align backlog">
-                    {% for finished in finish %}
-                        {{ finished.backlog_name }}<br>
-                    {% endfor %}
-                </div>
+            <p class="center-align">
+                Do you want to review your games?<br>
+                Just click on the finished game.
+            </p>
+                
+            <div class="card-panel center-align finished-backlog">
+                {% for finished in finish %}
+                    <p class="capitilize games">
+                        <a href="">
+                            {{ finished.backlog_name }}
+                        </a>
+                        <br>
+                    </p>
+                {% endfor %}
+            </div>
         </div>
-       
-    </div>
+    {% endif %}
 </div>
 {% endblock %}

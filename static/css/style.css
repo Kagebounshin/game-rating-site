@@ -132,7 +132,8 @@ a.sidenav-trigger.left {
    transform: scaleX(-1);
 }
 
-.hero-container h1 {
+.hero-container h1,
+.profile-container h2 {
     font-family: 'Press Start 2P', sans-serif;
 }
 
@@ -233,10 +234,15 @@ a.sidenav-trigger.left {
     .reviews-container img {
         width: 100%;
         height: auto;
-     }
+    }
     
     .profile-container h1 {
         font-size: 1.5rem;
+    }
+
+    .profile-container h2,
+    .reviews-container h1 {
+        font-size: 2rem;
     }
     
 }
@@ -435,9 +441,10 @@ hr {
     display: inline;
 }
 
-.backlog p {
+.backlog p,
+.finished-backlog p {
     font-size: 2rem;
-    letter-spacing: .5rem;
+    letter-spacing: .2rem;
 }
 
 .backlog i {
