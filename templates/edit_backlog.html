@@ -1,36 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="row add-container bg-color-add">
-        <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('edit_backlog', backlog_id=backlog._id) }}">
-            <div class="card-panel">
-              <div class="row">
-                <div class="col s12">
-                  <h1 class="center-align">
-                    Edit Backlog
-                  </h1>
-                </div>
-              </div>
-                <!-- GAME TITLE FOR BACKLOG -->
-                    <div class="row">
-                      <div class="input-field col s10 offset-s1">
-                        <input id="backlog_name" name="backlog_name"
-                          value="{{ backlog.backlog_name }}" type="text" class="validate" required>
-                        <label for="backlog_name">Game title</label>
-                      </div>
-                    </div>
-                <!-- EDIT  BUTTON -->
-                {% if session.user|lower == backlog.added_by|lower %}
-                <div class="row center-align">
-                    <button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
-                        Edit
-                    </button>
-                <!-- CANCEL BUTTON -->
-                    <a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>
-                </div>
-                {% endif %}
-            </div>
-          </form>
-    </div>
+<div class="row add-container bg-color-add">
+	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('edit_backlog', backlog_id=backlog._id) }}">
+		<div class="card-panel">
+			<div class="row">
+				<div class="col s12">
+					<h1 class="center-align">
+						Edit Backlog
+					</h1>
+				</div>
+			</div>
+			<!-- GAME TITLE FOR BACKLOG -->
+			<div class="row">
+				<div class="input-field col s10 offset-s1">
+				<input id="backlog_name" name="backlog_name"
+					value="{{ backlog.backlog_name }}" type="text" class="validate" required>
+				<label for="backlog_name">Game title</label>
+				</div>
+			</div>
+			<!-- EDIT  BUTTON -->
+			{% if session.user|lower == backlog.added_by|lower %}
+			<div class="row center-align">
+				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
+					Edit
+				</button>
+			<!-- CANCEL BUTTON -->
+				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>
+			</div>
+			{% endif %}
+		</div>
+	</form>
+</div>
 
 {% endblock %}
