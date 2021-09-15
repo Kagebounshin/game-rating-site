@@ -15,63 +15,87 @@
         <!-- TOP NAVBAR -->
         <nav class="nav-extended bg-color-navbar container navbar-fixed">
             <div class="nav-wrapper">
-              <a href="{{ url_for('index') }}" class="brand-logo"><i class="fas fa-gamepad"></i></a>
-              
-              <a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
-              
-              <ul class="right hide-on-med-and-down">
-                  <li><a href="{{ url_for('index') }}">Home</a></li>
-                  <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
-                  {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('log_out') }}">Sign Out</a></li>
-                  {% else %}
-                    <li><a href="{{ url_for('log_in') }}">Sign In</a></li>
-                    <li><a href="{{ url_for('register') }}">Sign Up</a></li>
-                  {% endif %}
-                  
-              </ul>
-              
+            	<a href="{{ url_for('index') }}" class="brand-logo"><i class="fas fa-gamepad"></i></a>
+            	<a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
+				<ul class="right hide-on-med-and-down">
+						<li>
+							<a href="{{ url_for('index') }}">Home</a>
+						</li>
+						<li>
+							<a href="{{ url_for('reviews') }}">Reviews</a>
+						</li>
+					{% if session.user %}
+						<li>
+							<a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+						</li>
+						<li>
+							<a href="{{ url_for('log_out') }}">Sign Out</a>
+						</li>
+					{% else %}
+						<li>
+							<a href="{{ url_for('log_in') }}">Sign In</a>
+						</li>
+						<li>
+							<a href="{{ url_for('register') }}">Sign Up</a>
+						</li>
+					{% endif %}
+				</ul>
             </div>
         </nav>
 
         <!-- MOBILE SIDENAV -->
-          <ul class="sidenav" id="mobile-demo">
-            <h3 class="sidenav-header">THE 
-              BACKL <img class =" pacman-sidenav"src="static/img/pacman.png" alt="picture of pacman instead of the letter O"> G </h3>
+        <ul class="sidenav" id="mobile-demo">
+            <h3 class="sidenav-header">THE BACKL 
+				<img class =" pacman-sidenav"src="static/img/pacman.png" alt="picture of pacman instead of the letter O"> G 
+			</h3>
+            	<hr class="hr-navbar">
+					<li>
+						<a href="{{ url_for('index') }}">Home</a>
+					</li>
+					<li>
+						<a href="{{ url_for('reviews') }}">Reviews</a>
+					</li>
+                {% if session.user %}
+                    <li>
+						<a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+					</li>
+                    <li>
+						<a href="{{ url_for('log_out') }}">Sign Out</a>
+					</li>
+            	{% else %}
+                    <li>
+						<a href="{{ url_for('log_in') }}">Sign In</a>
+					</li>
+                    <li>
+						<a href="{{ url_for('register') }}">Sign Up</a>
+					</li>
+                {% endif %}
             <hr class="hr-navbar">
-              <li><a href="{{ url_for('index') }}">Home</a></li>
-              <li><a href="{{ url_for('reviews') }}">Reviews</a></li>
-              {% if session.user %}
-                    <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                    <li><a href="{{ url_for('log_out') }}">Sign Out</a></li>
-                  {% else %}
-                    <li><a href="{{ url_for('log_in') }}">Sign In</a></li>
-                    <li><a href="{{ url_for('register') }}">Sign Up</a></li>
-                  {% endif %}
-              <hr class="hr-navbar">
-              <p class="sidenav-copyright">© <span class="copyright"></span> Kagebounshin</p>
-          </ul>
-          
+            <p class="sidenav-copyright">
+				© <span class="copyright"></span> Kagebounshin
+			</p>
+        </ul>
     </header>
 
     <section>
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          {% for message in messages %}
-            <div class="row flashes bg-color-flashes">
-              <h4 class="center-align">{{ message }}</h4>
-            </div>
-          {% endfor %}
-        {% endif %}
-      {% endwith %}
-
-    </section>
+      	{% with messages = get_flashed_messages() %}
+        	{% if messages %}
+          		{% for message in messages %}
+					<div class="row flashes bg-color-flashes">
+					<h4 class="center-align">
+						{{ message }}
+					</h4>
+					</div>
+          		{% endfor %}
+        	{% endif %}
+      	{% endwith %}
+	</section>
 
     <main class="container-fluid">
     {% block content %}
     {% endblock %}
-  </main>
+  	</main>
+	  
     <footer class="page-footer footer-container bg-color-footer">
       <div class="container">
         <div class="row">
