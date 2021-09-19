@@ -154,6 +154,10 @@ a.sidenav-trigger.left {
     padding-bottom: 2rem;
 }
 
+.about-container i:nth-child(1) {
+    padding-top: 2rem;
+}
+
 .about-container h1 {
     font-weight: 700;
     margin-top: -.1rem;
@@ -344,6 +348,10 @@ a.sidenav-trigger.left {
 
     .about-container h1 {
         font-size: 2rem;
+    }
+
+    .about-container p {
+        font-size: 1.3rem;
     }
 
     nav .brand-logo {
