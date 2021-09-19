@@ -162,6 +162,20 @@ def finished_backlog(backlog_id):
         url_for("profile", username=session["user"]))
 
 
+@app.route("/add_finished", methods=["GET", "POST"])
+def add_finished():
+    if request.method == "POST":
+        finished = {
+            "backlog_name": request.form.get("backlog_name"),
+            "added_by": session["user"]
+        }
+        mongo.db.finished.insert_one(finished)
+        flash("Game Successfully Added")
+        redirect(url_for("profile", username=session["user"]))
+    finish = mongo.db.finished.find().sort("backlog_name", 1)
+    return render_template("add_finished.html", finish=finish)
+
+
 @app.route("/add_review/<finished_id>", methods=["GET", "POST"])
 def add_review(finished_id):
     if request.method == "POST":

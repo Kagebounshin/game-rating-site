@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row add-container bg-color-add">
+	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="">
+		<div class="card-panel">
+			<div class="row">
+				<div class="col s12">
+					<h1 class="center-align">
+						Add to Finished
+					</h1>
+				</div>
+			</div>
+			<!-- GAME TITLE FOR BACKLOG -->
+			<div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="backlog_name" name="backlog_name"
+						type="text" class="validate" required>
+					<label for="backlog_name">Game title</label>
+				</div>
+			</div>
+			<!-- ADD BUTTON -->
+			<div class="row center-align">
+				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
+					Add <i class="fas fa-plus-circle right"></i>
+				</button>
+				<div class="row center-align">
+					<p>
+						Done adding? <a href="{{ url_for('profile', username=session['user']) }}">Check your Finished list</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
