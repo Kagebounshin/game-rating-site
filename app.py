@@ -7,9 +7,6 @@ from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
 if os.path.exists("env.py"):
     import env
-import cloudinary
-import cloudinary.uploader
-import cloudinary.api
 
 
 app = Flask(__name__)
@@ -30,6 +27,13 @@ def index():
 def reviews():
     reviews = mongo.db.reviews.find()
     return render_template("reviews.html", reviews=reviews)
+
+
+@app.route("/add_review/<finished_id>", methods=["GET", "POST"])
+def add_review(finished_id):
+    finished = mongo.db.finished.find_one({"_id": ObjectId(finished_id)})
+    finish = mongo.db.finished.find().sort("backlog_name", 1)
+    return render_template("add_review.html", finished=finished, finish=finish)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -153,6 +157,15 @@ def finished_backlog(backlog_id):
     flash("Congratulations on finishing the game")
     return redirect(
         url_for("profile", username=session["user"]))
+
+
+# def add_images():
+#     if request.method == "POST":
+#         photo = request.files['photo_url']
+#         photo_upload = cloudinary.uploader.upload(photo)
+#         review = {
+#             "photo_url": photo_upload["secure_url"]
+#         }
 
 
 if __name__ == "__main__":

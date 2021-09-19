@@ -48,26 +48,28 @@
     {% endif %}
 <!-- Show this if you have finshed a game -->
     {% if finish|length != 0 %}
+    <div class="row backlog-container center-align">
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <h2 class="center-align">
                 Finished
-            </h2>
-            <p class="center-align">
-                Do you want to review your games?<br>
-                Just click on the finished game.
-            </p>
-                
+            </h2>             
             <div class="card-panel center-align finished-backlog">
                 {% for finished in finish %}
                     <p class="capitilize games">
-                        <a href="">
+                        <a href="{{ url_for('add_review',  finished_id=finished._id) }}">
                             {{ finished.backlog_name }}
                         </a>
                         <br>
                     </p>
                 {% endfor %}
             </div>
+            <p class="center-align">
+                <span>Do you want to review your games?</span><br>
+                Just click on the game you want to review from the list<br>
+                and let everybody know your thoughts of the game. 
+            </p>
         </div>
+    </div>
     {% endif %}
 </div>
 {% endblock %}

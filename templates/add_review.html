@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="row add-container bg-color-add">
+	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="">
+		<div class="card-panel">
+			<div class="row">
+				<div class="col s12">
+					<h1 class="center-align">
+						Review your game
+					</h1>
+				</div>
+			</div>
+			<!-- GAME TITLE FOR BACKLOG -->
+			<div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="backlog_name" name="backlog_name"
+						type="text" class="validate" required>
+					<label for="backlog_name"></label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="genre" name="genre"
+						type="text" class="validate" required>
+					<label for="genre">Genre</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="developer" name="developer"
+						type="text" class="validate" required>
+					<label for="developer">Developer</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="platform" name="platform"
+						type="text" class="validate" required>
+					<label for="platform">platform</label>
+				</div>
+			</div>
+            <div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="review" name="review"
+						type="text" class="validate" required>
+					<label for="review">Review</label>
+				</div>
+			</div>
+			<!-- ADD BUTTON -->
+			<div class="row center-align">
+				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
+					Review
+				</button>
+				<div class="row center-align">
+					<p>
+						<a href="{{ url_for('profile', username=session['user']) }}">Done reviewing?</a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</form>
+</div>
+
+{% endblock %}
