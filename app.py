@@ -1,4 +1,7 @@
 import os
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 from flask import (
     Flask, flash, render_template,
     redirect, request, session, url_for)
@@ -16,6 +19,12 @@ app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
+
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUD_NAME"),
+    api_key=os.environ.get("API_KEY"),
+    api_secret=os.environ.get("API_SECRET")
+)
 
 
 @app.route("/")
@@ -155,6 +164,8 @@ def finished_backlog(backlog_id):
 @app.route("/add_review/<finished_id>", methods=["GET", "POST"])
 def add_review(finished_id):
     if request.method == "POST":
+        photo = request.files['photo_url']
+        photo_upload = cloudinary.uploader.upload(photo)
         review = {
             "review_name": request.form.get("review_name"),
             "genre_name": request.form.get("genre_name"),
@@ -162,6 +173,7 @@ def add_review(finished_id):
             "developer_name": request.form.get("developer_name"),
             "duration": request.form.get("duration"),
             "review_text": request.form.get("review_text"),
+            "photo_url": photo_upload["secure_url"],
             "review_by": session["user"]
         }
         mongo.db.reviews.insert_one(review)
