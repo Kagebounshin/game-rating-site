@@ -18,12 +18,12 @@
                     {{ review.image }} <img src="https://www.teknikhype.se/wp-content/uploads/2020/07/tlou2-11.jpg" alt="">
                 </div>
                 <div class="col s12 m12 l12 xl6">
-                    <h4>{{ review.review_name }}</h4>
+                    <h4>{{ review.review_name }} </h4>
                 <p class="inline">
                     <span>
                         Platform:
                     </span> 
-                        {{ review.platform }} 
+                        {{ review.platform_name }} 
                     <span>
                         |
                     </span>
@@ -32,7 +32,7 @@
                     <span>
                         Genre:
                     </span>
-                        {{ review.genre }} 
+                        {{ review.genre_name }} 
                     <span>
                         |
                     </span>
@@ -41,7 +41,7 @@
                     <span>
                         Developer:
                     </span> 
-                        {{ review.developer }} 
+                        {{ review.developer_name }} 
                     <span>
                         |
                     </span>
@@ -53,7 +53,7 @@
                         {{ review.duration }} 
                 </p>
                 <p class="review-text">
-                    {{ review.review }}
+                    {{ review.review_text }}
                 </p>
                 <p>
                     <span>

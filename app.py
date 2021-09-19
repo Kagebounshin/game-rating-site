@@ -29,17 +29,6 @@ def reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
-@app.route("/add_review/<finished_id>", methods=["GET", "POST"])
-def add_review(finished_id):
-    finished = mongo.db.finished.find_one({"_id": ObjectId(finished_id)})
-    finish = mongo.db.finished.find().sort("backlog_name", 1)
-    genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
-    platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
-    return render_template(
-        "add_review.html", finished=finished, finish=finish,
-        genres=genres, platforms=platforms)
-
-
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -153,13 +142,39 @@ def delete_backlog(backlog_id):
 
 @app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
-    move = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+    move = mongo.db.backlog.find_one(
+        {"_id": ObjectId(backlog_id)})
     mongo.db.finished.insert(move)
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
     flash("Congratulations on finishing the game")
     return redirect(
         url_for("profile", username=session["user"]))
+
+
+@app.route("/add_review/<finished_id>", methods=["GET", "POST"])
+def add_review(finished_id):
+    if request.method == "POST":
+        review = {
+            "review_name": request.form.get("review_name"),
+            "genre_name": request.form.get("genre_name"),
+            "platform_name": request.form.get("platform_name"),
+            "developer_name": request.form.get("developer_name"),
+            "duration": request.form.get("duration"),
+            "review_text": request.form.get("review_text"),
+            "review_by": session["user"]
+        }
+        mongo.db.reviews.insert_one(review)
+        flash("Review Successfully Added")
+        return redirect(url_for("reviews"))
+
+    finished = mongo.db.finished.find_one({"_id": ObjectId(finished_id)})
+    finish = mongo.db.finished.find().sort("backlog_name", 1)
+    genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
+    platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
+    return render_template(
+        "add_review.html", finished=finished, finish=finish,
+        genres=genres, platforms=platforms)
 
 
 # def add_images():
