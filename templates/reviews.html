@@ -55,11 +55,21 @@
                 <p class="review-text">
                     {{ review.review_text }}
                 </p>
-                <p>
+                <p class="inline">
+                    <span>
+                        Rating: 
+                    </span> 
+                   {{ review.rating_nr }}/5
+                   <span>
+                    |
+                </span>
+                </p>
+                <p class="inline">
                     <span>
                         By: 
                     </span> 
                     {{ review.review_by }}
+                    
                 </p>
                 <hr>
                 </div>

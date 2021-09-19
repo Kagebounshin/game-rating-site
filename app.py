@@ -188,6 +188,7 @@ def add_review(finished_id):
             "developer_name": request.form.get("developer_name"),
             "duration": request.form.get("duration"),
             "review_text": request.form.get("review_text"),
+            "rating_nr": request.form.get("rating_nr"),
             "photo_url": photo_upload["secure_url"],
             "review_by": session["user"]
         }
@@ -199,9 +200,10 @@ def add_review(finished_id):
     finish = mongo.db.finished.find().sort("backlog_name", 1)
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
+    ratings = mongo.db.rating.find().sort("rating_nr", 1)
     return render_template(
         "add_review.html", finished=finished, finish=finish,
-        genres=genres, platforms=platforms)
+        genres=genres, platforms=platforms, ratings=ratings)
 
 
 # def add_images():

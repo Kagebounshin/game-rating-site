@@ -65,6 +65,17 @@
 				</div>
 			</div>
 			<div class="row">
+				<div class="input-field col s10 offset-s1">
+					<select id="rating_nr" name="rating_nr" class="validate" required>
+						<option value="" disabled selected>(1 is Bad, 5 is Good)</option>
+						{% for rating in ratings %}
+						<option value="{{ rating.rating_nr }}">{{ rating.rating_nr }}</option>
+						{% endfor %}
+					</select>
+					<label for="rating_nr">Rating 1-5</label>
+				</div>
+			</div>
+			<div class="row">
 				
 				<div class="file-field input-field col s10 offset-s1">
 					<div class="btn">
