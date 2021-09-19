@@ -52,7 +52,13 @@
         <div class="col s12 m8 offset-m2 l6 offset-l3">
             <h2 class="center-align">
                 Finished
-            </h2>             
+            </h2>      
+            
+            <p class="center-align">
+                Do you want to review your games?<br>
+                Just click on the game you want to review from the list
+                and let everybody know your thoughts of the game. 
+            </p>
             <div class="card-panel center-align finished-backlog">
                 {% for finished in finish %}
                     <p class="capitilize games">
@@ -66,11 +72,6 @@
             <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-large">
                 Add to Finished
             </a>
-            <p class="center-align">
-                <span>Do you want to review your games?</span><br>
-                Just click on the game you want to review from the list<br>
-                and let everybody know your thoughts of the game. 
-            </p>
         </div>
     </div>
     {% endif %}
