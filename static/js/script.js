@@ -1,12 +1,14 @@
 $(document).ready(function(){
   $('.sidenav').sidenav({edge: "left"});
-
+  $('select').formSelect();
   // Copyright year
   $('.copyright').text(new Date().getFullYear());
 
   $('.fadeinleftstart').each(function() {
     $(this).animate({'opacity':'1', 'margin-left':'0px'}, 1000);
   });
+
+  
 
   // Fade in elements on sroll 
   // Code by https://vincoding.com/fade-in-elements-scroll-jquery/

@@ -33,7 +33,11 @@ def reviews():
 def add_review(finished_id):
     finished = mongo.db.finished.find_one({"_id": ObjectId(finished_id)})
     finish = mongo.db.finished.find().sort("backlog_name", 1)
-    return render_template("add_review.html", finished=finished, finish=finish)
+    genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
+    platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
+    return render_template(
+        "add_review.html", finished=finished, finish=finish,
+        genres=genres, platforms=platforms)
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -100,7 +104,6 @@ def profile(username):
         return render_template(
             "profile.html", username=username,
             backlogs=backlogs, finish=finish)
-    
     return redirect(url_for("log_in"))
 
 

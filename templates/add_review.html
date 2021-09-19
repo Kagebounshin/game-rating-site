@@ -15,29 +15,39 @@
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="backlog_name" name="backlog_name"
-						type="text" class="validate" required>
+						type="text" value="{{ finished.backlog_name }}" class="validate" required>
 					<label for="backlog_name"></label>
 				</div>
 			</div>
-            <div class="row">
+			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="genre" name="genre"
-						type="text" class="validate" required>
-					<label for="genre">Genre</label>
+					<select id="genre_name" name="genre_name" class="validate" required>
+						<option value="" disabled selected>Choose Genre</option>
+						{% for genre in genres %}
+						<option value="{{ genre.genre_name }}">{{ genre.genre_name }}</option>
+						{% endfor %}
+					</select>
+					
+					<label for="genre_name">Genre</label>
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="input-field col s10 offset-s1">
+					<select id="platform_name" name="platform_name" class="validate" required>
+						<option value="" disabled selected>Choose Platform</option>
+						{% for platform in platforms %}
+						<option value="{{ platform.platform_name }}">{{ platform.platform_name }}</option>
+						{% endfor %}
+					</select>
+					<label for="platform_name">Platform</label>
 				</div>
 			</div>
             <div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="developer" name="developer"
-						type="text" class="validate" required>
-					<label for="developer">Developer</label>
-				</div>
-			</div>
-            <div class="row">
-				<div class="input-field col s10 offset-s1">
-					<input id="platform" name="platform"
-						type="text" class="validate" required>
-					<label for="platform">platform</label>
+						type="text" class="validate">
+					<label for="developer">Developer (optional) </label>
 				</div>
 			</div>
             <div class="row">
@@ -50,11 +60,11 @@
 			<!-- ADD BUTTON -->
 			<div class="row center-align">
 				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
-					Review
+					Add Review
 				</button>
 				<div class="row center-align">
 					<p>
-						<a href="{{ url_for('profile', username=session['user']) }}">Done reviewing?</a>
+						<a href="{{ url_for('profile', username=session['user']) }}">Dont want to review?</a>
 					</p>
 				</div>
 			</div>
