@@ -71,5 +71,70 @@
         </div>
     </div>
     {% endif %}
+
+    <div class="col s12 m8 offset-m2 center-align">
+        <h1>
+            Here are your own reviews! 
+        </h1>
+    </div>
+    {% if review|length == 0 %}
+{% for review in reviews %}
+    <div class="col s12 m8 offset-m2">
+        <div class="card-panel fadeinleftstart">
+            <div class="row">
+                <div class="col s12 m12 l12 xl6">
+                    <img src="{{ review.photo_url }}" alt=" image">
+                </div>
+                <div class="col s12 m12 l12 xl6">
+                    <h4>{{ review.review_name }} </h4>
+                <p class="inline">
+                    <span>
+                        Platform:
+                    </span> 
+                        {{ review.platform_name }} 
+                    <span>
+                        |
+                    </span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Genre:
+                    </span>
+                        {{ review.genre_name }} 
+                    <span>
+                        |
+                    </span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Developer:
+                    </span> 
+                        {{ review.developer_name }} 
+                    <span>
+                        |
+                    </span>
+                </p>
+                <p class="inline">
+                    <span>
+                        Duration:
+                    </span> 
+                        {{ review.duration }} 
+                </p>
+                <p class="review-text">
+                    {{ review.review_text }}
+                </p>
+                <p>
+                    <span>
+                        By: 
+                    </span> 
+                    {{ review.review_by }}
+                </p>
+                <hr>
+                </div>
+            </div>
+        </div>
+    </div>
+        {% endfor %}
+        {% endif %}
 </div>
 {% endblock %}

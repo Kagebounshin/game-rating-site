@@ -188,7 +188,9 @@ a.sidenav-trigger.left {
 }
 
 .reviews-container h4,
-.reviews-container span {
+.reviews-container span,
+.profile-container h4,
+.profile-container span {
     font-weight: 700;
 }
 
@@ -196,7 +198,8 @@ a.sidenav-trigger.left {
     font-family: 'Press Start 2P', sans-serif;
 }
 
-.reviews-container img {
+.reviews-container img,
+.profile-container img {
     width: 100%;
     height: auto;
     margin-bottom: 0;

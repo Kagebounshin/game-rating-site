@@ -99,9 +99,10 @@ def profile(username):
     if session["user"]:
         backlogs = list(mongo.db.backlog.find({"added_by": username}))
         finish = list(mongo.db.finished.find({"added_by": username}))
+        reviews = list(mongo.db.reviews.find({"review_by": username}))
         return render_template(
             "profile.html", username=username,
-            backlogs=backlogs, finish=finish)
+            backlogs=backlogs, finish=finish, reviews=reviews)
     return redirect(url_for("log_in"))
 
 
