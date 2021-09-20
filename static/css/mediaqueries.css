@@ -1,3 +1,44 @@
+/* MEDIA BREAKPOINTS */
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .register-container h1 {
+        font-size: 3rem;
+    }
+
+    .hero-container h1{
+        font-size: 3rem;
+    }
+
+    .hero-container img {
+        width: 3rem;
+        height: 3rem;
+        margin-left: -3rem;
+        margin-right: -2.6rem;
+        margin-bottom: .2rem;
+    }
+
+    .about-container h1,
+    .about-container i {
+        font-size: 3rem;
+    }
+
+    .reviews-container img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .profile-container h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-container h2,
+    .reviews-container h1 {
+        font-size: 2rem;
+    }
+    
+}
+
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .hero-container h1{
@@ -83,14 +124,6 @@
         margin-left: -7rem;
         margin-right: -6.5rem;
         margin-bottom: .8rem;
-     }
-
-    .hero-container p:first-child {
-        font-size: 3rem;
-    }
-
-    .hero-container p:last-child {
-        font-size: 1rem;
     }
 
     .about-container h1 {
@@ -112,7 +145,7 @@
 
     .backlog-container p,
     .finished-container p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         margin: 0;
     }
 }

@@ -145,6 +145,7 @@ a.sidenav-trigger.left {
     margin-bottom: 0;
     padding-top: 5rem;
     padding-bottom: 5rem;
+    color: #1f1f1f;
 }
 
 .about-container {
@@ -229,47 +230,6 @@ a.sidenav-trigger.left {
 .register-container a,
 .login-container a{
     font-weight: 400;
-}
-
-/* MEDIA BREAKPOINTS */
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-    .register-container h1 {
-        font-size: 3rem;
-    }
-
-    .hero-container h1{
-        font-size: 3rem;
-    }
-
-    .hero-container img {
-        width: 3rem;
-        height: 3rem;
-        margin-left: -3rem;
-        margin-right: -2.6rem;
-        margin-bottom: .2rem;
-    }
-
-    .about-container h1,
-    .about-container i {
-        font-size: 3rem;
-    }
-
-    .reviews-container img {
-        width: 100%;
-        height: auto;
-    }
-    
-    .profile-container h1 {
-        font-size: 1.5rem;
-    }
-
-    .profile-container h2,
-    .reviews-container h1 {
-        font-size: 2rem;
-    }
-    
 }
 
 /* HOVER */
