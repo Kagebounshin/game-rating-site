@@ -301,7 +301,8 @@ a.sidenav-trigger.left {
         font-size: 2rem;
     }
 
-    .reviews-container h4 {
+    .reviews-container h4,
+    .profile-container h4 {
         margin-top: 1rem;
     }
 
@@ -351,7 +352,8 @@ a.sidenav-trigger.left {
         font-size: 2rem;
     }
 
-    .reviews-container h4 {
+    .reviews-container h4,
+    .profile-container h4 {
         margin-top: 0rem;
     }
 }
@@ -540,3 +542,6 @@ hr {
     margin-bottom: 3rem;
 }
 
+.review-inner {
+    margin: 0;
+}

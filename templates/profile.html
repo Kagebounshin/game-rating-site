@@ -81,43 +81,29 @@
 {% for review in reviews %}
     <div class="col s12 m8 offset-m2">
         <div class="card-panel fadeinleft">
-            <div class="row">
-                <div class="col s12 m12 l12 xl4">
+            <div class="row review-inner">
+                <div class="col s12 m12 l12 xl6">
                     <img src="{{ review.photo_url }}" alt=" image">
                 </div>
-                <div class="col s12 m12 l12 xl8">
+                <div class="col s12 m12 l12 xl6">
                     <h4>{{ review.review_name }} </h4>
                 <p class="inline">
-                    <span>
-                        Platform:
-                    </span> 
+                    <span>Platform:</span> 
                         {{ review.platform_name }} 
-                    <span>
-                        |
-                    </span>
+                    <span>|</span>
                 </p>
                 <p class="inline">
-                    <span>
-                        Genre:
-                    </span>
+                    <span>Genre:</span>
                         {{ review.genre_name }} 
-                    <span>
-                        |
-                    </span>
+                    <span>|</span>
                 </p>
                 <p class="inline">
-                    <span>
-                        Developer:
-                    </span> 
+                    <span>Developer:</span> 
                         {{ review.developer_name }} 
-                    <span>
-                        |
-                    </span>
+                    <span>|</span>
                 </p>
                 <p class="inline">
-                    <span>
-                        Duration:
-                    </span> 
+                    <span>Duration:</span> 
                         {{ review.duration }} 
                 </p>
                 <p class="review-text minimize">
@@ -125,18 +111,12 @@
                 </p>
                 <hr>
                 <p class="inline">
-                    <span>
-                        Rating: 
-                    </span> 
+                    <span>Rating: </span> 
                    {{ review.rating_nr }}/5
-                   <span>
-                    |
-                </span>
+                   <span>|</span>
                 </p>
                 <p class="inline">
-                    <span>
-                        By: 
-                    </span> 
+                    <span>By: </span> 
                     {{ review.review_by }}
                 </p>
                 </div>
