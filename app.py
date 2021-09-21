@@ -206,14 +206,5 @@ def add_review(finished_id):
         genres=genres, platforms=platforms, ratings=ratings)
 
 
-# def add_images():
-#     if request.method == "POST":
-#         photo = request.files['photo_url']
-#         photo_upload = cloudinary.uploader.upload(photo)
-#         review = {
-#             "photo_url": photo_upload["secure_url"]
-#         }
-
-
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)
