@@ -2,7 +2,7 @@
 {% block content %}
 
 <div class="row add-container bg-color-add">
-	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('edit_review', reviews_id=reviews._id) }}" enctype="multipart/form-data">
+	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('edit_review', review_id=review._id) }}" enctype="multipart/form-data">
 		<div class="card-panel">
 			<div class="row">
 				<div class="col s12">
@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="review_name" name="review_name"
-						type="text" value="{{ finished.backlog_name }}" class="validate" required>
+						type="text" value="{{ review.review_name }}" class="validate" required>
 					<label for="review_name"></label>
 				</div>
 			</div>
@@ -91,7 +91,7 @@
 			<!-- EDIT  BUTTON -->
 			<div class="row center-align">
 				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
-					Edit
+					Edit Review
 				</button>
 			<!-- CANCEL BUTTON -->
 				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>

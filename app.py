@@ -206,5 +206,15 @@ def add_review(finished_id):
         genres=genres, platforms=platforms, ratings=ratings)
 
 
+@app.route("/edit_review/<review_id>", methods=["GET", "POST"])
+def edit_review(review_id):
+    review = mongo.db.reviews.find_one({"_id":ObjectId(review_id)})
+    genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
+    platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
+    ratings = mongo.db.rating.find().sort("rating_nr", 1)
+    return render_template(
+        "edit_review.html", review=review, genres=genres, platforms=platforms, ratings=ratings)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"), port=int(os.environ.get("PORT")), debug=True)

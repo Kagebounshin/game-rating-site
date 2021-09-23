@@ -22,9 +22,9 @@ body {
 .bg-color-info,
 .bg-color-register,
 .bg-color-login,
-.bg-color-profile,
 .bg-color-reviews,
 .bg-color-flashes,
+.bg-color-profile 
 .bg-color-backlog,
 .bg-color-add {
     background-color: #f5f5f5;
@@ -34,7 +34,7 @@ body {
     background-color: #fff;
 }
 
-.bg-color-footer {
+.bg-color-footer{
     background-color: #1f1f1f;
 }
 
