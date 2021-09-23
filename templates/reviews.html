@@ -50,9 +50,11 @@
                 <p class="inline">
                     <span>By: </span> 
                     {{ review.review_by }}
-                    <span>|</span>
                     </p>
-                    <a href="{{ url_for('edit_review', review_id=review._id) }}">Edit</a>
+                    {% if session.user|lower == review.review_by|lower %}
+                <span>|</span>
+                <a href="{{ url_for('edit_review', review_id=review._id) }}">EDIT</a>
+                {% endif %}
                 </div>
             </div>
             

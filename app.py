@@ -208,6 +208,23 @@ def add_review(finished_id):
 
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
+    if request.method == "POST":
+        photo = request.files['photo_url']
+        photo_upload = cloudinary.uploader.upload(photo)
+        submit = {
+            "review_name": request.form.get("review_name"),
+            "genre_name": request.form.get("genre_name"),
+            "platform_name": request.form.get("platform_name"),
+            "developer_name": request.form.get("developer_name"),
+            "duration": request.form.get("duration"),
+            "review_text": request.form.get("review_text"),
+            "rating_nr": request.form.get("rating_nr"),
+            "photo_url": photo_upload["secure_url"],
+            "review_by": session["user"]
+        }
+        mongo.db.reviews.update({"_id":ObjectId(review_id)}, submit)
+        flash("Review Successfully Updated")
+
     review = mongo.db.reviews.find_one({"_id":ObjectId(review_id)})
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
