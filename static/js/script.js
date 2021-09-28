@@ -6,7 +6,7 @@ $(document).ready(function(){
 
   $('.fadeinleftstart').each(function() {
     $(this).animate({'opacity':'1', 'margin-left':'0px'}, 1000);
-  });
+});
 
   
 
@@ -45,8 +45,8 @@ jQuery(function(){
       if(t.length < 350) return;
       
       $(this).html(
-          t.slice(0,350)+'<span>... </span><a class="more"> <span>|</span> Show More</a>'+
-          '<span style="display:none;">'+ t.slice(350,t.length)+' <a class="less"> <span>|</span> Show Less</a></span>'
+          t.slice(0,350)+'<span>... </span><a class="more"> Show More</a>'+
+          '<span style="display:none;">'+ t.slice(350,t.length)+' <a class="less"> Show Less</a></span>'
       );
       
   }); 
