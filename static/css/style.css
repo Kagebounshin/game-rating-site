@@ -24,7 +24,7 @@ body {
 .bg-color-login,
 .bg-color-reviews,
 .bg-color-flashes,
-.bg-color-profile 
+.bg-color-profile, 
 .bg-color-backlog,
 .bg-color-add {
     background-color: #f5f5f5;
@@ -42,7 +42,7 @@ body {
     background-color: #fff;
 }
 
-/* NAVBAR */
+/* ----------------------NAVBAR--------------------- */
 
 nav.nav-extended {
     height: auto;
@@ -123,7 +123,7 @@ a.sidenav-trigger.left {
     margin-top: 2rem;
 }
 
-/* CONTAINERS */
+/* -----------------------CONTAINERS------------------------- */
 
 .hero-container {
     color: #1f1f1f;
@@ -238,7 +238,7 @@ a.sidenav-trigger.left {
     padding-right: 1rem;
 }
 
-/* MEDIA BREAKPOINTS */
+/* --------------------MEDIA BREAKPOINTS---------------------- */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -269,7 +269,7 @@ a.sidenav-trigger.left {
     }
     
     .profile-container h1 {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .profile-container h2,
@@ -279,6 +279,12 @@ a.sidenav-trigger.left {
 
     .about-container i:nth-child(1) {
     padding-top: 2rem;
+    }
+
+    .backlog-container p,
+    .finished-container p {
+        font-size: .9rem;
+        margin: 0;
     }
 }
 
@@ -306,10 +312,14 @@ a.sidenav-trigger.left {
         margin-top: 1rem;
     }
 
+    .profile-container h1 {
+        font-size: 1.5rem;
+    }
+
+
     .backlog p,
     .finished-backlog p {
-    font-size: 1.5rem;
-    letter-spacing: .2rem;
+    font-size: .7rem;
     margin: 0rem;
     }
 }
@@ -331,7 +341,7 @@ a.sidenav-trigger.left {
     .hero-container p {
         font-size: 2rem;
     }
-
+    
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -355,6 +365,12 @@ a.sidenav-trigger.left {
     .reviews-container h4,
     .profile-container h4 {
         margin-top: 0rem;
+    }
+
+    .backlog-container p,
+    .finished-container p {
+        font-size: 1rem;
+        margin: 0;
     }
 }
 
@@ -391,16 +407,15 @@ a.sidenav-trigger.left {
         font-size: 2.5rem;
     }
 
-    .backlog-container p,
-    .finished-container p {
-        font-size: 1.3rem;
-        margin: 0;
+    .finished-backlog,
+    .backlog {
+        min-height: 60vh;
     }
 }
 
 
 
-/* HOVER */
+/* --------------------HOVER----------------------- */
 
 .info-container a:last-child:hover,
 .footer-container a:hover,
@@ -425,7 +440,14 @@ i.fas.fa-times:hover {
     transition: 200ms ease-in-out;
 }
 
-/* ADDITIONAL STYLING */
+.backlog a:first-child:hover,
+.finished-backlog a:hover {
+    color: #ffcc00;
+    transition: 300ms ease-in-out;
+    text-decoration: underline;
+}
+
+/* ----------------------ADDITIONAL STYLING-------------------------- */
 
 .btn, .btn-large, .btn-small {
     text-decoration: none;
@@ -494,13 +516,13 @@ hr {
     margin-bottom:0;
 }
 
-.hr-backlog {
+/* .hr-backlog {
     border-bottom: 2px solid #f5f5f5;
     width: 100%;
     margin: 0 auto;
     margin-top:1rem;
     margin-bottom:0;
-}
+} */
 
 .hr-review {
     border-bottom: 2px solid #f5f5f5;

@@ -4,6 +4,7 @@
         <div class="col s12 m10 offset-m1 l8 offset-l2">
             <h1 class="center-align capitilize">
                 {{ username }}'s Games
+                <hr>
             </h1>
         </div>
 <!-- Show this if you havn't added to your list -->
@@ -21,8 +22,15 @@
     {% endif %}
 <!-- Show this if you have added to your list -->
     {% if backlogs|length != 0 %}
-        <div class="row backlog-container center-align">
-            <div class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="backlog-container center-align">
+            <div class="col s12 m8 offset-m2 l8 offset-l2 xl4 offset-xl2">
+                <div class="row">
+                    <div class="col s12">
+                        <h1 class="center-align">
+                            Backlog
+                        </h1>      
+                    </div>
+                </div>
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
                         <p class="capitilize games">
@@ -35,7 +43,6 @@
                                 <i class="fas fa-check "></i>
                             </a>
                         </p>
-                        <hr class="hr-backlog">
                         <br>
 
                     {% endfor %}
@@ -44,10 +51,23 @@
             </div>
         </div>
     {% endif %}
+<!-- Show this if you havn't finished any games -->
+    {% if finish|length == 0 %}
+        <div class="row backlog-container bg-color-backlog center-align">
+            <div class="col s12 m10 offset-m1 l8 offset-l2">
+                <p>
+                    You haven't finished any games yet!
+                </p>
+                <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-large">
+                    Add to Finished
+                </a>
+            </div>
+        </div>
+    {% endif %}
 <!-- Show this if you have finshed a game -->
     {% if finish|length != 0 %}
-    <div class="row finished-container center-align">
-        <div class="col s12 m8 offset-m2 l6 offset-l3">
+    <div class="finished-container center-align">
+        <div class="col s12 m8 offset-m2 l8 offset-l2 xl4">
             <div class="row">
                 <div class="col s12">
                     <h1 class="center-align">
@@ -55,7 +75,7 @@
                     </h1>      
                 </div>
             </div>
-            <div class="card-panel left-align finished-backlog ">
+            <div class="card-panel left-align finished-backlog">
                 {% for finished in finish %}
                     <p class="capitilize games inline">
                         <a class ="hover-effect" href="{{ url_for('add_review',  finished_id=finished._id) }}">
@@ -74,7 +94,7 @@
 
     <div class="col s12 m8 offset-m2 center-align">
         <h1>
-            Here are your own reviews! 
+            Here are your Reviews! 
         </h1>
     </div>
     {% if review|length == 0 %}
