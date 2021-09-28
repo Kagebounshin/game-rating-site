@@ -150,12 +150,6 @@ def delete_backlog(backlog_id):
     flash("Game Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
-# WHEN FINSHED I WANT TO ADD
-# THIS TO ANOTHER COLLECTION,
-# AND THE REMOVE IT FROM THE CURRENT ONE
-# IT GET REMOVED, BUT NOT INSERTED
-# TO THE OTHER COLLECTION
-
 
 @app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
@@ -237,7 +231,8 @@ def edit_review(review_id):
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
     ratings = mongo.db.rating.find().sort("rating_nr", 1)
     return render_template(
-        "edit_review.html", review=review, genres=genres, platforms=platforms, ratings=ratings)
+        "edit_review.html", review=review, genres=genres,
+        platforms=platforms, ratings=ratings)
 
 
 @app.route("/delete_review/<review_id>")
