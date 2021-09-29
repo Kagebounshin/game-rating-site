@@ -35,6 +35,7 @@ $(document).ready(function(){
   });
 });
 
+// http://jsfiddle.net/iambriansreed/bjdSF/
 
 jQuery(function(){
 
@@ -42,11 +43,11 @@ jQuery(function(){
   
   minimized_elements.each(function(){    
       var t = $(this).text();        
-      if(t.length < 350) return;
+      if(t.length < 500) return;
       
       $(this).html(
-          t.slice(0,350)+'<span>... </span><a class="more"> Show More</a>'+
-          '<span style="display:none;">'+ t.slice(350,t.length)+' <a class="less"> Show Less</a></span>'
+          t.slice(0,500)+'<span>... </span><a class="more"> Show More</a>'+
+          '<span style="display:none;">'+ t.slice(500,t.length)+' <a class="less"> Show Less</a></span>'
       );
       
   }); 
