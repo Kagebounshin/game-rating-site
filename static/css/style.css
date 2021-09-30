@@ -20,7 +20,7 @@ body {
 
 main {
     flex: 1 0 auto;
-  }
+}
 
 /* BACKGROUND COLORS */
 
@@ -238,14 +238,14 @@ a.sidenav-trigger.left {
 
     .hero-container h1,
     .register-container h1 {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .hero-container img {
-        width: 3rem;
-        height: 3rem;
-        margin-left: -3rem;
-        margin-right: -2.6rem;
+        width: 2rem;
+        height: 2rem;
+        margin-left: -2rem;
+        margin-right: -1.7rem;
         margin-bottom: .2rem;
     }
 
@@ -312,15 +312,15 @@ a.sidenav-trigger.left {
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .hero-container h1{
-        font-size: 2.5rem;
+        font-size: 5rem;
     }
 
     .hero-container img {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin-left: -2.5rem;
-        margin-right: -2rem;
-        margin-bottom: .2rem;
+        width: 5rem;
+        height: 5rem;
+        margin-left: -5rem;
+        margin-right: -4.3rem;
+        margin-bottom: .6rem;
     }
 
     .about-container h1,
@@ -336,7 +336,6 @@ a.sidenav-trigger.left {
     .profile-container h1 {
         font-size: 1.5rem;
     }
-
 
     .backlog p,
     .finished-backlog p {
@@ -360,18 +359,6 @@ a.sidenav-trigger.left {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-
-    .hero-container h1{
-        font-size: 5rem;
-    }
-
-    .hero-container img {
-        width: 5rem;
-        height: 5rem;
-        margin-left: -5rem;
-        margin-right: -4.3rem;
-        margin-bottom: .6rem;
-     }
 
     .hero-container p {
         font-size: 2rem;
@@ -500,6 +487,10 @@ i.fas.fa-times:hover {
     text-decoration: underline;
 }
 
+.btn:hover {
+    background-color: #000000ab;
+}
+
 /* ----------------------------INPUT FIELDS-------------------------- */
 
 .input-field label {
@@ -533,10 +524,6 @@ i.fas.fa-times:hover {
     transition: background-color .2s ease-out;
     cursor: pointer;
     font-weight: 600;
-}
-
-.btn:hover {
-    background-color: #000000ab;
 }
 
 .flashes {
