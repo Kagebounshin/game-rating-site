@@ -328,6 +328,12 @@ a.sidenav-trigger.left {
         margin: 0;
     }
 
+    .login-container button,
+    .register-container button {
+        width: 80%;
+        margin-top: 1rem;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -374,6 +380,12 @@ a.sidenav-trigger.left {
     .reviews-container form a {
         margin-top: 2rem;
         float: right;
+    }
+
+    .login-container button,
+    .register-container button {
+        width: 80%;
+        margin-top: 1rem;
     }
 
 }
