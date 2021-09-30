@@ -301,6 +301,12 @@ a.sidenav-trigger.left {
         margin-bottom: 1rem;
         max-width: 90%;
     }
+
+    .reviews-container form button,
+    .reviews-container form a  {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -337,6 +343,19 @@ a.sidenav-trigger.left {
     font-size: .7rem;
     margin: 0rem;
     }
+
+    .reviews-container form button {
+        margin-top: 2rem;
+        float: right;
+        margin-left: .2rem;
+    }
+
+    .reviews-container form a {
+        margin-top: 2rem;
+        float: right;
+        
+    }
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -368,6 +387,19 @@ a.sidenav-trigger.left {
         padding-bottom:5rem;
         margin-bottom: 0;
     }
+
+    .reviews-container form button {
+        margin-top: 2rem;
+        float: right;
+        margin-left: .5rem;
+    }
+
+    .reviews-container form a {
+        margin-top: 2rem;
+        float: right;
+        
+    }
+
     
 }
 
@@ -399,6 +431,18 @@ a.sidenav-trigger.left {
     .finished-container p {
         font-size: 1rem;
         margin: 0;
+    }
+
+    .reviews-container form button {
+        margin-top: 2rem;
+        float: right;
+        margin-left: .5rem;
+    }
+
+    .reviews-container form a {
+        margin-top: 2rem;
+        float: right;
+        
     }
 }
 
@@ -438,6 +482,21 @@ a.sidenav-trigger.left {
     .finished-backlog,
     .backlog {
         min-height: 60vh;
+    }
+
+    .reviews-container form button {
+        position: relative;
+        display: inline-block;
+        margin-top: 2rem;
+        float: right;
+    }
+
+    .reviews-container form a {
+        position: relative;
+        display: inline-block;
+        margin-top: 2rem;
+        float: right;
+        margin-left: .5rem;
     }
 }
 
