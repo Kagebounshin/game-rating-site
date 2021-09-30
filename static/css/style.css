@@ -280,7 +280,6 @@ a.sidenav-trigger.left {
 
     .register-container,
     .login-container,
-    .profile-container,
     .add-container {
         min-height: 80vh;
         padding-top: 5rem;
@@ -288,7 +287,8 @@ a.sidenav-trigger.left {
         margin-bottom: 0;
     }
     
-    .reviews-container {
+    .reviews-container,
+    .profile-container {
         padding-top: 2rem;
         padding-bottom: 2rem;
     }
@@ -307,6 +307,13 @@ a.sidenav-trigger.left {
         width: 100%;
         margin-bottom: 1rem;
     }
+
+    .finished-container .btn, 
+    .backlog-container .btn {
+        width: 100%;
+        margin: 0;
+    }
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -328,9 +335,10 @@ a.sidenav-trigger.left {
         font-size: 2rem;
     }
 
-    .reviews-container h4,
-    .profile-container h4 {
-        margin-top: 1rem;
+    .reviews-container,
+    .profile-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     .profile-container h1 {
@@ -352,7 +360,6 @@ a.sidenav-trigger.left {
     .reviews-container form a {
         margin-top: 2rem;
         float: right;
-        
     }
 
 }
@@ -449,6 +456,13 @@ a.sidenav-trigger.left {
     .finished-backlog,
     .backlog {
         min-height: 60vh;
+    }
+
+    .finished-container .btn, 
+    .backlog-container .btn {
+        width: 100%;
+        margin: 0;
+        margin-top: .5rem;
     }
 }
 
