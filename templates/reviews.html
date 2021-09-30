@@ -2,12 +2,12 @@
 {% block content %}
 
 <div class="row reviews-container bg-color-reviews">
-    <div class="col s12 m8 offset-m2 center-align">
+    <div class="col s12 m8 offset-m2 center-align header-reviews">
         <h1>
             Reviews
         </h1>
-        <p class="mb">Here are the latest user reviews</p>
-        <hr class="mb">
+        <p>Here are the latest user reviews</p>
+        
     </div>
 
         <form action="{{ url_for('search') }}" method="post" class="col s12">
@@ -17,10 +17,10 @@
                     <label for="query">Search Reviews</label>
                 </div>
                 <div class="col s12 m2">
-                    <button type="submit" class="btn waves-effect waves-light btn-large">
+                    <button type="submit" class="btn waves-effect waves-light btn-small center-align">
                         <i class="fas fa-search"></i>
                     </button>
-                    <a href="{{ url_for('reviews') }}" class="btn waves-effect waves-light btn-large">Reset</a>
+                    <a href="{{ url_for('reviews') }}" class="btn waves-effect waves-light btn-small">Reset</a>
                 </div>
             </div>
         </form>

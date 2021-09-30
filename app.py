@@ -223,7 +223,7 @@ def edit_review(review_id):
             "photo_url": photo_upload["secure_url"],
             "review_by": session["user"]
         }
-        mongo.db.reviews.update({"_id":ObjectId(review_id)}, submit)
+        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
 
     review = mongo.db.reviews.find_one({"_id":ObjectId(review_id)})

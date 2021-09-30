@@ -170,17 +170,6 @@ a.sidenav-trigger.left {
     margin-top: -.1rem;
 }
 
-.register-container,
-.login-container, 
-.reviews-container,
-.profile-container,
-.add-container {
-    min-height: 80vh;
-    padding-top: 5rem;
-    padding-bottom:5rem;
-    margin-bottom: 0;
-}
-
 .backlog-container,
 .finished-container {
     padding-bottom: 5rem;
@@ -204,7 +193,8 @@ a.sidenav-trigger.left {
     font-weight: 700;
 }
 
-.reviews-container h1 {
+.reviews-container h1,
+.profile-container h1:first-child {
     font-family: 'Press Start 2P', sans-serif;
 }
 
@@ -222,10 +212,6 @@ a.sidenav-trigger.left {
 .backlog-container a,
 .finished-container a {
     margin-top: 3rem;
-}
-
-.profile-container h1:first-child {
-    font-family: 'Press Start 2P', sans-serif;
 }
 
 .info-container a:last-child,
@@ -249,11 +235,9 @@ a.sidenav-trigger.left {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    .register-container h1 {
-        font-size: 3rem;
-    }
 
-    .hero-container h1{
+    .hero-container h1,
+    .register-container h1 {
         font-size: 3rem;
     }
 
@@ -292,6 +276,30 @@ a.sidenav-trigger.left {
     .finished-container p {
         font-size: .9rem;
         margin: 0;
+    }
+
+    .register-container,
+    .login-container,
+    .profile-container,
+    .add-container {
+        min-height: 80vh;
+        padding-top: 5rem;
+        padding-bottom:5rem;
+        margin-bottom: 0;
+    }
+    
+    .reviews-container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .header-reviews p {
+        padding-bottom: 2rem;
+    }
+
+    .header-reviews hr {
+        margin-bottom: 1rem;
+        max-width: 90%;
     }
 }
 
@@ -333,6 +341,7 @@ a.sidenav-trigger.left {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
+
     .hero-container h1{
         font-size: 5rem;
     }
@@ -348,12 +357,24 @@ a.sidenav-trigger.left {
     .hero-container p {
         font-size: 2rem;
     }
+
+    .register-container,
+    .login-container, 
+    .reviews-container,
+    .profile-container,
+    .add-container {
+        min-height: 80vh;
+        padding-top: 5rem;
+        padding-bottom:5rem;
+        margin-bottom: 0;
+    }
     
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .hero-container h1{
+
+    .hero-container h1 {
         font-size: 6rem;
     }
 
