@@ -389,17 +389,8 @@ a.sidenav-trigger.left {
     }
 
     .reviews-container form button {
-        margin-top: 2rem;
-        float: right;
         margin-left: .5rem;
     }
-
-    .reviews-container form a {
-        margin-top: 2rem;
-        float: right;
-        
-    }
-
     
 }
 
@@ -433,17 +424,6 @@ a.sidenav-trigger.left {
         margin: 0;
     }
 
-    .reviews-container form button {
-        margin-top: 2rem;
-        float: right;
-        margin-left: .5rem;
-    }
-
-    .reviews-container form a {
-        margin-top: 2rem;
-        float: right;
-        
-    }
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -482,21 +462,6 @@ a.sidenav-trigger.left {
     .finished-backlog,
     .backlog {
         min-height: 60vh;
-    }
-
-    .reviews-container form button {
-        position: relative;
-        display: inline-block;
-        margin-top: 2rem;
-        float: right;
-    }
-
-    .reviews-container form a {
-        position: relative;
-        display: inline-block;
-        margin-top: 2rem;
-        float: right;
-        margin-left: .5rem;
     }
 }
 
