@@ -11,7 +11,7 @@
 					</h1>
 				</div>
 			</div>
-			<!-- GAME TITLE FOR BACKLOG -->
+			<!-- GAME TITLE FOR REVIEW -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="review_name" name="review_name"
@@ -19,6 +19,7 @@
 					<label for="review_name"></label>
 				</div>
 			</div>
+			<!-- GENRE -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<select id="genre_name" name="genre_name" class="validate" required>
@@ -31,11 +32,10 @@
 							{% endif %}
 						{% endfor %}
 					</select>
-					
 					<label for="genre_name">Genre</label>
-					
 				</div>
 			</div>
+			<!-- PLATFORM -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<select id="platform_name" name="platform_name" class="validate" required>
@@ -51,6 +51,7 @@
 					<label for="platform_name">Platform</label>
 				</div>
 			</div>
+			<!-- DEVELOPER -->
             <div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="developer_name" name="developer_name"
@@ -58,6 +59,7 @@
 					<label for="developer_name">Developer</label>
 				</div>
 			</div>
+			<!-- DURATION -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="duration" name="duration"
@@ -65,6 +67,7 @@
 					<label for="duration">Duration</label>
 				</div>
 			</div>
+			<!-- REVIEW TEXT -->
             <div class="row">
 				<div class="input-field col s10 offset-s1">
 					<textarea id="review_text" name="review_text" 	type="text" class="materialize-textarea validate" required>
@@ -73,6 +76,7 @@
 					<label for="review_text">Review</label>
 				</div>
 			</div>
+			<!-- RATING -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<select id="rating_nr" name="rating_nr" class="validate" required>
@@ -88,8 +92,8 @@
 					<label for="rating_nr">Rating 1-5</label>
 				</div>
 			</div>
+			<!-- IMAGE UPLOAD -->
 			<div class="row">
-				
 				<div class="file-field input-field col s10 offset-s1">
 					<div class="btn">
 						<span>Upload Images</span>
@@ -98,9 +102,8 @@
 					<div class="file-path-wrapper">
 						<input class="file-path validate" type="text">
 					</div>
-		
+				</div>
 			</div>
-		</div>
 			<!-- EDIT  BUTTON -->
 			<div class="row center-align">
 				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
