@@ -9,12 +9,12 @@
         </div>
 <!-- Show this if you havn't added to your list -->
     {% if backlogs|length == 0 %}
-        <div class="row backlog-container bg-color-backlog center-align">
+        <div class="row bg-color-backlog center-align">
             <div class="col s12 m10 offset-m1 l8 offset-l2">
                 <p>
                     You dont have any games in your backlog!
                 </p>
-                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-large">
+                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">
                     Add to Backlog
                 </a>
             </div>
@@ -53,12 +53,12 @@
     {% endif %}
 <!-- Show this if you havn't finished any games -->
     {% if finish|length == 0 %}
-        <div class="row backlog-container bg-color-backlog center-align">
+        <div class="row bg-color-backlog center-align">
             <div class="col s12 m10 offset-m1 l8 offset-l2">
                 <p>
                     You haven't finished any games yet!
                 </p>
-                <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-large">
+                <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-small">
                     Add to Finished
                 </a>
             </div>
@@ -92,12 +92,23 @@
     </div>
     {% endif %}
 
+    {% if review|length == 0 %}
+    <div class="row">
+    <div class="col s12 m8 offset-m2 center-align">
+        <h1>
+            Your Reviews
+        </h1>
+        <p>You haven't reviewed any games yet.</p>
+    </div>
+</div>
+{% endif %}
+
+    {% if review|length != 0 %}
     <div class="col s12 m8 offset-m2 center-align">
         <h1>
             Here are your Reviews! 
         </h1>
     </div>
-    {% if review|length == 0 %}
 {% for review in reviews %}
     <div class="col s12 m8 offset-m2">
         <div class="card-panel fadeinleft">
