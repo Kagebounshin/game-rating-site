@@ -334,6 +334,13 @@ a.sidenav-trigger.left {
         margin-top: 1rem;
     }
 
+    .log-pending-container p,
+    .fin-pending-container p,
+    .rev-pending-container h1 {
+        padding-top: 5rem;
+    }
+
+
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -399,6 +406,12 @@ a.sidenav-trigger.left {
         padding-top: 5rem;
         padding-bottom:5rem;
         margin-bottom: 0;
+    }
+
+    .log-pending-container p,
+    .fin-pending-container p,
+    .rev-pending-container h1 {
+        padding-top: 5rem;
     }
 
 }
@@ -488,12 +501,10 @@ a.sidenav-trigger.left {
         margin-left: 2rem;
     }
 
-    .profile-container h1 {
-        
-    }
-
+    .profile-container h1,
     .backlog-container h1,
-    .finished-container h1 {
+    .finished-container h1,
+    .rev-pending-container h1 {
         font-size: 2.5rem;
     }
 
@@ -508,6 +519,13 @@ a.sidenav-trigger.left {
         margin: 0;
         margin-top: .5rem;
     }
+
+    .log-pending-container p,
+    .fin-pending-container p,
+    .rev-pending-container h1{
+        padding-top: 7.5rem;
+    }
+
 }
 
 

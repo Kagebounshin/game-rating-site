@@ -9,8 +9,8 @@
         </div>
 <!-- Show this if you havn't added to your list -->
     {% if backlogs|length == 0 %}
-        <div class="row bg-color-backlog center-align">
-            <div class="col s12 m10 offset-m1 l8 offset-l2">
+        <div class="log-pending-container bg-color-backlog center-align">
+            <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
                 <p>
                     You dont have any games in your backlog!
                 </p>
@@ -53,8 +53,8 @@
     {% endif %}
 <!-- Show this if you havn't finished any games -->
     {% if finish|length == 0 %}
-        <div class="row bg-color-backlog center-align">
-            <div class="col s12 m10 offset-m1 l8 offset-l2">
+        <div class="fin-pending-container bg-color-backlog center-align">
+            <div class="col s12 m10 offset-m1 l8 offset-l2 xl4">
                 <p>
                     You haven't finished any games yet!
                 </p>
@@ -93,7 +93,7 @@
     {% endif %}
 
     {% if review|length == 0 %}
-    <div class="row">
+    <div class="row rev-pending-container">
     <div class="col s12 m8 offset-m2 center-align">
         <h1>
             Your Reviews
