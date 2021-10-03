@@ -1,39 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
-
+{% for review in reviews %}
 <div class="row reviews-container bg-color-reviews">
     <div class="col s12 m8 offset-m2 center-align header-reviews">
         <h1>
-            Reviews
+            {{ review.review_name }}
         </h1>
-        <p>Here are the latest user reviews</p>
-        
     </div>
-
-        <form action="{{ url_for('search') }}" method="post" class="col s12">
-            <div class="row">
-                <div class="input-field col s12 m5 offset-m2 l6 offset-l2">
-                    <input type="text" name="query" id="query" minlength="2" class="validate" required>
-                    <label for="query">Search Reviews</label>
-                </div>
-                <div class="col s12 m3 l2">
-                    <button type="submit" class="btn waves-effect waves-light btn-small">
-                        <i class="fas fa-search"></i>
-                    </button>
-                    <a href="{{ url_for('reviews') }}" class="btn waves-effect waves-light btn-small">Reset</a>
-                </div>
-            </div>
-        </form>
-{% if reviews|length > 0 %}
-{% for review in reviews %}
-    <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <div class="row review-inner">
-                <div class="col s12 m12 l12 xl6">
                     <img src="{{ review.photo_url }}" alt=" image">
                 </div>
                 <div class="col s12 m12 l12 xl6">
-                    <a href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
+                    <h4>{{ review.review_name }} </h4>
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 
@@ -70,18 +47,6 @@
             </div>
         </div>
     </div>
-        {% endfor %}
-        {% else %}
-
-        <div class="row reviews-container bg-color-reviews">
-            <div class="col s12 m8 offset-m2 center-align">
-                <h4 class="center-align">
-                    No Results Found
-                </h4>
-            </div>
-        </div>
-        
-        {% endif %}
 </div>
-
+{% endfor %}
 {% endblock %}

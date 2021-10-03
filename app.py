@@ -38,6 +38,12 @@ def reviews():
     return render_template("reviews.html", reviews=reviews)
 
 
+@app.route("/full_review/<review_id>")
+def full_review(review_id):
+    reviews = mongo.db.reviews.find({"_id": ObjectId(review_id)})
+    return render_template("full_review.html", reviews=reviews)
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
