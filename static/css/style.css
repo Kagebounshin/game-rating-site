@@ -40,7 +40,8 @@ main {
     background-color: #fff;
 }
 
-.bg-color-footer{
+.bg-color-footer,
+.bg-color-fullreviews{
     background-color: #1f1f1f;
 }
 
@@ -189,9 +190,12 @@ a.sidenav-trigger.left {
 .reviews-container span,
 .profile-container h4,
 .profile-container span,
-.review-inner a {
+.review-inner a,
+.fullreview-container span,
+.fullreview-container h1 {
     font-weight: 700;
 }
+
 
 .reviews-container h1,
 .profile-container h1:first-child {
@@ -207,6 +211,27 @@ a.sidenav-trigger.left {
     width: 100%;
     height: auto;
     margin-bottom: 0;
+}
+
+.fullreview-container {
+    color: #7b7b7b;
+    margin-bottom: 0;
+    padding-bottom: 5rem;
+    padding-top: 5rem;
+}
+
+.fullreview-container img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.fullreview-container .review_text {
+    font-size: 2rem;
+}
+
+.fullreview-container .inline {
+    font-size: 2rem;
 }
 
 .backlog-container a,
@@ -288,7 +313,6 @@ a.sidenav-trigger.left {
         margin: 0;
     }
 
-
     .backlog i {
         margin-top: -.2rem;
     }
@@ -349,6 +373,15 @@ a.sidenav-trigger.left {
     .fin-pending-container p,
     .rev-pending-container h1 {
         padding-top: 5rem;
+    }
+
+    .fullreview-container .review_text,
+    .fullreview-container .inline {
+        font-size: 1rem;
+    }
+
+    .fullreview-container h1 {
+        font-size: 2rem;
     }
 }
 
@@ -659,6 +692,7 @@ a {
     width: 100%;
     margin: 0 auto;
     margin-bottom:0;
+    margin-top: 2rem;
 }
 
 #copyright {
@@ -686,18 +720,10 @@ a {
     text-transform: uppercase;
 }
 
-.review-text {
-    text-align: justify;
-}
-
 .mb {
     margin-bottom: 3rem;
 }
 
 .review-inner {
     margin: 0;
-}
-
-.review-text span {
-    font-weight: 400;
 }

@@ -1,16 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
 {% for review in reviews %}
-<div class="row reviews-container bg-color-reviews">
-    <div class="col s12 m8 offset-m2 center-align header-reviews">
+<div class="row fullreview-container bg-color-fullreviews center-align">
+    <div class="col s12 s12 m8 offset-m2">
+        <img src="{{ review.photo_url }}" alt=" image">
+    </div>
+    <div class="col s12 s12 m8 offset-m2">
         <h1>
             {{ review.review_name }}
         </h1>
     </div>
-                    <img src="{{ review.photo_url }}" alt=" image">
-                </div>
-                <div class="col s12 m12 l12 xl6">
-                    <h4>{{ review.review_name }} </h4>
+
+                <div class="col s12 s12 m8 offset-m2">
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 
@@ -30,10 +31,10 @@
                     <span>Duration:</span> 
                         {{ review.duration }} 
                 </p>
-                <p class="review-text minimize">
+                <hr class="hr-review">
+                <p class="review_text">
                     {{ review.review_text }}
                 </p>
-                <hr>
                 <p class="inline">
                     <span>Rating: </span> 
                    {{ review.rating_nr }}/5
@@ -43,10 +44,9 @@
                     <span>By: </span> 
                     {{ review.review_by }}
                     </p>
-                </div>
-            </div>
-        </div>
-    </div>
+                    <hr class="hr-review">
+</div>
+
 </div>
 {% endfor %}
 {% endblock %}
