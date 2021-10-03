@@ -14,9 +14,17 @@
 			<!-- GAME TITLE FOR REVIEW -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="review_name" name="review_name"
+					<!-- GAME TITLE FOR REVIEW --><input id="review_name" name="review_name"
 						type="text" value="{{ finished.backlog_name }}" class="validate" required>
 					<label for="review_name"></label>
+				</div>
+			</div>
+			<!-- CAPTURING TEXT -->
+			<div class="row">
+				<div class="input-field col s10 offset-s1">
+					<input id="review_capture" name="review_capture"
+						type="text" class="validate" data-length="30" required>
+					<label for="review_capture"> Capturing Text</label>
 				</div>
 			</div>
 			<!-- GENRE -->

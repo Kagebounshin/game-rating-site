@@ -3,9 +3,11 @@ $(document).ready(function(){
   $('select').formSelect();
   // Copyright year
   $('.copyright').text(new Date().getFullYear());
+  $('input#review_capture').characterCounter();
 
   $('.fadeinleftstart').each(function() {
     $(this).animate({'opacity':'1', 'margin-left':'0px'}, 1000);
+  
 });
 
   
