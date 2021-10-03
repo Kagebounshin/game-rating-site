@@ -273,7 +273,8 @@ a.sidenav-trigger.left {
     }
 
     .backlog-container h1,
-    .finished-container h1 {
+    .finished-container h1,
+    .add-container h1 {
         font-size: 2rem;
     }
 
@@ -328,8 +329,12 @@ a.sidenav-trigger.left {
         margin: 0;
     }
 
+   
+    
+
     .login-container button,
-    .register-container button {
+    .register-container button,
+    .add-container button {
         width: 80%;
         margin-top: 1rem;
     }
@@ -339,8 +344,6 @@ a.sidenav-trigger.left {
     .rev-pending-container h1 {
         padding-top: 5rem;
     }
-
-
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
@@ -390,7 +393,8 @@ a.sidenav-trigger.left {
     }
 
     .login-container button,
-    .register-container button {
+    .register-container button,
+    .add-container button  {
         width: 80%;
         margin-top: 1rem;
     }
@@ -412,6 +416,10 @@ a.sidenav-trigger.left {
     .fin-pending-container p,
     .rev-pending-container h1 {
         padding-top: 5rem;
+    }
+
+    .add-container h1 {
+        font-size: 2.5rem;
     }
 
 }
