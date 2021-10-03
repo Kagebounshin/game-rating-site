@@ -210,6 +210,8 @@ def add_review(finished_id):
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
+        photo = request.files['photo_url']
+        photo_upload = cloudinary.uploader.upload(photo)
         submit = {
             "review_name": request.form.get("review_name"),
             "genre_name": request.form.get("genre_name"),
@@ -218,12 +220,13 @@ def edit_review(review_id):
             "duration": request.form.get("duration"),
             "review_text": request.form.get("review_text"),
             "rating_nr": request.form.get("rating_nr"),
+            "photo_url": photo_upload["secure_url"],
             "review_by": session["user"]
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
 
-    review = mongo.db.reviews.find_one({"_id":ObjectId(review_id)})
+    review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
     ratings = mongo.db.rating.find().sort("rating_nr", 1)
@@ -232,24 +235,9 @@ def edit_review(review_id):
         platforms=platforms, ratings=ratings)
 
 
-@app.route("/edit_review_img/<review_id>", methods=["GET", "POST"])
-def edit_review_img(review_id):
-    if request.method == "POST":
-        photo = request.files['photo_url']
-        photo_upload = cloudinary.uploader.upload(photo)
-        edit = {
-            "photo_url": photo_upload["secure_url"],
-        }
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, edit)
-        flash("Images Successfully Updated")
-        return redirect(url_for("profile", username=session["user"]))
-
-    return render_template("edit_review_img.html")
-
-
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
-    mongo.db.reviews.remove({"_id":ObjectId(review_id)})
+    mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
 
