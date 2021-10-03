@@ -105,10 +105,10 @@
 				<div class="file-field input-field col s10 offset-s1">
 					<div class="btn waves-effect waves-light btn-small">
 						<span>Upload Images</span>
-						<input type="file" accept="image/*" name="photo_url" value="{{ review.photo_url }}" id="photo_url">
+						<input type="file" accept="image/*" name="photo_url" id="photo_url">
 					</div>
 					<div class="file-path-wrapper">
-						<input class="file-path validate" type="text">
+						<input value="{{ review.photo_url }}"  class="file-path validate" type="text">
 					</div>
 				</div>
 			</div>

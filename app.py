@@ -184,6 +184,7 @@ def add_review(finished_id):
         photo_upload = cloudinary.uploader.upload(photo)
         review = {
             "review_name": request.form.get("review_name"),
+            "review_capture": request.form.get("review_capture"),
             "genre_name": request.form.get("genre_name"),
             "platform_name": request.form.get("platform_name"),
             "developer_name": request.form.get("developer_name"),
@@ -214,6 +215,7 @@ def edit_review(review_id):
         photo_upload = cloudinary.uploader.upload(photo)
         submit = {
             "review_name": request.form.get("review_name"),
+            "review_capture": request.form.get("review_capture"),
             "genre_name": request.form.get("genre_name"),
             "platform_name": request.form.get("platform_name"),
             "developer_name": request.form.get("developer_name"),
@@ -225,7 +227,7 @@ def edit_review(review_id):
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
-
+    # ERROR WITH IMAGE, MAKE SO VAULE APEARS
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)
