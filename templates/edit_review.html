@@ -95,7 +95,7 @@
 			<!-- IMAGE UPLOAD -->
 			<div class="row">
 				<div class="file-field input-field col s10 offset-s1">
-					<div class="btn">
+					<div class="btn waves-effect waves-light btn-small">
 						<span>Upload Images</span>
 						<input type="file" accept="image/*" name="photo_url" value="{{ review.photo_url }}" id="photo_url">
 					</div>
@@ -106,11 +106,11 @@
 			</div>
 			<!-- EDIT  BUTTON -->
 			<div class="row center-align">
-				<button type="submit" class="btn waves-effect waves-light btn-large s10 offset-s1">
+				<button type="submit" class="btn waves-effect waves-light btn-small s10 offset-s1">
 					Edit Review
 				</button>
 			<!-- CANCEL BUTTON -->
-				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-large s10 offset-s1">Cancel</a>
+				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-small s10 offset-s1">Cancel</a>
 			</div>
 		</div>
 	</form>
