@@ -21,13 +21,17 @@
 			</div>
 			<!-- EDIT  BUTTON -->
 			{% if session.user|lower == backlog.added_by|lower %}
+			
 			<div class="row center-align">
 				<button type="submit" class="btn waves-effect waves-light btn-small s10 offset-s1">
 					Edit
 				</button>
-			<!-- CANCEL BUTTON -->
-				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-small s10 offset-s1">Cancel</a>
 			</div>
+			<!-- CANCEL BUTTON -->
+			<div class="row center-align">
+				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-small s10 offset-s1 edit-cancel">Cancel</a>
+			</div>
+		</div>
 			{% endif %}
 		</div>
 	</form>

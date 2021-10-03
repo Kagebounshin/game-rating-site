@@ -329,14 +329,20 @@ a.sidenav-trigger.left {
         margin: 0;
     }
 
-   
-    
-
     .login-container button,
     .register-container button,
-    .add-container button {
+    .add-container button{
         width: 80%;
         margin-top: 1rem;
+    }
+
+    
+    .edit-cancel {
+        width: 80%;
+    }
+
+    .add-container p {
+        padding-top: 2rem;
     }
 
     .log-pending-container p,
@@ -394,9 +400,13 @@ a.sidenav-trigger.left {
 
     .login-container button,
     .register-container button,
-    .add-container button  {
+    .add-container button {
         width: 80%;
         margin-top: 1rem;
+    }
+
+    .edit-cancel {
+        width: 80%;
     }
 
     .register-container h1 {
@@ -420,6 +430,10 @@ a.sidenav-trigger.left {
 
     .add-container h1 {
         font-size: 2.5rem;
+    }
+
+    .add-container p {
+        padding-top: 2rem;
     }
 
 }
