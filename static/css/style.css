@@ -489,7 +489,8 @@ a.sidenav-trigger.left {
     .reviews-container form button {
         margin-left: .5rem;
     }
-    
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -526,6 +527,10 @@ a.sidenav-trigger.left {
         font-size: 3rem;
     }
 
+    .review-inner p {
+        font-size: 1rem;
+    }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -559,7 +564,8 @@ a.sidenav-trigger.left {
     .profile-container h1,
     .backlog-container h1,
     .finished-container h1,
-    .rev-pending-container h1 {
+    .rev-pending-container h1,
+    .reviews-container h1 {
         font-size: 2.5rem;
     }
 
@@ -581,6 +587,8 @@ a.sidenav-trigger.left {
         padding-top: 7.5rem;
     }
 
+   
+
 }
 
 
@@ -590,8 +598,7 @@ a.sidenav-trigger.left {
 .info-container a:last-child:hover,
 .footer-container a:hover,
 .register-container a:hover,
-.login-container a:hover,
-.review-inner a:hover{
+.login-container a:hover{
     color: #ffcc00;
     transition: 300ms ease-in-out;
 }
@@ -612,7 +619,8 @@ i.fas.fa-times:hover {
 }
 
 .backlog a:first-child:hover,
-.finished-backlog a:hover {
+.finished-backlog a:hover,
+.review-inner a:nth-child(2):hover {
     color: #ffcc00;
     transition: 300ms ease-in-out;
     text-decoration: underline;
@@ -620,6 +628,10 @@ i.fas.fa-times:hover {
 
 .btn:hover {
     background-color: #000000ab;
+}
+
+.review-inner a:first-child:hover {
+    color: #d8ad00;
 }
 
 /* ----------------------------INPUT FIELDS-------------------------- */
@@ -688,11 +700,9 @@ a {
 }
 
 .hr-review {
-    border-bottom: 2px solid #f5f5f5;
+    border: 1px solid #7b7b7b6e;
     width: 100%;
     margin: 0 auto;
-    margin-bottom:0;
-    margin-top: 2rem;
 }
 
 #copyright {
@@ -726,4 +736,16 @@ a {
 
 .review-inner {
     margin: 0;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
 }
+
+.review-inner a {
+    color: #1f1f1f;
+}
+
+.review-inner a:first-child {
+    color: #ffcc00;
+    padding-bottom: 1rem;
+}
+
