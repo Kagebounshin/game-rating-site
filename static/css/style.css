@@ -226,12 +226,18 @@ a.sidenav-trigger.left {
     margin-bottom: 0;
 }
 
-.fullreview-container .review_text {
+.fullreview-container .review_text,
+.fullreview-container .inline,
+.fullreview-container a {
     font-size: 2rem;
 }
 
-.fullreview-container .inline {
-    font-size: 2rem;
+.fullreview-container hr{
+    margin-top: 2rem;
+}
+
+.fullreview-container a {
+    color: #ffcc00;
 }
 
 .backlog-container a,
@@ -255,6 +261,8 @@ a.sidenav-trigger.left {
     font-size: 3rem;
     padding-right: 1rem;
 }
+
+
 
 /* --------------------MEDIA BREAKPOINTS---------------------- */
 
@@ -376,7 +384,8 @@ a.sidenav-trigger.left {
     }
 
     .fullreview-container .review_text,
-    .fullreview-container .inline {
+    .fullreview-container .inline,
+    .fullreview-container a {
         font-size: 1rem;
     }
 
@@ -591,8 +600,6 @@ a.sidenav-trigger.left {
 
 }
 
-
-
 /* --------------------HOVER----------------------- */
 
 .info-container a:last-child:hover,
@@ -630,8 +637,10 @@ i.fas.fa-times:hover {
     background-color: #000000ab;
 }
 
-.review-inner a:first-child:hover {
+.review-inner a:first-child:hover,
+.fullreview-container a:hover {
     color: #d8ad00;
+    transition: 300ms ease-in-out;
 }
 
 /* ----------------------------INPUT FIELDS-------------------------- */
@@ -703,6 +712,7 @@ a {
     border: 1px solid #7b7b7b6e;
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 #copyright {

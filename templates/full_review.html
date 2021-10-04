@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% for review in reviews %}
-<div class="row fullreview-container bg-color-fullreviews center-align">
+<div class="row fullreview-container bg-color-fullreviews left-align">
     <div class="col s12 s12 m8 offset-m2">
         <img src="{{ review.photo_url }}" alt=" image">
     </div>
@@ -10,43 +10,43 @@
             {{ review.review_name }}
         </h1>
     </div>
-
-                <div class="col s12 s12 m8 offset-m2">
-                <p class="inline">
-                    <span>Platform:</span> 
-                        {{ review.platform_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Genre:</span>
-                        {{ review.genre_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Developer:</span> 
-                        {{ review.developer_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Duration:</span> 
-                        {{ review.duration }} 
-                </p>
-                <hr class="hr-review">
-                <p class="review_text left-align">
-                    {{ review.review_text }}
-                </p>
-                <p class="inline">
-                    <span>Rating: </span> 
-                   {{ review.rating_nr }}/5
-                   <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>By: </span> 
-                    {{ review.review_by }}
-                    </p>
-                    <hr class="hr-review">
-</div>
-
+    <div class="col s12 s12 m8 offset-m2">
+        <p class="inline">
+            <span>Platform:</span> 
+                {{ review.platform_name }} 
+            <span>|</span>
+        </p>
+        <p class="inline">
+            <span>Genre:</span>
+                {{ review.genre_name }} 
+            <span>|</span>
+        </p>
+        <p class="inline">
+            <span>Developer:</span> 
+                {{ review.developer_name }} 
+            <span>|</span>
+        </p>
+        <p class="inline">
+            <span>Duration:</span> 
+                {{ review.duration }} 
+        </p>
+        <hr class="hr-review">
+        <p class="review_text">
+            {{ review.review_text }}
+        </p>
+        <p class="inline rating">
+            <span>Rating: </span> 
+            {{ review.rating_nr }}/5
+        </p>
+        <br>
+        <p class="inline">
+        <span>By: {{ review.review_by }}</span> 
+        </p>
+        <hr class="hr-review">
+    </div>
+    <div class="col s12 s12 m8 offset-m2 center-align">
+        <a href="{{ url_for('reviews') }}">Back To Reviews</a>
+    </div>
 </div>
 {% endfor %}
 {% endblock %}
