@@ -395,8 +395,8 @@ a.sidenav-trigger.left {
 
     #myBtn {
         position: relative;
-        bottom: 2rem;
-        right: 2rem;
+        bottom: 1rem;
+        right: 1rem;
         z-index: 99;
         background-color: #ffcc00;
         color: white;
@@ -499,6 +499,7 @@ a.sidenav-trigger.left {
         padding-top: 2rem;
     }
 
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -520,7 +521,11 @@ a.sidenav-trigger.left {
         margin-left: .5rem;
     }
 
-
+    
+    .review-by {
+        position: absolute;
+        bottom: 0;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -559,6 +564,10 @@ a.sidenav-trigger.left {
 
     .review-inner p {
         font-size: 1rem;
+    }
+
+    .review-by  {
+        position: relative;
     }
 
 }
@@ -617,7 +626,14 @@ a.sidenav-trigger.left {
         padding-top: 7.5rem;
     }
 
-   
+    .review-inner p i {
+        font-size: 1.3rem;
+    }
+
+    .review-by {
+        position: absolute;
+        bottom: 0;
+    }
 
 }
 
@@ -777,6 +793,7 @@ a {
 }
 
 .review-inner {
+    position: relative;
     margin: 0;
     padding-top: 1rem;
     padding-bottom: 1rem;

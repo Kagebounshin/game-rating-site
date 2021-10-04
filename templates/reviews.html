@@ -29,10 +29,10 @@
     <div class="col s12 m12 l8 offset-l2">
         <div>
             <div class="row review-inner">
-                <div class="col s12 m6 l5">
+                <div class="col s12 m6 l5 xl4">
                     <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
                 </div>
-                <div class="col s12 m6 l7">
+                <div class="col s12 m6 l7 xl8">
                     <a href="{{ url_for('reviews') }}">Reviews</a>
                     <a href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
                 <p class="inline">
@@ -52,7 +52,7 @@
                 <p>
                     <i>{{ review.review_capture }}</i>
                 </p>
-                <p class="inline">
+                <p class="inline review-by">
                     <span>By: {{ review.review_by }}</span> 
                     </p>
                 </div>
