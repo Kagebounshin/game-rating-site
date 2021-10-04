@@ -712,6 +712,12 @@ a {
     border: 1px solid #7b7b7b6e;
     width: 100%;
     margin: 0 auto;
+}
+
+.hr-fullreview {
+    border: 1px solid #7b7b7b6e;
+    width: 100%;
+    margin: 0 auto;
     margin-bottom: 2rem;
 }
 

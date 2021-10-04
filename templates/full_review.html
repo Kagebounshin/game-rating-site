@@ -30,7 +30,7 @@
             <span>Duration:</span> 
                 {{ review.duration }} 
         </p>
-        <hr class="hr-review">
+        <hr class="hr-fullreview">
         <p class="review_text">
             {{ review.review_text }}
         </p>
@@ -42,10 +42,11 @@
         <p class="inline">
         <span>By: {{ review.review_by }}</span> 
         </p>
-        <hr class="hr-review">
+        <hr class="hr-fullreview">
     </div>
     <div class="col s12 s12 m8 offset-m2 center-align">
         <a href="{{ url_for('reviews') }}">Back To Reviews</a>
+        <hr class="hr-fullreview">
     </div>
 </div>
 {% endfor %}
