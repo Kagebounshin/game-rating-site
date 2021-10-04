@@ -29,7 +29,7 @@ $(document).ready(function(){
   });
 });
 
-// Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
+// Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top with some modifications
 
 //Back to top btn
 //Get the button
@@ -51,6 +51,7 @@ function scrollFunction() {
 
 // When user clicks on the button, smooth scroll to top of document
 function topFunction() {
+  // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo
   window.scrollTo({
     top: 0,
     behavior: 'smooth'
