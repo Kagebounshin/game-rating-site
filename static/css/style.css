@@ -171,7 +171,7 @@ a.sidenav-trigger.left {
 }
 
 .backlog-container,
-.finished-container {
+.finished-container{
     padding-bottom: 5rem;
     margin-bottom: 0;
 }
@@ -191,7 +191,8 @@ a.sidenav-trigger.left {
 .profile-container span,
 .review-inner a,
 .fullreview-container span,
-.fullreview-container h1 {
+.fullreview-container h1,
+.error-container h1 {
     font-weight: 700;
 }
 
@@ -261,6 +262,9 @@ a.sidenav-trigger.left {
     padding-right: 1rem;
 }
 
+.error-container span {
+    color: #ffcc00;
+}
 
 
 /* --------------------MEDIA BREAKPOINTS---------------------- */
@@ -326,7 +330,8 @@ a.sidenav-trigger.left {
 
     .register-container,
     .login-container,
-    .add-container {
+    .add-container,
+    .error-container {
         min-height: 80vh;
         padding-top: 5rem;
         padding-bottom:5rem;
@@ -439,7 +444,9 @@ a.sidenav-trigger.left {
         padding-bottom: 2rem;
     }
 
-    .profile-container h1 {
+    .profile-container h1,
+    .error-container p,
+    .error-container i {
         font-size: 1.5rem;
     }
 
@@ -477,7 +484,8 @@ a.sidenav-trigger.left {
 
     .register-container,
     .login-container,
-    .add-container {
+    .add-container,
+    .error-container {
         min-height: 80vh;
         padding-top: 5rem;
         padding-bottom:5rem;
@@ -496,6 +504,10 @@ a.sidenav-trigger.left {
 
     .add-container p {
         padding-top: 2rem;
+    }
+
+    .error-container h1 {
+        font-size: 6rem;
     }
 
 
