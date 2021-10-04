@@ -29,13 +29,13 @@ $(document).ready(function(){
   });
 });
 
-// Code borrowed from https://github.com/jennymalmoe/MSP3/blob/main/static/js/script.js
+// Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top
 
 //Back to top btn
-//Get the button:
+//Get the button
 mybutton = document.getElementById("myBtn");
 
-// When user scrolls down 20px from the top of document, show the button
+// When user scrolls down 20px from the top of document, button fades in.
 window.onscroll = function () {
 	scrollFunction();
 };
@@ -49,9 +49,11 @@ function scrollFunction() {
 	}
 }
 
-// When user clicks on the button, scroll to top of document
+// When user clicks on the button, smooth scroll to top of document
 function topFunction() {
-	document.body.scrollTop = 0; // For Safari
-	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
 }
 
