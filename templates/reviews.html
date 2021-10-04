@@ -2,16 +2,16 @@
 {% block content %}
 
 <div class="row reviews-container bg-color-reviews">
-    <div class="col s12 m8 offset-m2 center-align header-reviews">
+    <div class="col s12 m12 l8 offset-l2 center-align header-reviews">
         <h1>
             Reviews
         </h1>
         <p>Here are the latest user reviews</p>
         <hr class="hr-review">
-    </div>
+    </div> 
         <form action="{{ url_for('search') }}" method="post" class="col s12">
             <div class="row">
-                <div class="input-field col s12 m5 offset-m2 l6 offset-l2">
+                <div class="input-field col s12 m9 l6 offset-l2">
                     <input type="text" name="query" id="query" minlength="2" class="validate" required>
                     <label for="query">Search Reviews</label>
                 </div>
