@@ -662,9 +662,11 @@ i.fas.fa-times:hover {
     transition: 200ms ease-in-out;
 }
 
+
 .backlog a:first-child:hover,
 .finished-backlog a:hover,
-.review-inner a:nth-child(2):hover {
+.review-inner a:nth-child(2):hover,
+.profile-container .review-inner a:hover {
     color: #ffcc00;
     transition: 300ms ease-in-out;
     text-decoration: underline;
@@ -675,6 +677,7 @@ i.fas.fa-times:hover {
 }
 
 .review-inner a:first-child:hover,
+.profile-container .review-inner a:first-child:hover,
 .fullreview-container a:hover {
     color: #d8ad00;
     transition: 300ms ease-in-out;
@@ -808,6 +811,16 @@ a {
     padding-bottom: 1rem;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 
 /* Code borrowed from https://github.com/jennymalmoe/MSP3/blob/main/static/css/style.css */
 /* Back to top btn */
@@ -828,4 +841,6 @@ a {
     box-shadow: 0 24px 38px 3px rgb(0 0 0 / 14%),
      0 9px 46px 8px rgb(0 0 0 / 12%), 
      0 11px 15px -7px rgb(0 0 0 / 20%);
+    animation: fadeIn 1s ease-in-out;
+    animation-iteration-count: 1;
 }
