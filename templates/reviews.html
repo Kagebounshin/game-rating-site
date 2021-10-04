@@ -30,7 +30,7 @@
         <div>
             <div class="row review-inner">
                 <div class="col s12 m6 l5">
-                    <img src="{{ review.photo_url }}" alt="image for game review">
+                    <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
                 </div>
                 <div class="col s12 m6 l7">
                     <a href="{{ url_for('reviews') }}">Reviews</a>
