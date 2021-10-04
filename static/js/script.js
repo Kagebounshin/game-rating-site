@@ -4,14 +4,6 @@ $(document).ready(function(){
   // Copyright year
   $('.copyright').text(new Date().getFullYear());
   $('input#review_capture').characterCounter();
-
-  $('.fadeinleftstart').each(function() {
-    $(this).animate({'opacity':'1', 'margin-left':'0px'}, 1000);
-  
-});
-
-  
-
   // Fade in elements on sroll 
   // Code by https://vincoding.com/fade-in-elements-scroll-jquery/
   $(window).scroll(function() {
@@ -37,32 +29,28 @@ $(document).ready(function(){
   });
 });
 
-// http://jsfiddle.net/iambriansreed/bjdSF/
+// Code borrowed from https://github.com/jennymalmoe/MSP3/blob/main/static/js/script.js
 
-jQuery(function(){
+//Back to top btn
+//Get the button:
+mybutton = document.getElementById("myBtn");
 
-  var minimized_elements = $('p.minimize');
-  
-  minimized_elements.each(function(){    
-      var t = $(this).text();        
-      if(t.length < 500) return;
-      
-      $(this).html(
-          t.slice(0,500)+'<span>... </span><a class="more"> Show More</a>'+
-          '<span style="display:none;">'+ t.slice(500,t.length)+' <a class="less"> Show Less</a></span>'
-      );
-      
-  }); 
-  
-  $('a.more', minimized_elements).click(function(event){
-      event.preventDefault();
-      $(this).hide().prev().hide();
-      $(this).next().show();        
-  });
-  
-  $('a.less', minimized_elements).click(function(event){
-      event.preventDefault();
-      $(this).parent().hide().prev().show().prev().show();    
-  });
+// When user scrolls down 20px from the top of document, show the button
+window.onscroll = function () {
+	scrollFunction();
+};
 
-});
+function scrollFunction() {
+	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+		mybutton.style.display = "block";
+	} else {
+		mybutton.style.display = "none";
+	}
+}
+
+// When user clicks on the button, scroll to top of document
+function topFunction() {
+	document.body.scrollTop = 0; // For Safari
+	document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
