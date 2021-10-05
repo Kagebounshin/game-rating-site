@@ -6,6 +6,10 @@ $(document).ready(function(){
   $('input#review_capture').characterCounter();
 });
 
+$(document).ready(function(){
+  $('.modal').modal();
+});
+
 // Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top with some modifications
 
 //Get the button

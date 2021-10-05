@@ -33,8 +33,8 @@
                     <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
                 </div>
                 <div class="col s12 m6 l7 xl8">
-                    <a href="{{ url_for('reviews') }}">Reviews</a>
-                    <a href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
+                    <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
+                    <a class ="title" href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 

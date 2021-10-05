@@ -34,9 +34,9 @@
                 <div class="card-panel left-align backlog">
                     {% for backlog in backlogs %}
                         <p class="capitilize games">
-                            <a href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
+                            <a class="title" href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
                             </a>
-                            <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}">
+                            <a class="modal-trigger" href="#modal1">
                                 <i class="fas fa-times "></i>
                             </a>
                             <a href="{{ url_for('finished_backlog',  backlog_id=backlog._id ) }}">
@@ -44,7 +44,20 @@
                             </a>
                         </p>
                         <br>
-
+                        <!-- Modal Structure to avoid accidental deletion -->
+                            <div id="modal1" class="modal">
+                                <div class="modal-content center-align">
+                                    <h4>Have you thought this through?</h4>
+                                    <p>Do you really to delete this game from your backlog?</p>
+                                </div>
+                            <div class="row modal-footer">
+                                <div class="col s12 center-align">
+                                    <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}"
+                                        class="modal-close btn waves-effect waves-light btn-small">Yes</a>
+                                    <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
+                                </div>
+                            </div>
+                        </div>
                     {% endfor %}
                 </div>
                 <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">Add to Backlog</a>
@@ -118,8 +131,8 @@
                     <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
                 </div>
                 <div class="col s12 m6 l7 xl8">
-                    <a href="{{ url_for('reviews') }}">Reviews</a>
-                    <a href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
+                    <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
+                    <a class="title" href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 
@@ -143,7 +156,21 @@
                 <span>|</span>
                 <a href="{{ url_for('edit_review', review_id=review._id) }}">EDIT</a>
                 <span>|</span>
-                <a href="{{ url_for('delete_review', review_id=review._id) }}">DELETE</a>
+                <a class="modal-trigger" href="#modal2">DELETE</a>
+                <!-- Modal Structure to avoid accidental deletion -->
+                <div id="modal2" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Have you thought this through?</h4>
+                        <p>Do you really to delete this Review?</p>
+                    </div>
+                <div class="row modal-footer">
+                    <div class="col s12 center-align">
+                        <a href="{{ url_for('delete_review', review_id=review._id) }}"
+                            class="modal-close btn waves-effect waves-light btn-small">Yes</a>
+                        <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
+                    </div>
+                </div>
+            </div>
                 {% endif %}
                 </p>
                 
@@ -156,4 +183,5 @@
 {% endfor %}    
         {% endif %}
 </div>
+
 {% endblock %}
