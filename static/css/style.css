@@ -743,17 +743,6 @@ i.fas.fa-times:hover {
     color: #1f1f1f;
 }
 
-.fadein {
-    opacity:0;
-}
-
-.fadeinleft,
-.fadeinleftstart {
-    opacity: 0;
-    margin-left: -300px;
-    max-width: 100%;
-}
-
 a {
     color: #7b7b7b;
 }
@@ -790,20 +779,8 @@ a {
     padding: .5rem;
 }
 
-.hide {
-    opacity: 0;
-}
-
 .capitilize {
     text-transform: capitalize;
-}
-
-.uppercase {
-    text-transform: uppercase;
-}
-
-.mb {
-    margin-bottom: 3rem;
 }
 
 .review-inner {
@@ -822,6 +799,8 @@ a {
     padding-bottom: 1rem;
 }
 
+/* --------------KEYFRAMES--------------- */
+
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -832,6 +811,7 @@ a {
     }
 }
 
+/* --------------BORROWED CODE--------------- */
 
 /* Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top */
 /* Back to top btn */
