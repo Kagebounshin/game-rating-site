@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 body {
@@ -372,7 +368,6 @@ a.sidenav-trigger.left {
         margin-top: 1rem;
     }
 
-    
     .edit-cancel {
         width: 80%;
     }
@@ -399,8 +394,8 @@ a.sidenav-trigger.left {
 
     #myBtn {
         position: relative;
-        bottom: 1rem;
-        right: 1rem;
+        bottom: 4rem;
+        right: 2rem;
         z-index: 99;
         background-color: #ffcc00;
         color: white;
@@ -509,8 +504,6 @@ a.sidenav-trigger.left {
     .error-container h1 {
         font-size: 6rem;
     }
-
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -580,7 +573,6 @@ a.sidenav-trigger.left {
     .review-by  {
         position: relative;
     }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
@@ -645,7 +637,6 @@ a.sidenav-trigger.left {
         position: absolute;
         bottom: 0;
     }
-
 }
 
 /* --------------------HOVER----------------------- */
@@ -672,7 +663,6 @@ i.fas.fa-times:hover {
     color: rgb(180, 32, 32);
     transition: 200ms ease-in-out;
 }
-
 
 .backlog a:first-child:hover,
 .finished-backlog a:hover,
