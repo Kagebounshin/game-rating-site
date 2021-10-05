@@ -139,17 +139,12 @@ a.sidenav-trigger.left {
 }
 
 .hero-container h1,
-.profile-container h2 {
+.reviews-container h1,
+.profile-container h1:first-child {
     font-family: 'Press Start 2P', sans-serif;
 }
 
-.info-container {
-    margin-bottom: 0;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    color: #1f1f1f;
-}
-
+.info-container,
 .about-container {
     color: #1f1f1f;
     padding-top: 5rem;
@@ -190,12 +185,6 @@ a.sidenav-trigger.left {
 .fullreview-container h1,
 .error-container h1 {
     font-weight: 700;
-}
-
-
-.reviews-container h1,
-.profile-container h1:first-child {
-    font-family: 'Press Start 2P', sans-serif;
 }
 
 .reviews-container h4 {
@@ -262,14 +251,18 @@ a.sidenav-trigger.left {
     color: #ffcc00;
 }
 
-
 /* --------------------MEDIA BREAKPOINTS---------------------- */
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
-    .hero-container h1,
-    .register-container h1 {
+    .hero-container h1 {
+        font-size: 2.4rem;
+    }
+
+    .register-container h1,
+    .reviews-container h1,
+    .fullreview-container h1 {
         font-size: 2rem;
     }
 
@@ -286,24 +279,15 @@ a.sidenav-trigger.left {
         font-size: 3rem;
     }
 
+    .about-container i:nth-child(1) {
+        padding-top: 2rem;
+    }
+
     .reviews-container img {
         width: 100%;
         height: auto;
     }
     
-    .profile-container h1 {
-        font-size: 1rem;
-    }
-
-    .profile-container h2,
-    .reviews-container h1 {
-        font-size: 2rem;
-    }
-
-    .about-container i:nth-child(1) {
-    padding-top: 2rem;
-    }
-
     .backlog-container h1,
     .finished-container h1,
     .add-container h1 {
@@ -344,13 +328,9 @@ a.sidenav-trigger.left {
         padding-bottom: 2rem;
     }
 
-    .header-reviews hr {
-        margin-bottom: 1rem;
-        max-width: 90%;
-    }
-
     .reviews-container form button,
-    .reviews-container form a  {
+    .reviews-container form a,
+    .header-reviews hr  {
         width: 100%;
         margin-bottom: 1rem;
     }
@@ -382,14 +362,11 @@ a.sidenav-trigger.left {
         padding-top: 5rem;
     }
 
+    .profile-container h1,
     .fullreview-container .review_text,
     .fullreview-container .inline,
     .fullreview-container a {
         font-size: 1rem;
-    }
-
-    .fullreview-container h1 {
-        font-size: 2rem;
     }
 
     #myBtn {
@@ -429,7 +406,8 @@ a.sidenav-trigger.left {
     }
 
     .about-container h1,
-    .about-container i {
+    .about-container i,
+    .register-container h1 {
         font-size: 2rem;
     }
 
@@ -471,10 +449,6 @@ a.sidenav-trigger.left {
 
     .edit-cancel {
         width: 80%;
-    }
-
-    .register-container h1 {
-        font-size: 2rem;
     }
 
     .register-container,
@@ -525,7 +499,6 @@ a.sidenav-trigger.left {
         margin-left: .5rem;
     }
 
-    
     .review-by {
         position: absolute;
         bottom: 0;
@@ -546,10 +519,6 @@ a.sidenav-trigger.left {
         margin-right: -5.4rem;
         margin-bottom: .6rem;
      }
-
-    .hero-container p {
-        font-size: 2rem;
-    }
 
     .reviews-container h4,
     .profile-container h4 {
@@ -593,7 +562,6 @@ a.sidenav-trigger.left {
     .about-container i {
         font-size: 3rem;
     }
-
 
     .about-container p {
         font-size: 1.3rem;
