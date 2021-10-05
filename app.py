@@ -46,6 +46,7 @@ def full_review(review_id):
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
+    # Search root for reviews.html
     query = request.form.get("query")
     reviews = list(mongo.db.reviews.find({"$text": {"$search": query}}))
     return render_template("reviews.html", reviews=reviews)
@@ -54,13 +55,14 @@ def search():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
+        # Checking for an existing user.
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
-
+        # No existing user, register a new one.
         register = {
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
@@ -75,6 +77,7 @@ def register():
 
 @app.route("/log_in", methods=["GET", "POST"])
 def log_in():
+    # Route for login. 
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
@@ -83,7 +86,7 @@ def log_in():
             if check_password_hash(
                 existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
-                flash("Welcome, {}".format(request.form.get("username")))
+                flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(url_for(
                     "profile", username=session["user"]))
             else:
@@ -98,6 +101,7 @@ def log_in():
 
 @app.route("/log_out")
 def log_out():
+    # This is the logout route.
     flash("You have been logged out")
     session.pop("user")
     return redirect(url_for("log_in"))
@@ -106,6 +110,7 @@ def log_out():
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    # Route for user profile, Shows your games and reviews. 
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -121,6 +126,7 @@ def profile(username):
 
 @app.route("/add_backlog", methods=["GET", "POST"])
 def add_backlog():
+    # For adding to users backlog
     if request.method == "POST":
         backlog = {
             "backlog_name": request.form.get("backlog_name"),
@@ -135,6 +141,7 @@ def add_backlog():
 
 @app.route("/edit_backlog/<backlog_id>", methods=["GET", "POST"])
 def edit_backlog(backlog_id):
+    # For Editing users backlog
     if request.method == "POST":
         submit = {
             "backlog_name": request.form.get("backlog_name"),
@@ -151,6 +158,7 @@ def edit_backlog(backlog_id):
 
 @app.route("/delete_backlog/<backlog_id>")
 def delete_backlog(backlog_id):
+    # For deleting a backlog object. 
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
     flash("Game Successfully Deleted")
@@ -159,6 +167,7 @@ def delete_backlog(backlog_id):
 
 @app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
+    # When finishing a game, remove it and insert it to a Finished list. 
     move = mongo.db.backlog.find_one(
         {"_id": ObjectId(backlog_id)})
     mongo.db.finished.insert(move)
@@ -171,6 +180,7 @@ def finished_backlog(backlog_id):
 
 @app.route("/add_finished", methods=["GET", "POST"])
 def add_finished():
+    # For adding games to users finished list. 
     if request.method == "POST":
         finished = {
             "backlog_name": request.form.get("backlog_name"),
@@ -185,6 +195,7 @@ def add_finished():
 
 @app.route("/add_review/<finished_id>", methods=["GET", "POST"])
 def add_review(finished_id):
+    # For adding a user game review. 
     if request.method == "POST":
         photo = request.files['photo_url']
         photo_upload = cloudinary.uploader.upload(photo)
@@ -217,6 +228,7 @@ def add_review(finished_id):
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
+        # For editing a user game review. 
         photo = request.files['photo_url']
         photo_upload = cloudinary.uploader.upload(photo)
         submit = {
@@ -245,6 +257,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
+    # For deleting a user game review. 
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
@@ -252,17 +265,13 @@ def delete_review(review_id):
 
 @app.errorhandler(404)
 def page_not_found(error):
-    """
-    This is the route to send 404 errors to the 404.html template.
-    """
+    # Route to send 404 errors to the 404.html template.
     return render_template('404.html'), 404
 
 
 @app.errorhandler(500)
 def something_wrong(error):
-    """
-    This is the route to send 500 errors to the 500.html template.
-    """
+    # Route to send 500 errors to the 500.html template.
     return render_template('500.html'), 500
 
 
