@@ -264,16 +264,20 @@ a.sidenav-trigger.left {
 
     .register-container h1,
     .reviews-container h1,
-    .fullreview-container h1 {
+    .fullreview-container h1,
+    .backlog-container h1,
+    .finished-container h1,
+    .add-container h1,
+    .login-container h1 {
         font-size: 2rem;
     }
 
     .hero-container img {
-        width: 2rem;
-        height: 2rem;
-        margin-left: -2rem;
-        margin-right: -1.7rem;
-        margin-bottom: .2rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-left: -2.2rem;
+        margin-right: -1.9rem;
+        margin-bottom: .3rem;
     }
 
     .about-container h1,
@@ -288,12 +292,6 @@ a.sidenav-trigger.left {
     .reviews-container img {
         width: 100%;
         height: auto;
-    }
-    
-    .backlog-container h1,
-    .finished-container h1,
-    .add-container h1 {
-        font-size: 2rem;
     }
 
     .backlog-container .card-panel {
@@ -406,9 +404,9 @@ a.sidenav-trigger.left {
     } 
 
     .brand-logo img {
-        width: 2.5rem;
-        height: 2.5rem;
-        margin-top: .75rem;
+        width: 2.2rem;
+        height: 2.2rem;
+        margin-top: .9rem;
     }
 }
 
@@ -428,7 +426,8 @@ a.sidenav-trigger.left {
 
     .about-container h1,
     .about-container i,
-    .register-container h1 {
+    .register-container h1,
+    .login-container h1 {
         font-size: 2rem;
     }
 
@@ -552,7 +551,8 @@ a.sidenav-trigger.left {
         margin-top: 0rem;
     }
 
-    .register-container h1 {
+    .register-container h1,
+    .login-container h1 {
         font-size: 3rem;
     }
 
@@ -580,7 +580,7 @@ a.sidenav-trigger.left {
     }
 
     .about-container h1,
-    .about-container i {
+    .about-container i{
         font-size: 3rem;
     }
 
