@@ -77,14 +77,14 @@ def register():
 
 @app.route("/log_in", methods=["GET", "POST"])
 def log_in():
-    # Route for login. 
+    # Route for login.
     if request.method == "POST":
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
         if existing_user:
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
+                    existing_user["password"], request.form.get("password")):
                 session["user"] = request.form.get("username").lower()
                 flash("Welcome back, {}".format(request.form.get("username")))
                 return redirect(url_for(
@@ -92,7 +92,6 @@ def log_in():
             else:
                 flash("Incorrect Username and/or Password")
                 return redirect(url_for("log_in"))
-
         else:
             flash("Incorrect Username and/or Password")
             return redirect(url_for("log_in"))
@@ -102,15 +101,14 @@ def log_in():
 @app.route("/log_out")
 def log_out():
     # This is the logout route.
-    flash("You have been logged out")
+    flash("You have signed out")
     session.pop("user")
     return redirect(url_for("log_in"))
-    return render_template("logout.html")
 
 
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
-    # Route for user profile, Shows your games and reviews. 
+    # Route for user profile, Shows your games and reviews.
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
 
@@ -158,7 +156,7 @@ def edit_backlog(backlog_id):
 
 @app.route("/delete_backlog/<backlog_id>")
 def delete_backlog(backlog_id):
-    # For deleting a backlog object. 
+    # For deleting a backlog object.
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
     flash("Game Successfully Deleted")
@@ -167,7 +165,7 @@ def delete_backlog(backlog_id):
 
 @app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
-    # When finishing a game, remove it and insert it to a Finished list. 
+    # When finishing a game, remove it and insert it to a Finished list.
     move = mongo.db.backlog.find_one(
         {"_id": ObjectId(backlog_id)})
     mongo.db.finished.insert(move)
@@ -180,7 +178,7 @@ def finished_backlog(backlog_id):
 
 @app.route("/add_finished", methods=["GET", "POST"])
 def add_finished():
-    # For adding games to users finished list. 
+    # For adding games to users finished list.
     if request.method == "POST":
         finished = {
             "backlog_name": request.form.get("backlog_name"),
@@ -195,7 +193,7 @@ def add_finished():
 
 @app.route("/add_review/<finished_id>", methods=["GET", "POST"])
 def add_review(finished_id):
-    # For adding a user game review. 
+    # For adding a user game review.
     if request.method == "POST":
         photo = request.files['photo_url']
         photo_upload = cloudinary.uploader.upload(photo)
@@ -228,7 +226,7 @@ def add_review(finished_id):
 @app.route("/edit_review/<review_id>", methods=["GET", "POST"])
 def edit_review(review_id):
     if request.method == "POST":
-        # For editing a user game review. 
+        # For editing a user game review.
         photo = request.files['photo_url']
         photo_upload = cloudinary.uploader.upload(photo)
         submit = {
@@ -257,7 +255,7 @@ def edit_review(review_id):
 
 @app.route("/delete_review/<review_id>")
 def delete_review(review_id):
-    # For deleting a user game review. 
+    # For deleting a user game review.
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
