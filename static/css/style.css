@@ -59,8 +59,10 @@ nav .brand-logo {
     padding: 0;
 }
 
-.brand-logo i {
-    font-size: 3rem;
+.brand-logo img {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: .75rem;
 }
 
 nav ul li {
@@ -402,6 +404,12 @@ a.sidenav-trigger.left {
     .review-inner .modal .col {
        margin: 0;
     } 
+
+    .brand-logo img {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-top: .75rem;
+    }
 }
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
