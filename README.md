@@ -127,7 +127,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs
 
-- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, now the navbrand dose't show at sidenav at the profile page, fullreview page, when you edit your backlog or when your about to write a review. So the images dosen't load on every page with an argument passed through the URL.
+- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id pas through as an argumenet. 
+
+- Another bug I've encountered is at the edit-review page, I've preloaded all the fields with it's current values, but if I don't load the same or any images at the upload image field I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
 
 
