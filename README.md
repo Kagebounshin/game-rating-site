@@ -127,7 +127,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs
 
-- So the first bug iv'e encounterd was when opening the sidenav on mobile view, when I was logged in as a user. The pacman image in the log was like [this](static/img/img-readme/bug01.png). Only the alt text is showing
+- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, now the navbrand dose't show at sidenav at the profile page, fullreview page, when you edit your backlog or when your about to write a review. So the images dosen't load on every page with an argument passed through the URL.
 
 
 
