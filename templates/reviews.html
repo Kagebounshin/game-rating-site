@@ -3,7 +3,7 @@
 
 <div class="row reviews-container bg-color-reviews">
     <div class="col s12 m12 l8 offset-l2 center-align header-reviews">
-        <h1>
+        <h1 class="review-header">
             Reviews
         </h1>
         <p>Here are the latest user reviews</p>
@@ -16,10 +16,10 @@
                     <label for="query">Search Reviews</label>
                 </div>
                 <div class="col s12 m3 l2">
-                    <button type="submit" class="btn waves-effect waves-light btn-small">
+                    <button type="submit" class="btn waves-effect waves-light btn-small" aria-label="Search Button">
                         <i class="fas fa-search"></i>
                     </button>
-                    <a href="{{ url_for('reviews') }}" class="btn waves-effect waves-light btn-small">Reset</a>
+                    <a href="{{ url_for('reviews') }}" class="btn waves-effect waves-light btn-small" aria-label="Reset Button">Reset</a>
                 </div>
             </div>
         </form>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col s12 m6 l7 xl8">
                     <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
-                    <a class ="title" href="{{ url_for('full_review', review_id=review._id) }}"><h4>{{ review.review_name }} </h4></a>
+                    <a class ="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }} </h1></a>
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 

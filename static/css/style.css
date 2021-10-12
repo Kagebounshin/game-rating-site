@@ -141,7 +141,7 @@ a.sidenav-trigger.left {
 }
 
 .hero-container h1,
-.reviews-container h1,
+.review-header,
 .profile-container h1:first-child {
     font-family: 'Press Start 2P', sans-serif;
 }
@@ -182,7 +182,7 @@ a.sidenav-trigger.left {
     font-size: 2rem;
 }
 
-.reviews-container h4,
+.reviews-container h1,
 .reviews-container span,
 .profile-container h4,
 .profile-container span,
@@ -193,7 +193,7 @@ a.sidenav-trigger.left {
     font-weight: 700;
 }
 
-.reviews-container h4 {
+.reviews-container h1 {
     margin-top: 0rem;
 }
 
@@ -502,6 +502,10 @@ a.sidenav-trigger.left {
     .error-container h1 {
         font-size: 6rem;
     }
+
+    .reviews-container h1 {
+        font-size: 2.5rem;
+    }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -550,7 +554,7 @@ a.sidenav-trigger.left {
         margin-bottom: .6rem;
      }
 
-    .reviews-container h4,
+    .reviews-container h1,
     .profile-container h4 {
         margin-top: 0rem;
     }
@@ -793,7 +797,7 @@ i.fas.fa-times:hover {
 
 .review-inner .link:first-child:hover,
 .profile-container .review-inner .link:hover {
-    color: #d8ad00;
+    color: #b10e88;
     transition: 300ms ease-in-out;
 }
 
@@ -894,7 +898,7 @@ i.fas.fa-times:hover {
 }
 
 .review-inner .link:first-child {
-    color: #ffcc00;
+    color: #850866;
     padding-bottom: 1rem;
 }
 
