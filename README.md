@@ -144,11 +144,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ---
 
--   [W3C Markup Validator]()
--   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
--   [Pep8online](static/img/img-readme/pep8onlinevalid.png) - Validation for Python code. 
-
-
+-   [W3C Markup Validator](https://validator.w3.org/nu/?doc=http%3A%2F%2Fbacklog-gamesite.herokuapp.com%2F)
+-   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
+    -   [No Error Found](static/img/img-readme/cssValidation.png)
+    -   [Warning](static/img/img-readme/cssWarning.png)
 ### Lighthouse Testing
 
 --- 

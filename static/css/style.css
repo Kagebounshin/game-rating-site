@@ -5,7 +5,7 @@
 body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;
-    padding: 0 auto;
+    padding: 0;
     margin: 0 auto;
     overflow-x: hidden;
     min-height: 100vh;
@@ -238,7 +238,6 @@ a.sidenav-trigger.left {
     background-color: #1f1f1f;
     text-align: center;
     letter-spacing: .5px;
-    -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
     cursor: pointer;
     font-weight: 600;
