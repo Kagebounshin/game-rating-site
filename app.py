@@ -58,10 +58,11 @@ def register():
         # Checking for an existing user.
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-
+        
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
+
         # No existing user, register a new one.
         register = {
             "username": request.form.get("username").lower(),
