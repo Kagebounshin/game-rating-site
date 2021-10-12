@@ -178,6 +178,10 @@ a.sidenav-trigger.left {
    color: #f9f9f9;
 }
 
+.footer-container h1 {
+    font-size: 2rem;
+}
+
 .reviews-container h4,
 .reviews-container span,
 .profile-container h4,
@@ -899,7 +903,7 @@ a {
 }
 
 footer a {
-    color:#7b7b7b ;
+    color:rgb(211, 211, 211) ;
 }
 
 /* --------------KEYFRAMES--------------- */
