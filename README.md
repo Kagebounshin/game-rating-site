@@ -153,8 +153,19 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 --- 
 
-- Home
-    - Desktop [Results](pdf/index.pdf)
+1.  [index.html](pdf/index.pdf)
+2.  [reviews.html](pdf/review.pdf)
+3.  [login.html](pdf/signIn.pdf)
+4.  [register.html](pdf/signUp.pdf)
+5.  [profile.html](pdf/profile.pdf) 
+6.  [add_backlog.html](pdf/add_backlog.pdf)
+7.  [edit_backlog.html](pdf/edit_backlog.pdf)
+8.  [add_finished.html](pdf/add_finished.pdf)
+9.  [add_review.html](pdf/add_review.pdf)
+10. [edit_review.html](pdf/edit_review.pdf)
+11. [full_review.html](pdf/full_review.pdf)
+
+
 
 ### Testing User Stories from User Experience (UX) Section
 
