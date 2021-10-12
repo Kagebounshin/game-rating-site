@@ -27,6 +27,7 @@ main {
 .bg-color-flashes,
 .bg-color-profile, 
 .bg-color-backlog,
+.bg-color-fullreviews,
 .bg-color-add {
     background-color: #f5f5f5;
 }
@@ -35,8 +36,7 @@ main {
     background-color: #fff;
 }
 
-.bg-color-footer,
-.bg-color-fullreviews{
+.bg-color-footer{
     background-color: #1f1f1f;
 }
 
@@ -147,7 +147,7 @@ a.sidenav-trigger.left {
 }
 
 .info-container,
-.about-container {
+.about-container{
     color: #1f1f1f;
     padding-top: 5rem;
     padding-bottom: 5rem;
@@ -201,7 +201,7 @@ a.sidenav-trigger.left {
 }
 
 .fullreview-container {
-    color: #7b7b7b;
+    color: #1f1f1f;
     margin-bottom: 0;
     padding-bottom: 5rem;
     padding-top: 5rem;
@@ -224,7 +224,7 @@ a.sidenav-trigger.left {
 }
 
 .fullreview-container a {
-    color: #ffcc00;
+    color: #7b7b7b;
 }
 
 .backlog-container a,
@@ -776,7 +776,8 @@ i.fas.fa-times:hover {
 .backlog .title:first-child:hover,
 .finished-backlog a:hover,
 .review-inner .title:hover,
-.profile-container .review-inner .title:hover {
+.profile-container .review-inner .title:hover,
+.fullreview-container a:hover {
     color: #ffcc00;
     transition: 300ms ease-in-out;
     text-decoration: underline;
@@ -787,8 +788,7 @@ i.fas.fa-times:hover {
 }
 
 .review-inner .link:first-child:hover,
-.profile-container .review-inner .link:hover,
-.fullreview-container a:hover {
+.profile-container .review-inner .link:hover {
     color: #d8ad00;
     transition: 300ms ease-in-out;
 }
@@ -842,10 +842,6 @@ i.fas.fa-times:hover {
     color: #1f1f1f;
 }
 
-a {
-    color: #7b7b7b;
-}
-
 .hr-profile {
     border: 0;
     height: 1px;
@@ -896,6 +892,10 @@ a {
 .review-inner .link:first-child {
     color: #ffcc00;
     padding-bottom: 1rem;
+}
+
+a {
+    color: #292929;
 }
 
 /* --------------KEYFRAMES--------------- */
