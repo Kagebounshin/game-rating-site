@@ -1,10 +1,10 @@
 <h1 align="center">The Backlog site</h1>
 
-[View the live project here.]()
+[View the live project here.](http://backlog-gamesite.herokuapp.com/)
 
-On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start rating the games you have played, share your thoughts about the games. Register an account and start adding to your own list. 
+On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start reviewing the games you have played, share your thoughts about the games. Register an account and start adding to your own backlog. 
 
-<h2 align="center"><img src=""></h2>
+<h2 align="center"><img src="static/img/img-readme/amIResponsive.png"></h2>
 
 ---
 
@@ -103,9 +103,42 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 -   [CSS3](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+-   [JavaScript](https://www.javascript.com/)
+-   [Python](https://www.python.org/)
 
 ### Frameworks, Libraries & Programs Used
 
+- [jQuery](https://jquery.com/)
+
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+
+- [PyMongo](https://pypi.org/project/pymongo/)
+
+- [Materialize](https://materializecss.com/)
+
+- [BSON](https://bsonspec.org/)
+
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+
+- [Heroku]()
+
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+
+- [FontAwesome](https://fontawesome.com/) - provides icons across the site
+
+- [GoogleFonts](https://fonts.google.com/) - Fonts
+
+- [Git](https://git-scm.com/) - Git was used for version control.
+
+- [GitHub](https://github.com/) - GitHub was used to store the project.
+
+- [Balsamiq](https://balsamiq.com/) - Balsamiq was used to create the wireframes.
+
+- [Am I Responsive](http://ami.responsivedesign.is/#) - Tested responsivness & the images at the top of the readMe.
+
+- [Color Hex](https://www.color-hex.com/) - The color images wich are displayed at the [**Design**](#design) section of this readMe.
+
+- [Amp What](https://www.amp-what.com/) - At the footer, and sidenav.  
 
 ## Testing
 
@@ -127,25 +160,13 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs
 
-- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id pas through as an argumenet. 
+- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id pas through as an argumenet. Solved it by changing the src to the images address instead of the img folder in my static files. 
 
 - Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
 
 
 ## Deployment
-
-### GitHub Pages
-
-The project was deployed to GitHub Pages using the following steps...
-
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page), locate the "Settings" Button on the menu.
-    - Alternatively Click [Here](https://raw.githubusercontent.com/) for a GIF demonstrating the process starting from Step 2.
-3. Scroll down the Settings page until you locate the "GitHub Pages" Section.
-4. Under "Source", click the dropdown called "None" and select "Master Branch".
-5. The page will automatically refresh.
-6. Scroll back down through the page to locate the now published site [link](https://github.com) in the "GitHub Pages" section.
 
 ### Forking the GitHub Repository
 
@@ -186,6 +207,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Code
 
 ### Content
+
+
 
 ### Media
 
