@@ -144,7 +144,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ---
 
--   [W3C Markup Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
+-   [W3C Markup Validator]()
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
 -   [Pep8online](static/img/img-readme/pep8onlinevalid.png) - Validation for Python code. 
 

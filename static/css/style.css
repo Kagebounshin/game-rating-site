@@ -249,7 +249,7 @@ a.sidenav-trigger.left {
     margin-bottom: 0px;
 }
 
-.flashes h1 {
+.flashes h2 {
     color: #1f1f1f;
     font-size: 2rem;
 }
@@ -475,7 +475,7 @@ footer a {
         margin-top: .9rem;
     }
 
-    .flashes h1 {
+    .flashes h2 {
         font-size: 1.5rem;
     }
 }
