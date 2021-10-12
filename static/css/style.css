@@ -898,6 +898,10 @@ a {
     color: #292929;
 }
 
+footer a {
+    color:#7b7b7b ;
+}
+
 /* --------------KEYFRAMES--------------- */
 
 @keyframes fadeIn {
