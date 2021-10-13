@@ -122,13 +122,19 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - Profile 
     - When you are a newly registred member of the site, you'll can visit you profile page and start adding your games. At the top of the page is a [header-text](static/img/img-readme/profile01.png) where the users name is displayed. If you haven't added any games to you backlog or finished lists, or done any reviews yet. The page will look like [this](static/img/img-readme/profile02.png). 
-    - If you add a game to your backlog, by pressing the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. If you click on the game [title](static/img/img-readme/profile05.png) in your backlog, you can edit your game if you for example made a typo. By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. And when you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets sent over to the [finshed](static/img/img-readme/profile08.png) list.  
+    - When adding a game to your backlog, press the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). And you will end up at the [Add to Backlog](static/img/img-readme/profile09.png) page. Add one game at a time, when your done adding a game, click the "Add To Backlog" button, a [message](static/img/img-readme/profile10.png) is displayed saying the adding process was successful. Keep adding games or click the "Check your backlog" [link](static/img/img-readme/profile11.png) wich takes you back to your profile page. Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. 
+    - If you click on a game [title](static/img/img-readme/profile05.png) in your backlog, you can [edit](static/img/img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](static/img/img-readme/profile12.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button an you will be sent back to your profile page. 
+    - By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. 
+    - When you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets sent over to the [finshed](static/img/img-readme/profile08.png) list. 
+    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill, first is the [capturing text](), then you can choose between abunch of [genres]() from a dropdown list. Next up choose what [platform]() you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer]() field, [duration]() field. After all this it's time to put your thoughts of the game into words at the [review]() field. Made a basic [rating] system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is awesome. 
+    To make your review complete, you can add a [images]() to it. 
+    The click the ["Add Review"]() button, and the review is done.
+    Not happy with the review for some reason, or just not in the mood, click the ["Cancel"]() button, and your back at your profile page in no time.
   
 - Sign Up
   
 - Sign In
     
-- Add to Backlog
 
 - Footer
    
@@ -224,7 +230,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ### Resolved Bugs
 
 - When [deleting](static/img/img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](static/img/img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
-Becouse I didn't give each modal and a link instance a unique id, it jsut always triggers one and the same modal. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal.
+Becouse I didn't give each modal and a link instance a unique id, it just always triggers one and the same modal the first modal in the loop, so thats why the top object always got deleted. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal. Each object in the backlog got it'
+s own unique ID.
 
 ## Deployment
 
