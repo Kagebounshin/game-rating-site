@@ -120,8 +120,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - And after that you can see wich [user](static/img/img-readme/fullreview06.png) who has done the review.
     - When you are done with the review, you can easily click the [link](static/img/img-readme/fullreview07.png) at the bottom to get back to the review page. 
 
-
 - Profile 
+    - When you are a newly registred member of the site, you'll can visit you profile page and start adding your games. At the top of the page is a [header-text](static/img/img-readme/profile01.png) where the users name is displayed. If you haven't added any games to you backlog or finished lists, or done any reviews yet. The page will look like [this](static/img/img-readme/profile02.png). 
+    - If you add a game to your backlog, by pressing the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. If you click on the game [title](static/img/img-readme/profile05.png) in your backlog, you can edit your game if you for example made a typo. By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. And when you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets sent over to the [finshed](static/img/img-readme/profile08.png) list.  
   
 - Sign Up
   
