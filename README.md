@@ -185,7 +185,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
-- When deleting an object from your backlog, the one that is at the top of the list gets deleted, not the one that you choosed. Unless the one ou choosed is at the top of the list ofcourse. [](static/img/img-readme/bug04.png) [](static/img/img-readme/bug05.png), The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted.  
+- When [deleting](static/img/img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](static/img/img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
+Becouse I didn't give each modal and a link instance a unique id, it jsut always triggers one and the same modal. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal.
 
 ## Deployment
 
