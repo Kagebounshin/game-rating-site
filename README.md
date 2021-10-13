@@ -98,11 +98,29 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ## Features
 
 - Navbar
-    Upon entering the site, the navbar is set at the top of the page, on desktop veiw the 
+    - The [navbar](static/img/img-readme/navbar01.png) is set at the top of the page. On mobile veiw the the navbar collapses into a burger [menu](static/img/img-readme/navbar04.png), by clicking the menu, the menu choices will be displayed to the [left](static/img/img-readme/navbar05.png) of the screen.
+
 - Home
+    - Upon entering the site, first thing you'll see below the navbar is a [header-text](static/img/img-readme/index04.png), a short but informative [text](static/img/img-readme/index05.png) about the site and a choice to [sign up or sign in](static/img/img-readme/index06.png). All together looks like [this](static/img/img-readme/index01.png). 
+    - When you are logged in as a user, the sign up button and the sign in links are [hidden](static/img/img-readme/index03.png). 
+    - Below all of this I have an more explaining [section](static/img/img-readme/index02.png) on what you can do on this page.
+
      
-- Review Page
-     
+- Reviews
+    - At the top of the review page there is a [header-text](static/img/img-readme/reviews01.png) and an informative text. 
+    - Below there is a [search](static/img/img-readme/reviews02.png) bar. You can search for review title, genre, developer & platform. 
+    - Then there is the [reviews](static/img/img-readme/reviews03.png), by clicking on the [title](static/img/img-readme/reviews05.png) or the [image](static/img/img-readme/reviews06.png) for a review, you'll get to see the full review. Underneath the review title there is some minor information of the [platform, genre and developer](static/img/img-readme/reviews04.png). 
+    Below that there is a capturing [text](static/img/img-readme/reviews07.png), just to get the reader atention. At the very bottom you can see wich [user](static/img/img-readme/reviews08.png) that made the review
+    
+- Full Review 
+    - At the top of the page is the review [image](static/img/img-readme/fullreview01.png) followed by the [title](static/img/img-readme/fullreview02.png).
+    - Just beneth the title is the [information](static/img/img-readme/fullreview03.png) of the platform you can play the game on, wich genre, who is the developer & the duration of the game.
+    - Then there is the thoughts from the user displayed in [text](static/img/img-readme/fullreview04.png). 
+    - Made a simple rating system where you rate the game from 1-5 where 1 is bad and 5 is awesome, and the games [rating](static/img/img-readme/fullreview05.png) is displayed just under the review text. 
+    - And after that you can see wich [user](static/img/img-readme/fullreview06.png) who has done the review.
+    - When you are done with the review, you can easily click the [link](static/img/img-readme/fullreview07.png) at the bottom to get back to the review page. 
+
+
 - Profile 
   
 - Sign Up
@@ -110,6 +128,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - Sign In
     
 - Add to Backlog
+
+- Footer
    
 
 ## Technologies Used
