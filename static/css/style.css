@@ -204,7 +204,8 @@ a.sidenav-trigger.left {
 }
 
 .fullreview-container a {
-    color: #7b7b7b;
+    color: #292929;
+    font-weight: 700;
 }
 
 .backlog-container a,
