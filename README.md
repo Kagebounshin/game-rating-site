@@ -97,6 +97,21 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ## Features
 
+- Navbar
+    Upon entering the site, the navbar is set at the top of the page, on desktop veiw the 
+- Home
+     
+- Review Page
+     
+- Profile 
+  
+- Sign Up
+  
+- Sign In
+    
+- Add to Backlog
+   
+
 ## Technologies Used
 
 ### Languages Used
@@ -178,12 +193,14 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Further Testing
 
-
 ### Known Bugs
 
 - So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id pas through as an argumenet. Solved it by changing the src to the images address instead of the img folder in my static files. 
 
 - Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
+
+
+### Resolved Bugs
 
 - When [deleting](static/img/img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](static/img/img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
 Becouse I didn't give each modal and a link instance a unique id, it jsut always triggers one and the same modal. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal.
