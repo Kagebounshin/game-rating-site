@@ -6,6 +6,30 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 <h2 align="center"><img src="static/img/img-readme/amIResponsive.png"></h2>
 
+## Table Of Content
+1.[**UX**](#user-experience) 
+- [**User Stories**](#user-stories)
+- [**Strategy**](#strategy)
+- [**Scope**](#scope)
+- [**Structure**](#structure)
+- [**Skeleton**](#skeleton)
+    - [**Wireframes**](#wireframes)
+- [**Surface**](#surface)
+    - [**Design**](#design)
+
+2.[**Features**](#features)
+- [**Features For The Future**](#features-for-the-future)
+
+3.[**Technologies**](#technologies-used)
+
+4.[**Testing**](#testing)
+
+5.[**Deployment**](#deployment)
+
+6.[**Credits**](#credits)
+- [**Code**](#code)
+- [**Acknowledgements**](#acknowledgements)
+
 ---
 
 ## User Experience (UX)
@@ -132,12 +156,24 @@ On this site you will be able to keep track on your gaming, add the games you ha
     Not happy with the review for some reason, or just not in the mood, click the ["Cancel"](static/img/img-readme/profile25.png) button, and your back at your profile page in no time.
   
 - Sign Up
+    - This is were you can [sign up](static/img/img-readme/signUp01.png) for this page, figure out a username, if you have choosed the same username as an already existing user possesses, a [message](static/img/img-readme/signUp02.png) explains the situation, and you have to come up with a new username. 
+    - When you have an unique username, and have entered your password of choice. You'll be redirected to your own profile page, at the profile page there is a [message](static/img/img-readme/signUp03.png) at the top wich tells you that the registration was a success.
   
 - Sign In
+    - When you return to the website, as a already registred user, just sign in at the [sign in](static/img/img-readme/signIn01.png) page. If you spell either your username or password wrong, a [message](static/img/img-readme/signIn02.png) appears at the top of the page.
     
 
 - Footer
-   
+    - The footer looks the same across all the pages. You can send me an mail just by clicking the [Email](static/img/img-readme/footer01.png) under the "Get In Touch" header. Under the header "Social Media" you can visit my github, linkedIn or Instagram by clicking any of the [icons](static/img/img-readme/footer02.png). 
+
+- Additional Features
+    - When scrolling down on any of the pages a Back to the Top [button](static/img/img-readme/additional01.png) appears in the bottom right corner of the screen. Click it if you think you have scrolled down to far, and you get back to the top of the page. 
+
+### Features for the future 
+
+
+
+---
 
 ## Technologies Used
 
@@ -274,8 +310,6 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Code
 
 ### Content
-
-
 
 ### Media
 
