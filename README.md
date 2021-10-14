@@ -126,10 +126,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - If you click on a game [title](static/img/img-readme/profile05.png) in your backlog, you can [edit](static/img/img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](static/img/img-readme/profile12.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button an you will be sent back to your profile page. 
     - By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. 
     - When you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets sent over to the [finshed](static/img/img-readme/profile08.png) list. 
-    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill, first is the [capturing text](), then you can choose between abunch of [genres]() from a dropdown list. Next up choose what [platform]() you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer]() field, [duration]() field. After all this it's time to put your thoughts of the game into words at the [review]() field. Made a basic [rating] system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is awesome. 
-    To make your review complete, you can add a [images]() to it. 
-    The click the ["Add Review"]() button, and the review is done.
-    Not happy with the review for some reason, or just not in the mood, click the ["Cancel"]() button, and your back at your profile page in no time.
+    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill. First up is the [capturing text](static/img/img-readme/profile16.png), maximum of 50 characters. Then you can choose between abunch of [genres](static/img/img-readme/profile17.png) from a dropdown list. Next up choose what [platform](static/img/img-readme/profile18.png) you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer](static/img/img-readme/profile19.png) field, [duration](static/img/img-readme/profile20.png) field. After all this it's time to put your thoughts of the game into words at the [review](static/img/img-readme/profile21.png) field. Made a basic [rating](static/img/img-readme/profile22.png) system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is awesome. 
+    To make your review complete, you can add a [images](static/img/img-readme/profile23.png) to it. 
+    Then click the ["Add Review"](static/img/img-readme/profile24.png) button, and the review is done.
+    Not happy with the review for some reason, or just not in the mood, click the ["Cancel"](static/img/img-readme/profile25.png) button, and your back at your profile page in no time.
   
 - Sign Up
   
@@ -150,21 +150,21 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Frameworks, Libraries & Programs Used
 
-- [jQuery](https://jquery.com/)
+- [jQuery](https://jquery.com/) - Used for materialize compontents.
 
-- [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+- [Flask](https://flask.palletsprojects.com/en/1.1.x/) - The project uses Flask, which is a Python microframework. 
 
-- [PyMongo](https://pypi.org/project/pymongo/)
+- [PyMongo](https://pypi.org/project/pymongo/) - The project uses PyMongo as the Python API for MongoDB. To link the backend data to frontend application. 
 
-- [Materialize](https://materializecss.com/)
+- [Materialize](https://materializecss.com/) - The project uses the Materialize framework for structure of the website.
 
-- [BSON](https://bsonspec.org/)
+- [MongoDB]() - The project uses MongoDB to store the database in the cloud.
 
-- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/)
+- [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Jinja was used with flask in the HTML code. For simple linking between the backend and frontend. 
 
-- [Heroku]()
+- [Heroku]() - Heroku was used as the hosting platform to deploy my project.
 
-- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/)
+- [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) - Used to generate password hash. 
 
 - [FontAwesome](https://fontawesome.com/) - provides icons across the site
 
@@ -222,7 +222,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs
 
-- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id pas through as an argumenet. Solved it by changing the src to the images address instead of the img folder in my static files. 
+- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more.  
 
 - Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
