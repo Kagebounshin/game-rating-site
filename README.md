@@ -1,8 +1,8 @@
-<h1 align="center">The Backlog site</h1>
+<h1 align="center">The Backlog</h1>
 
 [View the live project here.](http://backlog-gamesite.herokuapp.com/)
 
-On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start reviewing the games you have played, share your thoughts about the games. Register an account and start adding to your own backlog. 
+On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start reviewing the games you have played. Register an account and start adding to your own backlog. 
 
 <h2 align="center"><img src="static/img/img-readme/amIResponsive.png"></h2>
 
@@ -170,6 +170,11 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - When scrolling down on any of the pages a Back to the Top [button](static/img/img-readme/additional01.png) appears in the bottom right corner of the screen. Click it if you think you have scrolled down to far, and you get back to the top of the page. 
 
 ### Features for the future 
+
+- I would like to add backlog opportunities for movies, and TV Series, wich you also could review when your done watching. 
+- A more complex rating system. For example gather up all the ratings for one game, and combine the score to make an overall rating of that game.
+- A top list for the games with the highest/lowest rating score. 
+- Connect the site to a video game database, such as [RAWG](https://rawg.io/).
 
 
 
