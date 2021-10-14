@@ -723,7 +723,7 @@ footer a {
     .login-container,
     .register-container,
     .add-container  {
-        padding-top: .5rem;        
+        padding-top: 1rem;        
     }
 
     .about-container h1,
@@ -786,8 +786,9 @@ footer a {
     .login-container,
     .register-container,
     .add-container,
-    .profile-container  {
-        padding-top: .5rem;        
+    .profile-container,
+    .about-container  {
+        padding-top: 1.5rem;        
     }
 
     .fullreview-container h1 {
