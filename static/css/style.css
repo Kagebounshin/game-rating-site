@@ -29,7 +29,7 @@ main {
 .bg-color-backlog,
 .bg-color-fullreviews,
 .bg-color-add {
-    background-color: #f5f5f5;
+    background-color: #f0f0f0;
 }
 
 .bg-color-about {
@@ -53,7 +53,6 @@ nav.nav-extended {
 
 nav .brand-logo {
     position: absolute;
-    color: #000000;
     display: inline-block;
     font-size: 2.1rem;
     padding: 0;
@@ -67,10 +66,6 @@ nav .brand-logo {
 
 nav ul li {
     font-weight: 900;
-}
-
-nav ul li:hover {
-    background-color: #f5f5f5;
 }
 
 nav ul a {
@@ -91,7 +86,7 @@ nav ul a {
 
 .sidenav li>a:hover {
     font-weight: 400;
-    transition: 100ms ease-in-out;
+    transition: 200ms ease-in-out;
 }
 
 .sidenav-overlay {
@@ -163,8 +158,17 @@ a.sidenav-trigger.left {
 .review-inner a,
 .fullreview-container span,
 .fullreview-container h1,
-.error-container h1 {
+.error-container h1,
+.info-container a:last-child,
+.footer-container a,
+.register-container a,
+.login-container a,
+.about-container span {
     font-weight: 700;
+}
+
+.about-container span {
+    text-decoration: underline;
 }
 
 .reviews-container h1 {
@@ -211,13 +215,6 @@ a.sidenav-trigger.left {
 .backlog-container a,
 .finished-container a {
     margin-top: 3rem;
-}
-
-.info-container a:last-child,
-.footer-container a,
-.register-container a,
-.login-container a{
-    font-weight: 400;
 }
 
 .footer-container ul {
@@ -333,6 +330,7 @@ footer a {
     .backlog-container h1,
     .finished-container h1,
     .add-container h1,
+    .about-container h1,
     .login-container h1 {
         font-size: 2rem;
     }
@@ -349,7 +347,7 @@ footer a {
         margin-bottom: .3rem;
     }
 
-    .about-container h1,
+    
     .about-container i {
         font-size: 3rem;
     }
@@ -827,9 +825,14 @@ footer a {
 /* --------------------HOVER----------------------- */
 
 .info-container a:last-child:hover,
-.footer-container a:hover,
 .register-container a:hover,
 .login-container a:hover{
+    color: #850866;
+    transition: 300ms ease-in-out;
+    text-decoration: underline;
+}
+
+.footer-container a:hover {
     color: #ffcc00;
     transition: 300ms ease-in-out;
 }
@@ -854,7 +857,7 @@ i.fas.fa-times:hover {
 .review-inner .title:hover,
 .profile-container .review-inner .title:hover,
 .fullreview-container a:hover {
-    color: #ffcc00;
+    color: #850866;
     transition: 300ms ease-in-out;
     text-decoration: underline;
 }
