@@ -193,10 +193,13 @@ a.sidenav-trigger.left {
     margin-bottom: 0;
 }
 
-.fullreview-container .review_text,
 .fullreview-container .inline,
 .fullreview-container a {
-    font-size: 2rem;
+    font-size: 1.5rem;
+}
+
+.fullreview-container .review_text {
+    font-size: 1.3rem;
 }
 
 .fullreview-container hr{
