@@ -114,6 +114,18 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 -   ### Design
     -   #### Colour Scheme
+        -   The background color of the site, navbar and the about-section, the inside of the card at the backlog, finished backlog, sign up and sign in is set to a basic white color ([#ffffff](static/img/img-readme/ffffff.png)). 
+        - Basically all the sections (except the footer and the about-section on the index page), has a light-grey ([#f0f0f0](static/img/img-readme/f0f0f0.png))  background color. 
+        - The footer of the page has a dark grey ([#1f1f1f](static/img/img-readme/1f1f1f.png)) background color. 
+        - My overall thoughts with this background color layout was that the color should gradually decrease in brightness, you start with the white, then the light grey, and at the footer is the dark grey. 
+        - Where there is a white or lightgrey background color, the text color is set to the same dark grey color ([#1f1f1f](static/img/img-readme/1f1f1f.png)) as the footer. 
+        - And at the footer the text is set to the same light-grey color ([#f0f0f0](static/img/img-readme/f0f0f0.png)) as in the most of the sections.
+        - When you hover the anchor links at the page they ease in to a to a lilac color ([#850866](static/img/img-readme/850866.png)) with a underline. But at the footer the anchor links and social icons ease in to a yellow ([#ffcc00](static/img/img-readme/ffcc00.png)) color.  
+        - The backlog has two icons after the game title, a "Check" icon and a "Delete" icon, when hovered the "Check" icon it eases in to a green ([#3e913e](static/img/img-readme/3e913e.png)) color. The "Delete" icon eases in to a red ([#b42020](static/img/img-readme/b42020.png)) color. 
+        - The horizontal lines at the review page and the fullreview page has a slightly darker color then the light grey background. They have the color ([#7b7b6e](static/img/img-readme/7b7b6e.png)).
+        In the reviews before you got to the fullreview page, has a text at the top wich just says "Reviews", that text is set to the same color as most of the anchor links, the lilac ([#850866](static/img/img-readme/850866.png)). But if hovered it get a slightly lighter lilac ([#b10e88](static/img/img-readme/b10e88.png))color 
+        - The horizontal line just benath the header at the profile page is set to the color (black [#000000](static/img/img-readme/000000.png)) and fades out at the edges. 
+        - The ["Back to the Top"](static/img/img-readme/additional01.png) button, has the same yellow ([#ffcc00](static/img/img-readme/ffcc00.png)) as the anchor links at the footer and the pacman images in the logo and at the navbar. But when hovered it get a slightly darker yellow ([#d8ad00](static/img/img-readme/d8ad00.png)) color. 
     -   #### Typography
     -   #### Imagery
 
