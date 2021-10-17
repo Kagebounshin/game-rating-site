@@ -127,7 +127,12 @@ On this site you will be able to keep track on your gaming, add the games you ha
         - The horizontal line just benath the header at the profile page is set to the color (black [#000000](static/img/img-readme/000000.png)) and fades out at the edges. 
         - The ["Back to the Top"](static/img/img-readme/additional01.png) button, has the same yellow ([#ffcc00](static/img/img-readme/ffcc00.png)) as the anchor links at the footer and the pacman images in the logo and at the navbar. But when hovered it get a slightly darker yellow ([#d8ad00](static/img/img-readme/d8ad00.png)) color. 
     -   #### Typography
+        - The Fonts I've used for this site are from [Google Fonts](https://fonts.google.com/). The ones I've used are "Open Sans" and "Press Start 2P". 
+            - ["Open Sans"](https://fonts.google.com/specimen/Open+Sans#about) is the main font for the page. I've choosed this font because it has a clean and readable look to it. Nice to have for informative text, and when you're typing.  
+            - The font used for header across the page has the ["Press Start 2P"](https://fonts.google.com/specimen/Press+Start+2P?query=press+) font. When I first saw this font, my mind went immediately to games. So just by having this font as the main header of the page, you'll get a hint of what the site is about. 
     -   #### Imagery
+        - For the navbrand, the site logo and the favicon I've used a image of [Pacman](static/img/pacman.png). Pacman is one of the most iconic game characters of all time, so I thought he would be perfect for this page, wich purpose is about games. For the site logo, I've put the image of pacman instead of the letter "O".
+        - Images are also used in the reviews. The purpose for those images is to show something from the game you reviewed.
 
 ---
 
@@ -221,7 +226,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - [FontAwesome](https://fontawesome.com/) - provides icons across the site
 
-- [GoogleFonts](https://fonts.google.com/) - Fonts
+- [GoogleFonts](https://fonts.google.com/) - Main font and header font for this site. 
 
 - [Git](https://git-scm.com/) - Git was used for version control.
 
