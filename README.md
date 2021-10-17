@@ -82,10 +82,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
     - The reviews will be stored in mongoDB.
 - Register
-    - A easily understanable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
+    - A easily understandable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
 - Log In
     - Will have the same estetics as the register page. 
-    - Just enter your nickname and password and your are good to go. Will have simular styling as the register page. 
+    - Just enter your nickname and password and your are good to go.
 - Add to Backlog
     - Will have the same estetics as the register page.
     - At this page you will add games to your backlog.
@@ -287,7 +287,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs 
 
-- Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
+- A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
 
 ### Resolved Bugs

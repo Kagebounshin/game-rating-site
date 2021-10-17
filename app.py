@@ -114,9 +114,12 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        backlogs = list(mongo.db.backlog.find({"added_by": username}).sort("_id", -1))
-        finish = list(mongo.db.finished.find({"added_by": username}).sort("_id", -1))
-        reviews = list(mongo.db.reviews.find({"review_by": username}).sort("_id", -1))
+        backlogs = list(mongo.db.backlog.find(
+            {"added_by": username}).sort("_id", -1))
+        finish = list(mongo.db.finished.find(
+            {"added_by": username}).sort("_id", -1))
+        reviews = list(mongo.db.reviews.find(
+            {"review_by": username}).sort("_id", -1))
         return render_template(
             "profile.html", username=username,
             backlogs=backlogs, finish=finish, reviews=reviews)
