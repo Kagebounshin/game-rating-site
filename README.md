@@ -331,11 +331,9 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Code
 
-- The code for the "Back To Top Button" was borrowed from [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top)
+- The code for the "Back To Top Button" was borrowed from [W3Schools](https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top).
 
-- The Code to make you smooth scroll back to the top when clicking the "Back To Top Button" was borrowed from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo)
-
-### Content
+- The Code to make you smooth scroll back to the top when clicking the "Back To Top Button" was borrowed from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
 
 ### Media
 
