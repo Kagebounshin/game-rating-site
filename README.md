@@ -17,16 +17,18 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - [**Surface**](#surface)
     - [**Design**](#design)
 
-2.[**Features**](#features)
+2.[**Database Design**](#database-design)
+
+3.[**Features**](#features)
 - [**Features For The Future**](#features-for-the-future)
 
-3.[**Technologies**](#technologies-used)
+4.[**Technologies**](#technologies-used)
 
-4.[**Testing**](#testing)
+5.[**Testing**](#testing)
 
-5.[**Deployment**](#deployment)
+6.[**Deployment**](#deployment)
 
-6.[**Credits**](#credits)
+7.[**Credits**](#credits)
 - [**Code**](#code)
 - [**Acknowledgements**](#acknowledgements)
 
@@ -138,6 +140,14 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ---
 
+## Database Design 
+
+MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page. 
+
+<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
+
+---
+
 ## Features
 
 - Navbar
@@ -200,14 +210,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ---
 
-## Database Design 
-
-MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page. 
-
-<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
-
-
-
 ## Technologies Used
 
 ### Languages Used
@@ -229,7 +231,7 @@ MongoDB Atlas is used as database backend for storing user, backlog, finished an
 
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Jinja was used with flask in the HTML code. For simple linking between the backend and frontend. 
 
-- [Heroku]() - Heroku was used as the hosting platform to deploy my project.
+- [Heroku](https://id.heroku.com/login) - Heroku was used as the hosting platform to deploy my project.
 
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) - Used to generate password hash. 
 
@@ -327,6 +329,11 @@ MongoDB Atlas is used as database backend for storing user, backlog, finished an
 
 ### Further Testing
 
+- Tested the links  alot, to see if they get you to the desired place. 
+- This project was tested different webbrowsers, Google Chrome & Microsoft Edge, Safari.
+- This project was tested different devices such as Desktop, Laptop, Ipad, Iphone 12 Pro, Iphone X, Iphone 8 & Iphone 7, Sony xperia Z1.
+- Friend & Family members has tested the site, looking for bugs and other issues.
+
 ### Known Bugs 
 
 - A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
@@ -342,13 +349,36 @@ s own unique ID.
 
 ## Deployment
 
+The site was deployed to Heroku. Following the steps below.
+
+### Deployment steps
+
+1. Before deploying your project add a requirements.txt file by running ```pip3 freeze > requirements.txt``` command in the CLI.
+2. Create a Procfile file by running ```echo web: python app.py > Procfile``` command in the CLI.
+3. Git add, git commit and git push your changes to GitHub.
+4. Log in to [Heroku](https://dashboard.heroku.com/apps).
+5. Then select "New" on your dashboard followed by selecting "Create new app".
+6. Select a unique name for your Applicaion, select your region, and then click "Create app".
+7. From the apps dashboard, navigate to the "Deploy" tab.
+8. For Deployment method select "Github" and confirm the linking of the Heroku app by clicking "Search" then select your github repository name.
+9. Once you find your repository, click on "Connect".
+10. After you connected to your repository, click on "Settings" tab on your app dashboard, and click on "Reveal Config Vars" and add your configuration variables to Heroku.
+    - **IP** : `0.0.0.0`
+    - **PORT** : `5000`
+    - **SECRET_KEY** : `<secret_key>`
+    - **MONGO_URI** : `<mongodb_URI>`
+    - **MONGO_DBNAME** : `<db_name>`
+11. Navigate to "Deploy" tab, and from Manual deploy choose your master branch, and click "Deploy Branch".
+12. After you deployed your branch "Enable Automatic Deploys".
+13. Site is successfully deployed, any further changes will automatically be updated everytime they are commited and pushed on Github.
+
 ### Forking the GitHub Repository
 
-By forking the GitHub Repository we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+By forking the GitHub Repository you can make a copy of the original repository to your GitHub account to just view or make changes without affecting the original. Use these steps or press this [link](https://docs.github.com/en/github/getting-started-with-github/fork-a-repo).
 
-1. Log in to GitHub and locate the [GitHub Repository](https://github.com/)
-2. At the top of the Repository (not top of page) just above the "Settings" Button on the menu, locate the "Fork" Button.
-3. You should now have a copy of the original repository in your GitHub account.
+1. Log in to [GitHub](https://github.com/) and locate the [GitHub Repository](https://github.com/Kagebounshin/game-rating-site).
+2. In the top-right corner of the page, click Fork.
+3. Now you will have a copy of the original repository in your GitHub account.
 
 ### Making a Local Clone
 
