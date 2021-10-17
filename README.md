@@ -44,23 +44,26 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
     -   #### Frequent User Goals
         1. I would like the login process to be a button click away. 
-        2. I want to add new games to my backlog easily, maybe add multiple games at once. 
-        3. I want to review my finshed game, and let others see my reviews. 
-        4. I would like to search for a specific game review, to see other users thought on that game.
-        5. I would want to add pictures to my review.  
-        6. I want to see other users backlog. 
-        7. I would like to know where I could purchase a copy of a game.
-
+        2. I want to add new games to my backlog easily. 
+        3. I want to edit my backlog, incase I've made an Typo
+        4. I would like to delete games from my backlog. 
+        5. I want to have the choice to review my finshed game, and let others see my reviews. 
+        6. I want the option the edit my reviews. 
+        7. I want  the option to delete my reviews. 
+        8. I would want to add pictures to my review. 
+        9. I would like to search for a specific game review, to see other users thought on that game.
+        10. I would like to contact the creator if I've encounter any problems with the site. 
+    
 ---
 
 - ### Strategy
-    - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So the reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a short review of your experience, for other users to see.
+    - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my own backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So the reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a short review of your experience, for other users to see.
 
 ---
 
 - ### Scope
     
-    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews and backlogs. More features will be to add a link to where you can buy the games. 
+    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy games wich got your interest. 
 
 ---
 
@@ -71,8 +74,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - Home
     - At first you will see the page header, A short description on what the site is about, and then you can choose to Register an account or Log in. 
 - Review Page
-    - At the review page you will see other users reviews as well as our own, displaying from newest to oldest post. 
-    - 
+    - At the review page you will see other users reviews as well as our own, displaying from newest to oldest post.  
 - My page
     - At this page you will store your backlog in a list. 
     - Also displayed in a list would be yor finished games.
@@ -276,8 +278,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ### Testing User Stories from User Experience (UX) Section
 
 -   #### First Time Visitor Goals
-
--   #### Returning Visitor Goals
 
 -   #### Frequent User Goals
 
