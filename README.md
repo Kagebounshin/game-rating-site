@@ -188,10 +188,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Features for the future 
 
-- I would like to add backlog opportunities for movies, and TV Series, wich you also could review when your done watching. 
-- A more complex rating system. For example gather up all the ratings for one game, and combine the score to make an overall rating of that game.
+- I would like to add backlog opportunities for movies, and TV Series, wich you also could be reviewed when your done them watching. 
+- A more complex rating system. For example gather up all the ratings for one game, and combine the score to make an overall rating.
 - A top list for the games with the highest/lowest rating score. 
-- Connect the site to a video game database, such as [RAWG](https://rawg.io/).
+- Connect the site to a video game database, such as [RAWG](https://rawg.io/). For example to make the adding to your backlog process easier. You would only need to click on the game that you want to add, and the choose to add it to your backlog. 
 
 
 
@@ -216,8 +216,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - [Materialize](https://materializecss.com/) - The project uses the Materialize framework for structure of the website.
 
-- [MongoDB]() - The project uses MongoDB to store the database in the cloud.
-
 - [Jinja](https://jinja.palletsprojects.com/en/3.0.x/) - Jinja was used with flask in the HTML code. For simple linking between the backend and frontend. 
 
 - [Heroku]() - Heroku was used as the hosting platform to deploy my project.
@@ -238,7 +236,15 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - [Color Hex](https://www.color-hex.com/) - The color images wich are displayed at the [**Design**](#design) section of this readMe.
 
-- [Amp What](https://www.amp-what.com/) - At the footer, and sidenav.  
+- [Amp What](https://www.amp-what.com/) - For copyright symbol at the footer.  
+
+### Database Management
+
+- [MongoDB](https://www.mongodb.com/) - The project uses MongoDB to store the database in the cloud.
+
+- [Cloudinary](https://cloudinary.com/) - Used for storing the images for the site. 
+
+---
 
 ## Testing
 
@@ -248,6 +254,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
     -   [No Error Found](static/img/img-readme/cssValidation.png)
     -   [Warning](static/img/img-readme/cssWarning.png)
+
 ### Lighthouse Testing
 
 --- 
@@ -278,9 +285,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Further Testing
 
-### Known Bugs
-
-- So the first bug i've encounterd was when opening the sidenav on mobile view, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more.  
+### Known Bugs 
 
 - Another bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
 
@@ -290,6 +295,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - When [deleting](static/img/img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](static/img/img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
 Becouse I didn't give each modal and a link instance a unique id, it just always triggers one and the same modal the first modal in the loop, so thats why the top object always got deleted. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal. Each object in the backlog got it'
 s own unique ID.
+
+- So the first bug i've encounterd was when opening the sidenav on my iPhone X, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more. 
 
 ## Deployment
 
