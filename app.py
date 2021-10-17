@@ -30,7 +30,7 @@ cloudinary.config(
 @app.route("/")
 def index():
     """
-    Root for the home page. 
+    Root for the home page.
     """
     return render_template("index.html")
 
@@ -72,7 +72,7 @@ def register():
         # Checking for an existing user.
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
-        
+
         if existing_user:
             flash("Username already exists")
             return redirect(url_for("register"))
