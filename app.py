@@ -247,7 +247,6 @@ def edit_review(review_id):
         }
         mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
         flash("Review Successfully Updated")
-    # ERROR WITH IMAGE, MAKE SO VAULE APEARS
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
     platforms = mongo.db.reviews_platform.find().sort("platform_name", 1)

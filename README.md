@@ -30,6 +30,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 7.[**Credits**](#credits)
 - [**Code**](#code)
+- [**Media**](#media)
 - [**Acknowledgements**](#acknowledgements)
 
 ---
@@ -462,4 +463,14 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Media
 
+- All the reviews text are copied from the review made from [IGN](https://nordic.ign.com/) writers. 
+- Images are copied from [IGN](https://nordic.ign.com/), [PC Gamer](https://www.pcgamer.com/uk/), [Kotaku](https://kotaku.com/), [GiantBomb](https://www.giantbomb.com/) & [Google](https://www.google.com/).
+- Pacman image for navbrand, favicon and header at home page are from [wikipedia](https://commons.wikimedia.org/wiki/File:Pacman.svg)
+- All the text and images are used for educational purpose only.
 
+### Acknowledgements
+
+- Thanks to family and friends for endless support. 
+
+### Disclaimer
+- This website was built for educational purpose only!
