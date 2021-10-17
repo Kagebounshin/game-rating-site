@@ -228,9 +228,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) - Used to generate password hash. 
 
-- [FontAwesome](https://fontawesome.com/) - provides icons across the site
+- [FontAwesome](https://fontawesome.com/) - Provides icons across the site
 
-- [GoogleFonts](https://fonts.google.com/) - Main font and header font for this site. 
+- [GoogleFonts](https://fonts.google.com/) - Main font and header font. 
 
 - [Git](https://git-scm.com/) - Git was used for version control.
 
