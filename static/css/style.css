@@ -28,7 +28,8 @@ main {
 .bg-color-profile, 
 .bg-color-backlog,
 .bg-color-fullreviews,
-.bg-color-add {
+.bg-color-add,
+.bg-color-error {
     background-color: #f0f0f0;
 }
 
@@ -145,7 +146,7 @@ a.sidenav-trigger.left {
 }
 
 .footer-container {
-   color: #f9f9f9;
+   color: #f0f0f0;
 }
 
 .footer-container h1 {
@@ -208,7 +209,6 @@ a.sidenav-trigger.left {
 }
 
 .fullreview-container a {
-    color: #292929;
     font-weight: 700;
 }
 
@@ -274,7 +274,7 @@ a.sidenav-trigger.left {
 }
 
 #copyright {
-    color: #7b7b7b;
+    color: #f0f0f0;
 }
 
 .inline {
@@ -307,11 +307,11 @@ a.sidenav-trigger.left {
 }
 
 a {
-    color: #292929;
+    color: #1f1f1f;
 }
 
 footer a {
-    color:rgb(211, 211, 211) ;
+    color:#f0f0f0;
 }
 
 /* --------------------MEDIA BREAKPOINTS---------------------- */
@@ -827,7 +827,12 @@ footer a {
 
 .info-container a:last-child:hover,
 .register-container a:hover,
-.login-container a:hover{
+.login-container a:hover,
+.backlog .title:first-child:hover,
+.finished-backlog a:hover,
+.review-inner .title:hover,
+.profile-container .review-inner .title:hover,
+.fullreview-container a:hover {
     color: #850866;
     transition: 300ms ease-in-out;
     text-decoration: underline;
@@ -838,29 +843,14 @@ footer a {
     transition: 300ms ease-in-out;
 }
 
-.finished-hover:hover {
-    color: #464646;
-    transition: 300ms ease-in-out;
-}
-
 i.fas.fa-check:hover {
-    color: rgb(62, 145, 62);
+    color: #3e913e;
     transition: 200ms ease-in-out;
 }
 
 i.fas.fa-times:hover {
-    color: rgb(180, 32, 32);
+    color: #b42020;
     transition: 200ms ease-in-out;
-}
-
-.backlog .title:first-child:hover,
-.finished-backlog a:hover,
-.review-inner .title:hover,
-.profile-container .review-inner .title:hover,
-.fullreview-container a:hover {
-    color: #850866;
-    transition: 300ms ease-in-out;
-    text-decoration: underline;
 }
 
 .btn:hover {
