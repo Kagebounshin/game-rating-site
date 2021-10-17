@@ -4,6 +4,7 @@
 
 body {
     background-color: #fff;
+    color: #1f1f1f;
     font-family: 'Open Sans', sans-serif;
     padding: 0;
     margin: 0 auto;
@@ -33,15 +34,12 @@ main {
     background-color: #f0f0f0;
 }
 
-.bg-color-about {
-    background-color: #fff;
-}
-
 .bg-color-footer{
     background-color: #1f1f1f;
 }
 
-.bg-color-navbar {
+.bg-color-navbar,
+.bg-color-about {
     background-color: #fff;
 }
 
@@ -101,7 +99,6 @@ a.sidenav-trigger.left {
 /* -----------------------CONTAINERS------------------------- */
 
 .hero-container {
-    color: #1f1f1f;
     margin-bottom: 0;
     user-select: none;
     padding-top: 5rem;
@@ -119,7 +116,6 @@ a.sidenav-trigger.left {
 
 .info-container,
 .about-container{
-    color: #1f1f1f;
     padding-top: 5rem;
     padding-bottom: 5rem;
     margin-bottom: 0;
@@ -183,7 +179,6 @@ a.sidenav-trigger.left {
 }
 
 .fullreview-container {
-    color: #1f1f1f;
     margin-bottom: 0;
     padding-bottom: 5rem;
     padding-top: 5rem;
@@ -832,7 +827,9 @@ footer a {
 .finished-backlog a:hover,
 .review-inner .title:hover,
 .profile-container .review-inner .title:hover,
-.fullreview-container a:hover {
+.fullreview-container a:hover,
+.profile-container .review-inner .edit:hover,
+.profile-container .review-inner .delete:hover {
     color: #850866;
     transition: 300ms ease-in-out;
     text-decoration: underline;
