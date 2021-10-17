@@ -270,6 +270,11 @@ On this site you will be able to keep track on your gaming, add the games you ha
     -   [No Error Found](static/img/img-readme/cssValidation.png)
     -   [Warnings](static/img/img-readme/cssWarning.png)
 
+- [PEP8 Online](http://pep8online.com/) - Validation for Python Code
+    - [Results](static/img/img-readme/pep8.png)
+
+- [JSHint](https://jshint.com/) - Validation for JavaScript code. 
+    - [Results](static/img/img-readme/jshint.png)
 ### Lighthouse Testing
 
 --- 
