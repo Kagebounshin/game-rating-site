@@ -38,7 +38,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
     -   #### First Time Visitor Goals
 
-        1. I would like to get a clear instructions on what the site is about, what I can do. 
+        1. I would like to get a introduction on what the site is about, what I can do. 
         2. I would like to easily navigate my way through the site.  
         3. I want the registration process to be smooth and availible. 
 
@@ -193,11 +193,20 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - I would like to add backlog opportunities for movies, and TV Series, wich you also could be reviewed when your done them watching. 
 - A more complex rating system. For example gather up all the ratings for one game, and combine the score to make an overall rating.
 - A top list for the games with the highest/lowest rating score. 
+- A chance for the users to retrive their lost usernames or passwords.
 - Connect the site to a video game database, such as [RAWG](https://rawg.io/). For example to make the adding to your backlog process easier. You would only need to click on the game that you want to add, and the choose to add it to your backlog. 
 
 
 
 ---
+
+## Database Design 
+
+MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page. 
+
+<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
+
+
 
 ## Technologies Used
 
@@ -240,6 +249,8 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - [Amp What](https://www.amp-what.com/) - For copyright symbol at the footer.  
 
+- [dbDiagrams](https://dbdiagram.io/home) - Was used for displaying MongoDB collections in README. 
+
 ### Database Management
 
 - [MongoDB](https://www.mongodb.com/) - The project uses MongoDB to store the database in the cloud.
@@ -251,11 +262,10 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ## Testing
 
 ---
-
 -   [W3C Markup Validator](https://validator.w3.org/nu/?doc=http%3A%2F%2Fbacklog-gamesite.herokuapp.com%2F)
 -   [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) 
     -   [No Error Found](static/img/img-readme/cssValidation.png)
-    -   [Warning](static/img/img-readme/cssWarning.png)
+    -   [Warnings](static/img/img-readme/cssWarning.png)
 
 ### Lighthouse Testing
 
@@ -273,15 +283,47 @@ On this site you will be able to keep track on your gaming, add the games you ha
 10. [edit_review.html](pdf/edit_review.pdf)
 11. [full_review.html](pdf/full_review.pdf)
 
-
-
 ### Testing User Stories from User Experience (UX) Section
 
--   #### First Time Visitor Goals
+---
 
+-   #### First Time Visitor Goals
+    1. "I would like to get a introduction on what the site is about, what I can do."
+        - When I enter the site, first thing I see is a header with some explaining text underneath. Wich explains the soul purpose for this page. 
+        If thats not enough I find an about section abit further down the home page. 
+    2. I would like to easily navigate my way through the site.  
+        - I can easily navigate between the pages at the top of the site using the navbar. When shown on small & medium devieces the navbar collapses into a burger menu, wich when pressed appears to the left of the screen.
+    3. I want the registration process to be smooth and availible. 
+        - When I enter the site, just below the header there is a "Sign Up" button, I click that button an it takes me to the sign up page. I click on the "Sign Up" button, the username input field tells me that a need to fill out that field first. So I choose a username that I know exists in the database. A message at the top of the page appears, saying that this username already exists. So I enter a new username, using only four letters. The username input field tells me to match the requested format. So I choose another username with five letters and I click the "Sign Up" button. The password input field tells me that I need to fill in a password. So I enter a four letter password, the password input field tells me to match the requested format. So I enter my username and password correctly and I end up on my new profile page, greated with a message at the top of the page, saying that the registration was a success. 
 -   #### Frequent User Goals
 
-
+    1. I would like the login process to be a button click away. 
+        - I enter the website, I locate the "Sign In" link at the navbar, it takes me to the sign in page. I click the "Sign In" button, and then the username field tells me that I need to fill in that field first. So I enter my username in that field and then I click the "Sign In" button again. The password field tells me that I also need to fill that field. So I enter the wrong password and I click the "Sign In" button. A message appears at the top of the page. Saying the either my username or password was incorrect. So now I enter the correct username and password, and I'm greated with a welcome message at my profile page. 
+    2. I want to add new games to my backlog easily. 
+        - When the I'm sign in, and at my profile page, I can click on a button wich says "Add To Backlog". I click the button and I end up on another page, the header says "Add To Backlog", and benath the header is an input field with a placeholder explaining that I should type in a game title. I dont do that, instead I click the "Add to Backlog" button. The Game title field tells me to fill out that field. I enter a game title of a game that I want to play, I click the button to add the game t my backlog. A message appears at the top of the page, saying that the game has been added. I navigate my way back to my profile page, and there in my backlog, I can see that the game I've added, is at the top of my backlog. 
+    3. I want to edit my backlog, incase I've made an Typo
+        - If I click on a game title in my backlog, a land on an edit page. I corrected my typo and click on the "Edit" button. A message appears at the top, saying that the game has been updated successfully. 
+        - I click a game title in my backlog, but I dont want to edit this game, it's perfect as it is. So I click the "Cancel" Button, and I'm back at my profile page. 
+        - I click a game title in my backlog, I remove the text in the input field and click the "Edit" button. The input field tells me to match the requested format. I type in the game title again an click on the "Edit" button. The update was a succsess and I can go back to my profile page either by clicking the "Cancel" Button or using the navbar. 
+    4. I would like to delete games from my backlog. 
+        - At my profile, in my backlog I see an "X" icon to the right of the game title. I click that icon, and a modal shows up, asking me if i really want to delete this game. I dont want to do that so I click the "No" button. Nothing has happend, my backlog looks the same as before.
+        I click the "X" icon to the right of the game I want to delete. A modal pops up, asking if I really want to delete the game. I do want to delete the game. I click on the "Yes" button. The game gets deleted, never to be seen again.  
+    5. I want to have the choice to review my finshed game, and let others see my reviews.
+        - I'm done with a game so I clicked the "Check" icon to the right of that game title. The game ends up in a "Finished" list next to my backlog. Now If I click that game title in that list I end up on the add review page. I dont want to add a review right now, so a click the "Cancel" button, and I'm back at my profile page. 
+        - Now I want to add a review, so I click the game title I want to review in my "Finished" list and now I'm at the add review page. I try to click the "Add Review" without filling out any of the fields. That dosen't work, I need to fill out every field before a can add my review. I do so, I fill every field and add a picture at the bottom. I click the "Add Review" button. I end up at the reviews page, seeing that my newly added review is at the top of the page. I go back top my profile page to see that my review has been added there as well, and beneath the backlog and the finished list is my newly added review. 
+    6. I want the option the edit my reviews. 
+        - At my profile page, down where I can see my own reviews, I can locate a Edit button on the reviews, I Choose a review a want to edit, I click the "Edit" link, and I end up on an edit review page. I review the input value from on of the fields and click the "Edit" button. That field urges me to fill it out if I want to be able to finish my editing. A refill that field and I'm happy with the changes. So I click on the "Edit" button. A messages appears at the top, saying that the update was a success. I navigate my way back using the navbar, or by clicking the "Cancel" button. 
+        - I click on the edit button for a review. But I dont want to edit the game at all. I just click the "Cancel" button and I'm back at my profile page. 
+    7. I want  the option to delete my reviews. 
+        - I locate the review I like to delete at my profile page. At the bottom of each ones of my reviews I can locate a "Delete" link. I click that link, A modal appears asking me if I really want to delete that review. I do want to delete it, so I click on the "Yes" Button. And the review is deleted.
+        - I clicked the "Delete" link by accident, a modal popped up asking if I really want to delete this review. I dont want to do that, so I click the "No" button.
+    8. I would want to add pictures to my review. 
+        - The input field at the bottom of the add review form is where I can add my picture. I can add a pictures by clicking at the button to the left of the input field. I the picture I want to add. If all the other fields are filled, I can click the "Add Review" button. 
+    9. I would like to search for a specific game review, to see other users thought on that game.
+        - I locate the reviews page at the top of the navbar. Just below the page header is an input field. To the right of that field is two button, one has a "Search" icon, and the other says "Reset". I click on the search button without filling out the input field. The input field urgest me to fill it out before clicking the "Search" Button. I do so, I type in what I like to search for, I mostly play on the PC so I want to see reviews for PC  games. I type in the word "PC" and click the search button. The search results shows me the reviews with the matching platform choice of "PC". I'm done searching I click the "Reset" button and the page does just that. 
+        - I search for a word I know doesn't exist in the search base. A message get displayed below the search field saying "No Results Found". I click the "Reset" button and the page does just that.
+    10. I would like to contact the creator if I've encounter any problems with the site.
+        - Down at the footer is a contact section with an email adress. If I click the email address a new e-mail opens up with the address already filled in. I add a subject, write whats o my mind and the click send. 
 
 ### Further Testing
 
