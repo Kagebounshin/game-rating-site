@@ -4,16 +4,13 @@ $(document).ready(function(){
   // Copyright year
   $('.copyright').text(new Date().getFullYear());
   $('input#review_capture').characterCounter();
-});
-
-$(document).ready(function(){
   $('.modal').modal();
 });
 
 // Code borrowed from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_scroll_to_top with some modifications
 
 //Get the button
-mybutton = document.getElementById("myBtn");
+var mybutton = document.getElementById("myBtn");
 
 // When user scrolls down 20px from the top of document, button fades in.
 window.onscroll = function () {
@@ -25,7 +22,7 @@ function scrollFunction() {
 		mybutton.style.display = "block";
 	} else {
 		mybutton.style.display = "none";
-    mybutton.style.animation = "fadeIn 1s"
+    mybutton.style.animation = "fadeIn 1s";
 	}
 }
 
@@ -38,3 +35,4 @@ function topFunction() {
   });
 }
 
+topFunction();
