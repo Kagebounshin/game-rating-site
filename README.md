@@ -17,14 +17,14 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - [**Surface**](#surface)
     - [**Design**](#design)
 
-2.[**Database Design**](#database-design)
-
-3.[**Features**](#features)
+2.[**Features**](#features)
 - [**Features For The Future**](#features-for-the-future)
 
-4.[**Technologies**](#technologies-used)
+3.[**Technologies**](#technologies-used)
 
-5.[**Testing**](#testing)
+4.[**Testing**](#testing)
+
+5.[**Database Setup**](#database-setup)
 
 6.[**Deployment**](#deployment)
 
@@ -140,14 +140,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ---
 
-## Database Design 
-
-MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page. 
-
-<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
-
----
-
 ## Features
 
 - Navbar
@@ -253,6 +245,14 @@ MongoDB Atlas is used as database backend for storing user, backlog, finished an
 
 - [dbDiagrams](https://dbdiagram.io/home) - Was used for displaying MongoDB collections in README. 
 
+- [Lighthouse](https://developers.google.com/web/tools/lighthouse) - Lighthouse was used to test the performanceof the website.
+
+- [W3.CSS](https://www.w3schools.com/w3css/defaulT.asp) - General resources.
+
+- [Stack Overflow](https://pt.stackoverflow.com/)- General resources.
+
+- Code Institute SLACK Community - General resources
+
 ### Database Management
 
 - [MongoDB](https://www.mongodb.com/) - The project uses MongoDB to store the database in the cloud.
@@ -347,11 +347,57 @@ s own unique ID.
 
 - So the first bug i've encounterd was when opening the sidenav on my iPhone X, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more. 
 
+---
+
+## Database Setup
+
+MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page.
+
+<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
+
+Follow these steps to setup your MongoDB.
+
+1. Sign up for a free account and login to [MongoDB](https://www.mongodb.com).
+2. Create a cluster first by clicking "Create" and following the steps.
+3. Go to your cluster and click on the button "Connect".
+4. Select "Connect to your application".
+5. Select Python as "Driver" and choose "Version 3.6 or later"
+6. Create a `env.py` in your project and paste in the following text below.
+```
+import os
+
+os.environ.setdefault("IP", "0.0.0.0")
+os.environ.setdefault("PORT", "5000")
+os.environ.setdefault("SECRET_KEY", "<secret_key>")
+os.environ.setdefault("MONGO_URI", "<mongodb_URI>")
+os.environ.setdefault("MONGO_DBNAME", "<db_name>")
+```
+7. Create an instance of PyMongo
+```
+mongo = PyMongo(app)
+```
+---
+
+Cloudinary was used to store review images.
+
+1. Sign up for a free account and login to [Cloudinary](https://cloudinary.com/).
+2. Click on "Dashboard" at the top left corner.
+3. There you can find your "Cloud Name", "API Key" and "API Secret".
+4. At your `env.py` paste in the following text below.
+
+```
+os.environ.setdefault("CLOUD_NAME", "<cloud_name>")
+os.environ.setdefault("API_KEY", "<api_key>")
+os.environ.setdefault("API_SECRET", "<api_secret>")
+```
+5. Then add your own "Cloud Name", "API Key" and "API Secret" wich is found at your dashboard at Cloudinary.
+
+Follow these steps to co
 ## Deployment
 
 The site was deployed to Heroku. Following the steps below.
 
-### Deployment steps
+### Heroku Deployment Steps
 
 1. Before deploying your project add a requirements.txt file by running ```pip3 freeze > requirements.txt``` command in the CLI.
 2. Create a Procfile file by running ```echo web: python app.py > Procfile``` command in the CLI.
@@ -416,4 +462,4 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 ### Media
 
-### Acknowledgements
+
