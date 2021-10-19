@@ -512,6 +512,11 @@ footer a {
         font-size: 1.5rem;
     }
 
+    .profile-container .review-inner h1 {
+        font-size: 2rem;
+        margin-top: 0rem;
+    }
+
     .backlog p,
     .finished-backlog p {
     font-size: 1rem;
@@ -704,11 +709,6 @@ footer a {
 
     .review-inner p i {
         font-size: 1.3rem;
-    }
-
-    .review-by {
-        position: absolute;
-        bottom: 0;
     }
 }
 
