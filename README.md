@@ -63,7 +63,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - This site will have it's focus on the gamers, one of the larges growing community in the world. 
     - During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my own backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So that was the main idea for this website, keep track . 
     - The reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a review of your experience, for other users to see.
-    - By adding a review possibility for the user, later on I 
     
 ---
 
@@ -79,8 +78,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - At this page you will store your backlog in a list. 
     - Also displayed in a list would be yor finished games.
     - Underneath those lists you can see your own reviews, in an order from newest to oldest.
-    - When you are done with a game, review the game and it will be for everybody to see at this page. Viewing the newest to oldest reviews.
-    - The reviews will be stored in mongoDB.
+    - When you are done with a game, review the game and it will be for everybody to see at the review page.
 - Register
     - A easily understandable register page, centered in the middle of the page. Come up with a nickname, enter a password, and you are ready to start your backlog. 
 - Log In
@@ -90,7 +88,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
     - Will have the same estetics as the register page.
     - At this page you will add games to your backlog.
     - You type in the name of your game, and it will be stores in your backlog.
-    - The backlog will be stored in mongoDB.
 
 ---
 
