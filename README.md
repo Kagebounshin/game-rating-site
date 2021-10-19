@@ -194,7 +194,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - I would like to add backlog opportunities for movies, and TV Series, wich you also could be reviewed when your done them watching. 
 - A more complex rating system. For example gather up all the ratings for one game, and combine the score to make an overall rating.
 - A top list for the games with the highest/lowest rating score. 
-- A chance for the users to retrive their lost usernames or passwords.
+- A chance for the users to retrive/change their lost usernames or passwords.
 - Connect the site to a video game database, such as [RAWG](https://rawg.io/). For example to make the adding to your backlog process easier. You would only need to click on the game that you want to add, and the choose to add it to your backlog. 
 
 ---
