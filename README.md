@@ -60,13 +60,16 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ---
 
 - ### Strategy
-    - This site focuses on the gamers, one of the larges growing community in the world. During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my own backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So the reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a short review of your experience, for other users to see.
-
+    - This site will have it's focus on the gamers, one of the larges growing community in the world. 
+    - During this recent pandemic, lots of gaming companies has delayed there games. So there hasn't been to many new games released. So by shortage of something to play, I started my own backlog. With just pen and paper. I looked at the games I missed or didn't have time to finish and started to write them down. So that was the main idea for this website, keep track . 
+    - The reason for this website is for you to keep better track on your own perosnal backlog. Just add your games to your list. And when you are done, you can leave a review of your experience, for other users to see.
+    - By adding a review possibility
+    
 ---
 
 - ### Scope
     
-    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other users reviews. More features will be to add a link to where you can buy games wich got your interest. 
+    - So the users of this site should be able to create an account, add to there own backlog, review there finished games & look on other user reviews. More features will be to add a link to where you can buy games wich got your interest. 
 
 ---
 
@@ -183,13 +186,16 @@ On this site you will be able to keep track on your gaming, add the games you ha
   
 - Sign In
     - When you return to the website, as a already registred user, just sign in at the [sign in](static/img/img-readme/signIn01.png) page. If you spell either your username or password wrong, a [message](static/img/img-readme/signIn02.png) appears at the top of the page.
-    
+
+- Admin 
+    - Late in the development process I made an Admin page. At this page the admin can see all the [users](static/img/img-readme/admin01.png) in alphabetical order. The admin also has the power to Edit and/or Delete user reviews. Thought that would be a good idea if a user should for some reason, write something inaprproprate or add an inaprproprate image. The [reviews](static/img/img-readme/admin02.png) are also displayed in alphabetical order. 
 
 - Footer
     - The footer looks the same across all the pages. You can send me an mail just by clicking the [Email](static/img/img-readme/footer01.png) under the "Get In Touch" header. Under the header "Social Media" you can visit my github, linkedIn or Instagram by clicking any of the [icons](static/img/img-readme/footer02.png). 
 
 - Additional Features
     - When scrolling down on any of the pages a Back to the Top [button](static/img/img-readme/additional01.png) appears in the bottom right corner of the screen. Click it if you think you have scrolled down to far, and you get back to the top of the page. 
+
 
 ### Features for the future 
 
@@ -198,8 +204,6 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - A top list for the games with the highest/lowest rating score. 
 - A chance for the users to retrive their lost usernames or passwords.
 - Connect the site to a video game database, such as [RAWG](https://rawg.io/). For example to make the adding to your backlog process easier. You would only need to click on the game that you want to add, and the choose to add it to your backlog. 
-
-
 
 ---
 
