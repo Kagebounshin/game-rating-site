@@ -307,8 +307,8 @@ def admin():
     Admins area, allows the admin to check reviews, and users.
     """
     if session["user"] == "admin":
-        users = mongo.db.users.find()
-        reviews = mongo.db.reviews.find().sort("_id", -1)
+        users = mongo.db.users.find().sort("username", 1)
+        reviews = mongo.db.reviews.find().sort("review_name", 1)
 
         return render_template("admin.html", users=users, reviews=reviews)
     else:

@@ -3,48 +3,36 @@
     <div class="row profile-container bg-color-profile">
         <div class="col s12 m8 offset-m2 l8 offset-l2">
             <h1 class="center-align capitilize profile-header">
-                Admin
+                Admin Page
                 <hr class="hr-profile">
             </h1>
         </div>
         
 <div class="col s12 m8 offset-m2 l8 offset-l2">
-    <h4 class="center-align">Users</h4>
+    <h4 class="center-align">Users (A-Z)</h4>
 {% for user in users %}
-    <p class="center-align">
-        {{ user.username }} <br>
+    <p class="inline left-align">
+        {{ user.username }} | 
     </p>
  {% endfor %}
+ <hr class="hr-profile">
+</div>
+
+<div class="col s12 m8 offset-m2 center-align">
+    <h4 class="center-align">
+        User Reviews (A-Z)
+    </h4>
+    <hr class="hr-review">
 </div>
 
 {% for review in reviews %}
     <div class="col s12 m12 l8 offset-l2">
         <div>
-            <div class="row review-inner">
-                <div class="col s12 m6 l5 xl4">
-                    <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
-                </div>
-                <div class="col s12 m6 l7 xl8">
-                    <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
+            <div class="row review-inner left-align">
+                <div class="col s12">
                     <a class ="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }} </h1></a>
-                <p class="inline">
-                    <span>Platform:</span> 
-                        {{ review.platform_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Genre:</span>
-                        {{ review.genre_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Developer:</span> 
-                        {{ review.developer_name }} 
-                </p>
-                <p>
-                    <i>{{ review.review_capture }}</i>
-                </p>
-                <p class="inline review-by">
+              
+                <p class="review-by">
                     <span>By: {{ review.review_by }}</span>
                     {% if session["user"] == "admin" %}
                     <span>|</span>
