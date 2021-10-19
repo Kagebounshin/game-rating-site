@@ -137,7 +137,7 @@ def profile(username):
         backlogs = list(mongo.db.backlog.find(
             {"added_by": username}).sort("_id", -1))
         finish = list(mongo.db.finished.find(
-            {"added_by": username}).sort("_id", -1))
+            {"added_by": username}).sort("backlog_name", 1))
         reviews = list(mongo.db.reviews.find(
             {"review_by": username}).sort("_id", -1))
         return render_template(
@@ -222,7 +222,7 @@ def add_finished():
         mongo.db.finished.insert_one(finished)
         flash("Game Successfully Added")
         redirect(url_for("profile", username=session["user"]))
-    finish = mongo.db.finished.find().sort("backlog_name", 1)
+    finish = mongo.db.finished.find().sort("backlog_name")
     return render_template("add_finished.html", finish=finish)
 
 
