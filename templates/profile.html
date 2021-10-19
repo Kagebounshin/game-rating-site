@@ -132,7 +132,7 @@
                 </div>
                 <div class="col s12 m6 l7 xl8">
                     <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
-                    <a class="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }} </h1></a>
+                    <a class="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }}</h1></a>
                 <p class="inline">
                     <span>Platform:</span> 
                         {{ review.platform_name }} 
@@ -148,7 +148,7 @@
                         {{ review.developer_name }} 
                 </p>
                 <p>
-                    <i>{{ review.review_capture }}</i>
+                    <i>"{{ review.review_capture }}"</i>
                 </p>
                 <p class="inline review-by">
                     <span>By: {{ review.review_by }}</span> 
