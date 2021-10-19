@@ -196,7 +196,8 @@ def delete_backlog(backlog_id):
 @app.route("/finished_backlog/<backlog_id>")
 def finished_backlog(backlog_id):
     """
-    When finishing a game, remove it and insert it to a Finished list.
+    When finishing a game, remove it from the backlog
+    and insert it to a Finished list.
     """
     move = mongo.db.backlog.find_one(
         {"_id": ObjectId(backlog_id)})
@@ -298,6 +299,21 @@ def delete_review(review_id):
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))
+
+
+@app.route("/admin")
+def admin():
+    """
+    Admins area, allows the admin to check reviews, and users.
+    """
+    if session["user"] == "admin":
+        users = mongo.db.users.find()
+        reviews = mongo.db.reviews.find().sort("_id", -1)
+
+        return render_template("admin.html", users=users, reviews=reviews)
+    else:
+        flash("Only Admin on this page")
+        return redirect(url_for("index"))
 
 
 @app.errorhandler(404)

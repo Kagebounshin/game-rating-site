@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row profile-container bg-color-profile">
+        <div class="col s12 m8 offset-m2 l8 offset-l2">
+            <h1 class="center-align capitilize profile-header">
+                Admin
+                <hr class="hr-profile">
+            </h1>
+        </div>
+        
+<div class="col s12 m8 offset-m2 l8 offset-l2">
+    <h4 class="center-align">Users</h4>
+{% for user in users %}
+    <p class="center-align">
+        {{ user.username }} <br>
+    </p>
+ {% endfor %}
+</div>
+
+{% for review in reviews %}
+    <div class="col s12 m12 l8 offset-l2">
+        <div>
+            <div class="row review-inner">
+                <div class="col s12 m6 l5 xl4">
+                    <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
+                </div>
+                <div class="col s12 m6 l7 xl8">
+                    <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
+                    <a class ="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }} </h1></a>
+                <p class="inline">
+                    <span>Platform:</span> 
+                        {{ review.platform_name }} 
+                    <span>|</span>
+                </p>
+                <p class="inline">
+                    <span>Genre:</span>
+                        {{ review.genre_name }} 
+                    <span>|</span>
+                </p>
+                <p class="inline">
+                    <span>Developer:</span> 
+                        {{ review.developer_name }} 
+                </p>
+                <p>
+                    <i>{{ review.review_capture }}</i>
+                </p>
+                <p class="inline review-by">
+                    <span>By: {{ review.review_by }}</span>
+                    {% if session %}
+                    <span>|</span>
+                    <a class="edit" href="{{ url_for('edit_review', review_id=review._id) }}">EDIT</a>
+                    <span>|</span>
+                    <a class="modal-trigger delete" href="#modal2{{loop.index}}">DELETE</a>
+                    <!-- Modal Structure to avoid accidental deletion -->
+                    <div id="modal2{{loop.index}}" class="modal">
+                        <div class="modal-content center-align">
+                            <h4>Have you thought this through?</h4>
+                            <p>Do you really to delete this Review?</p>
+                        </div>
+                    <div class="row modal-footer">
+                        <div class="col s12 center-align">
+                            <a href="{{ url_for('delete_review', review_id=review._id) }}"
+                                class="modal-close btn waves-effect waves-light btn-small">Yes</a>
+                            <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
+                        </div>
+                    </div>
+                </div>
+                    {% endif %}
+                    </p>
+                </div>
+                
+            </div>
+            <hr class="hr-review">
+        </div>
+    </div>
+{% endfor %}
+
+
+    
+</div>
+
+{% endblock %}
