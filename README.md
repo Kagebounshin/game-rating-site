@@ -304,9 +304,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
         - When I enter the site, first thing I see is a header with some explaining text underneath. Wich explains the soul purpose for this page. 
         If thats not enough I find an about section abit further down the home page. 
     2. I would like to easily navigate my way through the site.  
-        - I can easily navigate between the pages at the top of the site using the navbar. When shown on small & medium devieces the navbar collapses into a burger menu, wich when pressed appears to the left of the screen.
+        - I can easily navigate between the pages at the top of the site using the navbar. When shown on small & medium devieces the navbar collapses into a burger menu, wich when clicked appears to the left of the screen.
     3. I want the registration process to be smooth and availible. 
-        - When I enter the site, just below the header there is a "Sign Up" button, I click that button an it takes me to the sign up page. I click on the "Sign Up" button, the username input field tells me that a need to fill out that field first. So I choose a username that I know exists in the database. A message at the top of the page appears, saying that this username already exists. So I enter a new username, using only four letters. The username input field tells me to match the requested format. So I choose another username with five letters and I click the "Sign Up" button. The password input field tells me that I need to fill in a password. So I enter a four letter password, the password input field tells me to match the requested format. So I enter my username and password correctly and I end up on my new profile page, greated with a message at the top of the page, saying that the registration was a success. 
+        - When I enter the site, just below the header there is a "Sign Up" button, I click that button an it takes me to the sign up page. I click on the "Sign Up" button, the username input field tells me that a need to fill out that field first. So I choose a username that I know exists in the database. A message at the top of the page appears, saying that this "username already exists". So I enter a new username, using only four letters. The username input field tells me to match the requested format. So I choose another username with five letters and I click the "Sign Up" button. The password input field tells me that I need to fill in a password. So I enter a four letter password, the password input field tells me to match the requested format. So I enter my username and password correctly and I end up on my new profile page, greated with a message at the top of the page, saying that the registration was a success. 
 -   #### Frequent User Goals
 
     1. I would like the login process to be a button click away. 
@@ -339,9 +339,9 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Further Testing
 
-- Tested the links  alot, to see if they get you to the desired place. 
+- Tested the links alot, to see if they behave as they should. 
 - This project was tested different webbrowsers, Google Chrome & Microsoft Edge, Safari.
-- This project was tested different devices such as Desktop, Laptop, Ipad, Iphone 12 Pro, Iphone X, Iphone 8 & Iphone 7, Sony xperia Z1.
+- This project was tested different devices such as Desktop, Laptop, Ipad, Iphone 12 Pro, Iphone X, Iphone 8.
 - Friend & Family members has tested the site, looking for bugs and other issues.
 
 ### Known Bugs 
@@ -361,7 +361,7 @@ s own unique ID.
 
 ## Database Setup
 
-MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" Page.
+MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" and "Edit Review" Page.
 
 <h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
 
@@ -424,6 +424,9 @@ The site was deployed to Heroku. Following the steps below.
     - **SECRET_KEY** : `<secret_key>`
     - **MONGO_URI** : `<mongodb_URI>`
     - **MONGO_DBNAME** : `<db_name>`
+    - **CLOUD_NAME** : `<cloud_name>`
+    - **API_KEY** : `<api_key>`
+    - **API_SECRET** : `<api_secret>`
 11. Navigate to "Deploy" tab, and from Manual deploy choose your master branch, and click "Deploy Branch".
 12. After you deployed your branch "Enable Automatic Deploys".
 13. Site is successfully deployed, any further changes will automatically be updated everytime they are commited and pushed on Github.
