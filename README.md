@@ -162,12 +162,13 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 - Profile 
     - When you are a newly registred member of the site, you'll can visit you profile page and start adding your games. At the top of the page is a [header-text](static/img/img-readme/profile01.png) where the users name is displayed. If you haven't added any games to you backlog or finished lists, or done any reviews yet. The page will look like [this](static/img/img-readme/profile02.png). 
-    - When adding a game to your backlog, press the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). And you will end up at the [Add to Backlog](static/img/img-readme/profile09.png) page. Add one game at a time, when your done adding a game, click the "Add To Backlog" button, a [message](static/img/img-readme/profile10.png) is displayed saying the adding process was successful. Keep adding games or click the "Check your backlog" [link](static/img/img-readme/profile11.png) wich takes you back to your profile page. Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. 
-    - If you click on a game [title](static/img/img-readme/profile05.png) in your backlog, you can [edit](static/img/img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](static/img/img-readme/profile12.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button an you will be sent back to your profile page. 
+    - When adding a game to your backlog, press the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). And you will end up at the [Add to Backlog](static/img/img-readme/profile09.png) page. Add one game at a time, and when you are done adding a game, click the "Add To Backlog" button, a [message](static/img/img-readme/profile10.png) is displayed saying the adding process was successful. Keep adding games or click the "Check your backlog" [link](static/img/img-readme/profile11.png) wich takes you back to your profile page. 
+    Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. 
+    - If you click on a game [title](static/img/img-readme/profile05.png) in your backlog, you can [edit](static/img/img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](static/img/img-readme/profile12.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button. 
     - By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. 
-    - When you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets sent over to the [finshed](static/img/img-readme/profile08.png) list. 
-    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill. First up is the [capturing text](static/img/img-readme/profile16.png), maximum of 50 characters. Then you can choose between abunch of [genres](static/img/img-readme/profile17.png) from a dropdown list. Next up choose what [platform](static/img/img-readme/profile18.png) you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer](static/img/img-readme/profile19.png) field, [duration](static/img/img-readme/profile20.png) field. After all this it's time to put your thoughts of the game into words at the [review](static/img/img-readme/profile21.png) field. Made a basic [rating](static/img/img-readme/profile22.png) system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is awesome. 
-    To make your review complete, you can add a [images](static/img/img-readme/profile23.png) to it. 
+    - When you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets pushed over to the [finshed](static/img/img-readme/profile08.png) list. 
+    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill. First up is the [capturing text](static/img/img-readme/profile16.png), maximum of 50 characters. The capturing text for the game can for example be the first you think of when thinking of that game. Then you can choose between abunch of [genres](static/img/img-readme/profile17.png) from a dropdown list. Not sure wich genre? Choose "Other". Next up choose what [platform](static/img/img-readme/profile18.png) you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer](static/img/img-readme/profile19.png) field, [duration](static/img/img-readme/profile20.png) field. After all this it's time to put your thoughts of the game into words at the [review](static/img/img-readme/profile21.png) field. Made a basic [rating](static/img/img-readme/profile22.png) system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is good. 
+    To make your review complete, you'll add an [images](static/img/img-readme/profile23.png). 
     Then click the ["Add Review"](static/img/img-readme/profile24.png) button, and the review is done.
     Not happy with the review for some reason, or just not in the mood, click the ["Cancel"](static/img/img-readme/profile25.png) button, and your back at your profile page in no time.
   
@@ -392,8 +393,8 @@ os.environ.setdefault("API_KEY", "<api_key>")
 os.environ.setdefault("API_SECRET", "<api_secret>")
 ```
 5. Then add your own "Cloud Name", "API Key" and "API Secret" wich is found at your dashboard at Cloudinary.
+---
 
-Follow these steps to co
 ## Deployment
 
 The site was deployed to Heroku. Following the steps below.
@@ -455,6 +456,8 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
 Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
+---
 
 ## Credits
 
