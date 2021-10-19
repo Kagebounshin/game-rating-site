@@ -597,11 +597,6 @@ footer a {
         margin-left: .5rem;
     }
 
-    .review-by {
-        position: absolute;
-        bottom: 0;
-    }
-
     .backlog-container p,
     .finished-container p {
         font-size: 1.2rem;
@@ -635,10 +630,6 @@ footer a {
 
     .review-inner p {
         font-size: 1rem;
-    }
-
-    .review-by  {
-        position: relative;
     }
 }
 
@@ -709,6 +700,10 @@ footer a {
 
     .review-inner p i {
         font-size: 1.3rem;
+    }
+
+    .review-by {
+        padding-top: .5rem;
     }
 }
 
