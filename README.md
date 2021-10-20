@@ -471,6 +471,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 
 - The Code to make you smooth scroll back to the top when clicking the "Back To Top Button" was borrowed from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo).
 
+- For the backend setup, I followed Code Institutes Video lessons.  
+
 ### Media
 
 - All the reviews text are copied from the review made from [IGN](https://nordic.ign.com/) writers. 
@@ -483,6 +485,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 - Thanks to family and friends for endless support. 
 - Aaron and Daisy for feedback. 
 - Slack Community
+- The layout inspration for this README.md is from Code Institute's own [Sample README](https://github.com/Code-Institute-Solutions/SampleREADME).
+
 
 ### Disclaimer
 - This website was built for educational purpose only!
