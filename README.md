@@ -481,6 +481,8 @@ Click [Here](https://help.github.com/en/github/creating-cloning-and-archiving-re
 ### Acknowledgements
 
 - Thanks to family and friends for endless support. 
+- Aaron and Daisy for feedback. 
+- Slack Community
 
 ### Disclaimer
 - This website was built for educational purpose only!
