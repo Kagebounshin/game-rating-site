@@ -14,12 +14,14 @@ if os.path.exists("env.py"):
 
 app = Flask(__name__)
 
+# Config for MongoDB
 app.config["MONGO_DBNAME"] = os.environ.get("MONGO_DBNAME")
 app.config["MONGO_URI"] = os.environ.get("MONGO_URI")
 app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# Config for Cloudinary
 cloudinary.config(
     cloud_name=os.environ.get("CLOUD_NAME"),
     api_key=os.environ.get("API_KEY"),
