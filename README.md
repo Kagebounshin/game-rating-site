@@ -4,7 +4,7 @@
 
 On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start reviewing the games you have played. Register an account and start adding to your own backlog. 
 
-<h2 align="center"><img src="static/img/img-readme/amIResponsive.png"></h2>
+<h2 align="center"><img src="img-readme/amIResponsive.png"></h2>
 
 ## Table Of Content
 1.[**UX**](#user-experience) 
@@ -69,7 +69,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - ### Structure
 - Navbar
     - At the top of the page I will have a navbar so you can easily navigate around the site. 
-    - On smaller devices the navbar links will collapse into a toggler menu. With a button to reveal the links in a good looking [sidenav](static/img/img-readme/mobileSidenav.png).
+    - On smaller devices the navbar links will collapse into a toggler menu. With a button to reveal the links in a good looking [sidenav](img-readme/mobileSidenav.png).
 - Home
     - At first you will see the page header, A short description on what the site is about, and then you can choose to Register an account or Log in. 
 - Review Page
@@ -94,18 +94,18 @@ On this site you will be able to keep track on your gaming, add the games you ha
 - ### Skeleton
     *   ### Wireframes
     - Desktop
-        - [Home Page](static/img/img-readme/home.png)
-        - [My Page](static/img/img-readme/myPage.png)
-        - [Reviews](static/img/img-readme/reviews.png)
-        - [Register](static/img/img-readme/signUp.png)
+        - [Home Page](img-readme/home.png)
+        - [My Page](img-readme/myPage.png)
+        - [Reviews](img-readme/reviews.png)
+        - [Register](img-readme/signUp.png)
     - Mobile
-        - [Home](static/img/img-readme/mobileHome.png)
-        - [Sidenav](static/img/img-readme/mobileSidenav.png)
-        - [Register](static/img/img-readme/mobileSign.png)
-        - [Review](static/img/img-readme/mobileReview.png)
-        - [My page](static/img/img-readme/mobileMy.png)
-        - [Log in](static/img/img-readme/mobileLog.png)
-        - [Add](static/img/img-readme/mobileAdd.png)
+        - [Home](img-readme/mobileHome.png)
+        - [Sidenav](img-readme/mobileSidenav.png)
+        - [Register](img-readme/mobileSign.png)
+        - [Add Review](img-readme/mobileReview.png)
+        - [My page](img-readme/mobileMy.png)
+        - [Log in](img-readme/mobileLog.png)
+        - [Add Backlog](img-readme/mobileAdd.png)
 
 ---
 
@@ -113,24 +113,24 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 -   ### Design
     -   #### Colour Scheme
-        -   The background color of the site, navbar and the about-section, the inside of the card at the backlog, finished backlog, sign up and sign in is set to a basic white color ([#ffffff](static/img/img-readme/ffffff.png)). 
-        - Basically all the sections (except the footer and the about-section on the index page), has a light-grey ([#f0f0f0](static/img/img-readme/f0f0f0.png))  background color. 
-        - The footer of the page has a dark grey ([#1f1f1f](static/img/img-readme/1f1f1f.png)) background color. 
+        -   The background color of the site, navbar and the about-section, the inside of the card at the backlog, finished backlog, sign up and sign in is set to a basic white color ([#ffffff](img-readme/ffffff.png)). 
+        - Basically all the sections (except the footer and the about-section on the index page), has a light-grey ([#f0f0f0](img-readme/f0f0f0.png))  background color. 
+        - The footer of the page has a dark grey ([#1f1f1f](img-readme/1f1f1f.png)) background color. 
         - My overall thoughts with this background color layout was that the color should gradually decrease in brightness, you start with the white, then the light grey, and at the footer is the dark grey. 
-        - Where there is a white or lightgrey background color, the text color is set to the same dark grey color ([#1f1f1f](static/img/img-readme/1f1f1f.png)) as the footer. 
-        - And at the footer the text is set to the same light-grey color ([#f0f0f0](static/img/img-readme/f0f0f0.png)) as in the most of the sections.
-        - When you hover the anchor links at the page they ease in to a to a lilac color ([#850866](static/img/img-readme/850866.png)) with a underline. But at the footer the anchor links and social icons ease in to a yellow ([#ffcc00](static/img/img-readme/ffcc00.png)) color.  
-        - The backlog has two icons after the game title, a "Check" icon and a "Delete" icon, when hovered the "Check" icon it eases in to a green ([#3e913e](static/img/img-readme/3e913e.png)) color. The "Delete" icon eases in to a red ([#b42020](static/img/img-readme/b42020.png)) color. 
-        - The horizontal lines at the review page and the fullreview page has a slightly darker color then the light grey background. They have the color ([#7b7b6e](static/img/img-readme/7b7b6e.png)).
-        In the reviews before you got to the fullreview page, has a text at the top wich just says "Reviews", that text is set to the same color as most of the anchor links, the lilac ([#850866](static/img/img-readme/850866.png)). But if hovered it get a slightly lighter lilac ([#b10e88](static/img/img-readme/b10e88.png))color 
-        - The horizontal line just benath the header at the profile page is set to the color (black [#000000](static/img/img-readme/000000.png)) and fades out at the edges. 
-        - The ["Back to the Top"](static/img/img-readme/additional01.png) button, has the same yellow ([#ffcc00](static/img/img-readme/ffcc00.png)) as the anchor links at the footer and the pacman images in the logo and at the navbar. But when hovered it get a slightly darker yellow ([#d8ad00](static/img/img-readme/d8ad00.png)) color. 
+        - Where there is a white or lightgrey background color, the text color is set to the same dark grey color ([#1f1f1f](img-readme/1f1f1f.png)) as the footer. 
+        - And at the footer the text is set to the same light-grey color ([#f0f0f0](img-readme/f0f0f0.png)) as in the most of the sections.
+        - When you hover the anchor links at the page they ease in to a to a lilac color ([#850866](img-readme/850866.png)) with a underline. But at the footer the anchor links and social icons ease in to a yellow ([#ffcc00](img-readme/ffcc00.png)) color.  
+        - The backlog has two icons after the game title, a "Check" icon and a "Delete" icon, when hovered the "Check" icon it eases in to a green ([#3e913e](img-readme/3e913e.png)) color. The "Delete" icon eases in to a red ([#b42020](img-readme/b42020.png)) color. 
+        - The horizontal lines at the review page and the fullreview page has a slightly darker color then the light grey background. They have the color ([#7b7b6e](img-readme/7b7b6e.png)).
+        In the reviews before you got to the fullreview page, has a text at the top wich just says "Reviews", that text is set to the same color as most of the anchor links, the lilac ([#850866](img-readme/850866.png)). But if hovered it get a slightly lighter lilac ([#b10e88](img-readme/b10e88.png))color 
+        - The horizontal line just benath the header at the profile page is set to the color (black [#000000](img-readme/000000.png)) and fades out at the edges. 
+        - The ["Back to the Top"](img-readme/additional01.png) button, has the same yellow ([#ffcc00](img-readme/ffcc00.png)) as the anchor links at the footer and the pacman images in the logo and at the navbar. But when hovered it get a slightly darker yellow ([#d8ad00](img-readme/d8ad00.png)) color. 
     -   #### Typography
         - The Fonts I've used for this site are from [Google Fonts](https://fonts.google.com/). The ones I've used are "Open Sans" and "Press Start 2P". 
-            - ["Open Sans"](https://fonts.google.com/specimen/Open+Sans#about) is the main font for the page. I've choosed this font because it has a clean and readable look to it. Nice to have for informative text, and when you're typing.  
+            - ["Open Sans"](https://fonts.google.com/specimen/Open+Sans?query=open+sans) is the main font for the page. I've choosed this font because it has a clean and readable look to it. Nice to have for informative text, and when you're typing.  
             - The font used for header across the page has the ["Press Start 2P"](https://fonts.google.com/specimen/Press+Start+2P?query=press+) font. When I first saw this font, my mind went immediately to games. So just by having this font as the main header of the page, you'll get a hint of what the site is about. 
     -   #### Imagery
-        - For the navbrand, the site logo and the favicon I've used a image of [Pacman](static/img/pacman.png). Pacman is one of the most iconic game characters of all time, so I thought he would be perfect for this page, wich purpose is about games. For the site logo, I've put the image of pacman instead of the letter "O".
+        - For the navbrand, the site logo and the favicon I've used a image of [Pacman](img-readme/pacman.png). Pacman is one of the most iconic game characters of all time, so I thought he would be perfect for this page, wich purpose is about games. For the site logo, I've put the image of pacman instead of the letter "O".
         - Images are also used in the reviews. The purpose for those images is to show something from the game you reviewed.
 
 ---
@@ -138,56 +138,56 @@ On this site you will be able to keep track on your gaming, add the games you ha
 ## Features
 
 - Navbar
-    - The [navbar](static/img/img-readme/navbar01.png) is set at the top of the page. On mobile veiw the the navbar collapses into a burger [menu](static/img/img-readme/navbar04.png), by clicking the menu, the menu choices will be displayed to the [left](static/img/img-readme/navbar05.png) of the screen.
+    - The [navbar](img-readme/navbar01.png) is set at the top of the page. On mobile veiw the the navbar collapses into a burger [menu](img-readme/navbar04.png), by clicking the menu, the menu choices will be displayed to the [left](img-readme/navbar05.png) of the screen.
 
 - Home
-    - Upon entering the site, first thing you'll see below the navbar is a [header-text](static/img/img-readme/index04.png), a short but informative [text](static/img/img-readme/index05.png) about the site and a choice to [sign up or sign in](static/img/img-readme/index06.png). All together looks like [this](static/img/img-readme/index01.png). 
-    - When you are logged in as a user, the sign up button and the sign in links are [hidden](static/img/img-readme/index03.png). 
-    - Below all of this I have an more explaining [section](static/img/img-readme/index02.png) on what you can do on this page.
+    - Upon entering the site, first thing you'll see below the navbar is a [header-text](img-readme/index04.png), a short but informative [text](img-readme/index05.png) about the site and a choice to [sign up or sign in](img-readme/index06.png). All together looks like [this](img-readme/index01.png). 
+    - When you are logged in as a user, the sign up button and the sign in links are [hidden](img-readme/index03.png). 
+    - Below all of this I have an more explaining [section](img-readme/index02.png) on what you can do on this page.
 
      
 - Reviews
-    - At the top of the review page there is a [header-text](static/img/img-readme/reviews01.png) and an informative text. 
-    - Below there is a [search](static/img/img-readme/reviews02.png) bar. You can search for review title, genre, developer & platform. 
-    - Then there is the [reviews](static/img/img-readme/reviews03.png), by clicking on the [title](static/img/img-readme/reviews05.png) or the [image](static/img/img-readme/reviews06.png) for a review, you'll get to see the full review. Underneath the review title there is some minor information of the [platform, genre and developer](static/img/img-readme/reviews04.png). 
-    Below that there is a capturing [text](static/img/img-readme/reviews07.png), just to get the reader atention. At the very bottom you can see wich [user](static/img/img-readme/reviews08.png) that made the review
+    - At the top of the review page there is a [header-text](img-readme/reviews01.png) and an informative text. 
+    - Below there is a [search](img-readme/reviews02.png) bar. You can search for review title, genre, developer & platform. 
+    - Then there is the [reviews](img-readme/reviews03.png), by clicking on the [title](img-readme/reviews05.png) or the [image](img-readme/reviews06.png) for a review, you'll get to see the full review. Underneath the review title there is some minor information of the [platform, genre and developer](img-readme/reviews04.png). 
+    Below that there is a capturing [text](img-readme/reviews07.png), just to get the reader atention. At the very bottom you can see wich [user](img-readme/reviews08.png) that made the review
     
 - Full Review 
-    - At the top of the page is the review [image](static/img/img-readme/fullreview01.png) followed by the [title](static/img/img-readme/fullreview02.png).
-    - Just beneth the title is the [information](static/img/img-readme/fullreview03.png) of the platform you can play the game on, wich genre, who is the developer & the duration of the game.
-    - Then there is the thoughts from the user displayed in [text](static/img/img-readme/fullreview04.png). 
-    - Made a simple rating system where you rate the game from 1-5 where 1 is bad and 5 is awesome, and the games [rating](static/img/img-readme/fullreview05.png) is displayed just under the review text. 
-    - And after that you can see wich [user](static/img/img-readme/fullreview06.png) who has done the review.
-    - When you are done with the review, you can easily click the [link](static/img/img-readme/fullreview07.png) at the bottom to get back to the review page. 
+    - At the top of the page is the review [image](img-readme/fullreview01.png) followed by the [title](img-readme/fullreview02.png).
+    - Just beneth the title is the [information](img-readme/fullreview03.png) of the platform you can play the game on, wich genre, who is the developer & the duration of the game.
+    - Then there is the thoughts from the user displayed in [text](img-readme/fullreview04.png). 
+    - Made a simple rating system where you rate the game from 1-5 where 1 is bad and 5 is awesome, and the games [rating](img-readme/fullreview05.png) is displayed just under the review text. 
+    - And after that you can see wich [user](img-readme/fullreview06.png) who has done the review.
+    - When you are done with the review, you can easily click the [link](img-readme/fullreview07.png) at the bottom to get back to the review page. 
 
 - Profile 
-    - When you are a newly registred member of the site, you'll can visit you profile page and start adding your games. At the top of the page is a [header-text](static/img/img-readme/profile01.png) where the users name is displayed. If you haven't added any games to you backlog or finished lists, or done any reviews yet. The page will look like [this](static/img/img-readme/profile02.png). 
-    - When adding a game to your backlog, press the button wich says ["Add To Backlog"](static/img/img-readme/profile03.png). And you will end up at the [Add to Backlog](static/img/img-readme/profile09.png) page. Add one game at a time, and when you are done adding a game, click the "Add To Backlog" button, a [message](static/img/img-readme/profile10.png) is displayed saying the adding process was successful. Keep adding games or click the "Check your backlog" [link](static/img/img-readme/profile11.png) wich takes you back to your profile page. 
-    Your [backlog](static/img/img-readme/profile04.png) will appear with the game(s) you have added. 
-    - If you click on a game [title](static/img/img-readme/profile05.png) in your backlog, you can [edit](static/img/img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](static/img/img-readme/profile12.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button. 
-    - By clicking on the ["X"](static/img/img-readme/profile06.png) icon to the right of your games, you delete that game. 
-    - When you click on the ["check"](static/img/img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets pushed over to the [finshed](static/img/img-readme/profile08.png) list. 
-    - By clicking a game title in the finshed list, you can make a [review](static/img/img-readme/profile14.png) of that game. The Review title is set to the game [title](static/img/img-readme/profile15.png), then you have some fields to fill. First up is the [capturing text](static/img/img-readme/profile16.png), maximum of 50 characters. The capturing text for the game can for example be the first you think of when thinking of that game. Then you can choose between abunch of [genres](static/img/img-readme/profile17.png) from a dropdown list. Not sure wich genre? Choose "Other". Next up choose what [platform](static/img/img-readme/profile18.png) you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer](static/img/img-readme/profile19.png) field, [duration](static/img/img-readme/profile20.png) field. After all this it's time to put your thoughts of the game into words at the [review](static/img/img-readme/profile21.png) field. Made a basic [rating](static/img/img-readme/profile22.png) system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is good. 
-    - To make your review complete, you'll add an [images](static/img/img-readme/profile23.png). But because of a bug at the edit review page, I removed the choice to change your image, so be sure to add the images you really want.
-    Then click the ["Add Review"](static/img/img-readme/profile24.png) button, and the review is done.
-    Not happy with the review for some reason, or just not in the mood, click the ["Cancel"](static/img/img-readme/profile25.png) button, and your back at your profile page in no time.
-    - Users can [edit](static/img/img-readme/profile26.png) or [delete](static/img/img-readme/profile27.png) your review at your profile page. But becouse of a [bug](static/img/img-readme/bug02.png) giving me a hard time, I removed the choice to edit your image. Sadly I didn't figure out how to fix it before submitting my project. So choose wisly before adding your image to your review. 
+    - When you are a newly registred member of the site, you'll can visit you profile page and start adding your games. At the top of the page is a [header-text](img-readme/profile01.png) where the users name is displayed. If you haven't added any games to you backlog or finished lists, or done any reviews yet. The page will look like [this](img-readme/profile02.png). 
+    - When adding a game to your backlog, press the button wich says ["Add To Backlog"](img-readme/profile03.png). And you will end up at the [Add to Backlog](img-readme/profile09.png) page. Add one game at a time, and when you are done adding a game, click the "Add To Backlog" button, a [message](img-readme/profile10.png) is displayed saying the adding process was successful. Keep adding games or click the "Check your backlog" [link](img-readme/profile11.png) wich takes you back to your profile page. 
+    Your [backlog](img-readme/profile04.png) will appear with the game(s) you have added. 
+    - If you click on a game [title](img-readme/profile05.png) in your backlog, you can [edit](img-readme/profile12.png) your game if you for example made a typo. When you are done editing press the edit button a [message](img-readme/profile13.png) is displayed saying that the editing process was successful. If You dont want to edit, click the cancel button. 
+    - By clicking on the ["X"](img-readme/profile06.png) icon to the right of your games, you delete that game. 
+    - When you click on the ["check"](img-readme/profile07.png) icon, it means that you have finshed that game, and the game gets pushed over to the [finshed](img-readme/profile08.png) list. 
+    - By clicking a game title in the finshed list, you can make a [review](img-readme/profile14.png) of that game. The Review title is set to the game [title](img-readme/profile15.png), then you have some fields to fill. First up is the [capturing text](img-readme/profile16.png), maximum of 50 characters. The capturing text for the game can for example be the first you think of when thinking of that game. Then you can choose between abunch of [genres](img-readme/profile17.png) from a dropdown list. Not sure wich genre? Choose "Other". Next up choose what [platform](img-readme/profile18.png) you can play the game on. More the one platform? Choose "Multiplatform". Then the [developer](img-readme/profile19.png) field, [duration](img-readme/profile20.png) field. After all this it's time to put your thoughts of the game into words at the [review](img-readme/profile21.png) field. Made a basic [rating](img-readme/profile22.png) system, you choose between 1-5 in a dropdown menu, where 1 is bad and 5 is good. 
+    - To make your review complete, you'll add an [images](img-readme/profile23.png). But because of a bug at the edit review page, I removed the choice to change your image, so be sure to add the images you really want.
+    Then click the ["Add Review"](img-readme/profile24.png) button, and the review is done.
+    Not happy with the review for some reason, or just not in the mood, click the ["Cancel"](img-readme/profile25.png) button, and your back at your profile page in no time.
+    - Users can [edit](img-readme/profile26.png) or [delete](img-readme/profile27.png) your review at your profile page. But becouse of a [bug](img-readme/bug02.png) giving me a hard time, I removed the choice to edit your image. Sadly I didn't figure out how to fix it before submitting my project. So choose wisly before adding your image to your review. 
   
 - Sign Up
-    - This is were you can [sign up](static/img/img-readme/signUp01.png) for this page, figure out a username, if you have choosed the same username as an already existing user possesses, a [message](static/img/img-readme/signUp02.png) explains the situation, and you have to come up with a new username. 
-    - When you have an unique username, and have entered your password of choice. You'll be redirected to your own profile page, at the profile page there is a [message](static/img/img-readme/signUp03.png) at the top wich tells you that the registration was a success.
+    - This is were you can [sign up](img-readme/signUp01.png) for this page, figure out a username, if you have choosed the same username as an already existing user, a [message](img-readme/signUp02.png) explains the situation, and you have to come up with a new username. 
+    - When you have an unique username, and have entered your password of choice. You'll be redirected to your own profile page, at the profile page there is a [message](img-readme/signUp03.png) at the top wich tells you that the registration was a success.
   
 - Sign In
-    - When you return to the website, as a already registred user, just sign in at the [sign in](static/img/img-readme/signIn01.png) page. If you spell either your username or password wrong, a [message](static/img/img-readme/signIn02.png) appears at the top of the page.
+    - When you return to the website, as a already registred user, just sign in at the [sign in](img-readme/signIn01.png) page. If you spell either your username or password wrong, a [message](img-readme/signIn02.png) appears at the top of the page. When you enter your username and password correctly you will be greeted at your [profile](img-readme/signIn03.png) page.
 
 - Admin 
-    - Late in the development process I made an Admin page. At this page the admin can see all the [users](static/img/img-readme/admin01.png) in alphabetical order. The admin also has the power to [Edit and/or Delete](static/img/img-readme/admin03.png) user reviews. Thought that would be a good idea if a user should for some reason, write something inappropriate or add an inappropriate image. Due to a [bug](static/img/img-readme/bug02.png) the admin can't edit the review image, so if the user has choosen an inappropriate image, the admin needs to delete the whole review. But If you make that choice to add a images of that sort. It's fair to say that the admin can delete the whole review without any doubts. The [reviews](static/img/img-readme/admin02.png) are also displayed in alphabetical order. 
+    - Late in the development process I made an Admin page. At this page the admin can see all the [users](img-readme/admin01.png) in alphabetical order. The admin also has the power to [Edit and/or Delete](img-readme/admin03.png) user reviews. Thought that would be a good idea if a user should for some reason, write something inappropriate or add an inappropriate image. Due to a [bug](img-readme/bug02.png) the admin can't edit the review image, so if the user has choosen an inappropriate image, the admin needs to delete the whole review. But If you make that choice to add a images of that sort. It's fair to say that the admin can delete the whole review without any doubts. The [reviews](img-readme/admin02.png) are also displayed in alphabetical order. 
 
 - Footer
-    - The footer looks the same across all the pages. You can send me an mail just by clicking the [Email](static/img/img-readme/footer01.png) under the "Get In Touch" header. Under the header "Social Media" you can visit my github, linkedIn or Instagram by clicking any of the [icons](static/img/img-readme/footer02.png). 
+    - The footer looks the same across all the pages. You can send me an mail just by clicking the [Email](img-readme/footer01.png) under the "Get In Touch" header. Under the header "Social Media" you can visit my github, linkedIn or Instagram by clicking any of the [icons](img-readme/footer02.png). 
 
 - Additional Features
-    - When scrolling down on any of the pages a Back to the Top [button](static/img/img-readme/additional01.png) appears in the bottom right corner of the screen. Click it if you think you have scrolled down to far, and you get back to the top of the page. 
+    - When scrolling down on any of the pages a Back to the Top [button](img-readme/additional01.png) appears in the bottom right corner of the screen. Click it if you think you have scrolled down to far, and you get back to the top of the page. 
 
 
 ### Features for the future 
@@ -343,15 +343,15 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Resolved Bugs
 
-- When [deleting](static/img/img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](static/img/img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
-Becouse I didn't give each modal and a link instance a unique id, it just always triggers one and the same modal the first modal in the loop, so thats why the top object always got deleted. So by adding [{{loop.index}}](static/img/img-readme/bugResolved01.png) to the modal ID both in the a link and modal. Each object in the backlog got it'
+- When [deleting](img-readme/bug05.png) an object from your backlog, the one that is at the top of the list gets [deleted](img-readme/bug05.png), not the one that I've choosed. The problem came once I've added a modal wich just checks if you really want to delete the current object. If I remove the modal, then it's back to normal, the choosen object gets deleted. Went to slack, figured that somebody have had this problem before, and yes. So it basically generates a modal for every item in the loop.
+Becouse I didn't give each modal and a link instance a unique id, it just always triggers one and the same modal the first modal in the loop, so thats why the top object always got deleted. So by adding [{{loop.index}}](img-readme/bugResolved01.png) to the modal ID both in the a link and modal. Each object in the backlog got it'
 s own unique ID.
 
-- So the first bug i've encounterd was when opening the sidenav on my iPhone X, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more. 
+- So the first bug i've encounterd was when opening the sidenav on my iPhone X, at the users profile page. The pacman image looked like [this](img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more. 
 
 - Edit review bugs
-    - A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png). First I removed the choice to edit the images, but then if you edited the review, the images for the review would disappear. 
-    So I had to rewrite the code for editing the review, to just change what the user can edit. So I change my code to [this](static/img/img-readme/bugResolved02.png). Now the url for the photo is unchanged, I also removed the "review_by" because if I edited a review as the "admin", the "review_by" was set to "admin" instead of the reviews creator. 
+    - A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](img-readme/bug02.png). First I removed the choice to edit the images, but then if you edited the review, the images for the review would disappear. 
+    So I had to rewrite the code for editing the review, to just change what the user can edit. So I change my code to [this](img-readme/bugResolved02.png). Now the url for the photo is unchanged, I also removed the "review_by" because if I edited a review as the "admin", the "review_by" was set to "admin" instead of the reviews creator. 
 
 ---
 
@@ -359,7 +359,7 @@ s own unique ID.
 
 MongoDB Atlas is used as database backend for storing user, backlog, finished and review details. The rating, reviews_genre and the reviews_platform collections was made to store values for dropdown menu's at the "Add Review" and "Edit Review" Page.
 
-<h2 align="center"><img src="static/img/img-readme/mongoDBCollections.png"></h2>
+<h2 align="center"><img src="img-readme/mongoDBCollections.png"></h2>
 
 Follow these steps to setup your MongoDB.
 
