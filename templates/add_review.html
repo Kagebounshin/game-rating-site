@@ -14,16 +14,16 @@
 			<!-- GAME TITLE FOR REVIEW -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="review_name" name="review_name"
-						type="text" value="{{ finished.backlog_name }}" class="validate" required>
+					<input id="review_name" name="review_name" type="text" value="{{ finished.backlog_name }}"
+						class="validate" required>
 					<label for="review_name"></label>
 				</div>
 			</div>
 			<!-- CAPTURING TEXT -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="review_capture" name="review_capture"
-						type="text" class="validate" data-length="50" required>
+					<input id="review_capture" name="review_capture" type="text" class="validate" data-length="50"
+						required>
 					<label for="review_capture"> Capturing Text</label>
 				</div>
 			</div>
@@ -52,26 +52,24 @@
 				</div>
 			</div>
 			<!-- DEVELOPER -->
-            <div class="row">
+			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="developer_name" name="developer_name"
-						type="text" class="validate" required>
+					<input id="developer_name" name="developer_name" type="text" class="validate" required>
 					<label for="developer_name">Developer</label>
 				</div>
 			</div>
 			<!-- DURATION -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<input id="duration" name="duration"
-						type="text" class="validate" data-length="10" required>
+					<input id="duration" name="duration" type="text" class="validate" data-length="10" required>
 					<label for="duration">Duration (Hours)</label>
 				</div>
 			</div>
 			<!-- REVIEW TEXT  -->
-            <div class="row">
+			<div class="row">
 				<div class="input-field col s10 offset-s1">
-					<textarea id="review_text" name="review_text"
-						type="text" class="materialize-textarea validate" required></textarea>
+					<textarea id="review_text" name="review_text" type="text" class="materialize-textarea validate"
+						required></textarea>
 					<label for="review_text">Review</label>
 				</div>
 			</div>
@@ -98,6 +96,9 @@
 						<input class="file-path validate" type="text">
 					</div>
 				</div>
+				<div class="col s10 offset-s1">
+					<p class="center-align red-text">(Image cannot be edited afterwards! Choose image with care.)</p>
+				</div>
 			</div>
 			<!-- ADD BUTTON -->
 			{% if session.user|lower == finished.added_by|lower %}
@@ -108,7 +109,8 @@
 			</div>
 			<!-- CANCEL BUTTON -->
 			<div class="row center-align">
-				<a href="{{ url_for('profile', username=session['user']) }}" class="btn waves-effect waves-light btn-small s10 offset-s1 edit-cancel">Cancel</a>
+				<a href="{{ url_for('profile', username=session['user']) }}"
+					class="btn waves-effect waves-light btn-small s10 offset-s1 edit-cancel">Cancel</a>
 			</div>
 			{% endif %}
 		</div>
