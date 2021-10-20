@@ -1,3 +1,8 @@
+"""
+The Backlog's main server code. Flask initialisation,
+database interface, and server routes.
+"""
+
 import os
 import cloudinary
 import cloudinary.uploader
