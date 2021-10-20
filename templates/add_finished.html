@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- ADD TO FINISHED LIST  -->
 <div class="row add-container bg-color-add">
 	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="">
 		<div class="card-panel">
@@ -11,7 +11,7 @@
 					</h1>
 				</div>
 			</div>
-			<!-- GAME TITLE FOR BACKLOG -->
+			<!-- GAME TITLE FOR FINISHED -->
 			<div class="row">
 				<div class="input-field col s10 offset-s1">
 					<input id="backlog_name" name="backlog_name"
@@ -24,6 +24,7 @@
 				<button type="submit" class="btn waves-effect waves-light btn-small s10 offset-s1">
 					Add to Finished 
 				</button>
+			<!-- BACK TO FINISHED LIST  -->
 				<div class="row center-align">
 					<p>
 						Done adding? <a href="{{ url_for('profile', username=session['user']) }}">Check your Finished list</a>

@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-
+<!-- ADDING TO BACKLOG -->
 <div class="row add-container bg-color-add">
 	<form class="col s12 m8 offset-m2 l6 offset-l3" method="POST">
 		<div class="card-panel">
@@ -24,6 +24,7 @@
 				<button type="submit" class="btn waves-effect waves-light btn-small s10 offset-s1">
 					Add to Backlog
 				</button>
+			<!-- BACK TO YOUR BACKLOG -->
 				<div class="row center-align">
 					<p>
 						Done adding? <a href="{{ url_for('profile', username=session['user']) }}">Check your Backlog</a>

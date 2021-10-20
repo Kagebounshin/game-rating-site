@@ -1,61 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description"
-	content="The Backlog, Keep track of your unfinshed games. If you're in search for inner peace, start clearing out your backlog!">
+		content="The Backlog, Keep track of your unfinshed games. If you're in search for inner peace, start clearing out your backlog!">
 	<meta name="keywords" content="backlog, games, reviews">
 	<meta name="author" content="Kristoffer Heiskanen">
-	<link rel="icon" type="image/png" sizes="16x16"  href="/static/img/pacman.png">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/pacman.png">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+		type="text/css">
 	<link rel="stylesheet" href="{{url_for('static', filename='css/style.css') }}" type="text/css">
 	{% block styles %}
 	{% endblock %}
 	<title>The Backlog</title>
 </head>
+
 <body>
 	<header>
 		<!-- TOP NAVBAR -->
 		<nav class="nav-extended bg-color-navbar container navbar-fixed">
 			<div class="nav-wrapper">
-				<a href="{{ url_for('index') }}" class="brand-logo"><img src="https://res.cloudinary.com/dls9xupa8/image/upload/v1634052220/pacman_vwldtv.png" alt="picture of pacman"></a>
+				<a href="{{ url_for('index') }}" class="brand-logo"><img
+						src="https://res.cloudinary.com/dls9xupa8/image/upload/v1634052220/pacman_vwldtv.png"
+						alt="picture of pacman"></a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger left"><i class="fa fa-bars"></i></a>
 				<ul class="right hide-on-med-and-down">
-						<li>
-							<a href="{{ url_for('index') }}">Home</a>
-						</li>
-						<li>
-							<a href="{{ url_for('reviews') }}">Reviews</a>
-						</li>
-						{% if session["user"] == "admin" %}
-					<li>
-						<a href="{{ url_for('admin') }}">Admin</a>
-					</li>
-					{% endif %}
-					{% if session.user %}
-						<li>
-							<a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
-						</li>
-						<li>
-							<a href="{{ url_for('log_out') }}">Sign Out</a>
-						</li>
-					{% else %}
-						<li>
-							<a href="{{ url_for('log_in') }}">Sign In</a>
-						</li>
-						<li>
-							<a href="{{ url_for('register') }}">Sign Up</a>
-						</li>
-					{% endif %}
-
-				</ul>
-			</div>
-		</nav>
-
-		<!-- MOBILE SIDENAV -->
-		<ul class="sidenav" id="mobile-demo">
 					<li>
 						<a href="{{ url_for('index') }}">Home</a>
 					</li>
@@ -67,85 +39,123 @@
 						<a href="{{ url_for('admin') }}">Admin</a>
 					</li>
 					{% endif %}
-				{% if session.user %}
+					{% if session.user %}
 					<li>
 						<a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
 					</li>
 					<li>
 						<a href="{{ url_for('log_out') }}">Sign Out</a>
 					</li>
-				{% else %}
+					{% else %}
 					<li>
 						<a href="{{ url_for('log_in') }}">Sign In</a>
 					</li>
 					<li>
 						<a href="{{ url_for('register') }}">Sign Up</a>
 					</li>
-				{% endif %}
+					{% endif %}
+
+				</ul>
+			</div>
+		</nav>
+        <!-- MOBILE SIDENAV -->
+		<ul class="sidenav" id="mobile-demo">
+			<li>
+				<a href="{{ url_for('index') }}">Home</a>
+			</li>
+			<li>
+				<a href="{{ url_for('reviews') }}">Reviews</a>
+			</li>
+			{% if session["user"] == "admin" %}
+			<li>
+				<a href="{{ url_for('admin') }}">Admin</a>
+			</li>
+			{% endif %}
+			{% if session.user %}
+			<li>
+				<a href="{{ url_for('profile', username=session['user']) }}">Profile</a>
+			</li>
+			<li>
+				<a href="{{ url_for('log_out') }}">Sign Out</a>
+			</li>
+			{% else %}
+			<li>
+				<a href="{{ url_for('log_in') }}">Sign In</a>
+			</li>
+			<li>
+				<a href="{{ url_for('register') }}">Sign Up</a>
+			</li>
+			{% endif %}
 		</ul>
 	</header>
 
+	<!-- FLASH MESSAGES -->
 	<div>
 		{% with messages = get_flashed_messages() %}
-			{% if messages %}
-				{% for message in messages %}
-					<div class="row flashes bg-color-flashes">
-					<h2 class="center-align">
-						{{ message }}
-					</h2>
-					</div>
-				{% endfor %}
-			{% endif %}
+		{% if messages %}
+		{% for message in messages %}
+		<div class="row flashes bg-color-flashes">
+			<h2 class="center-align">
+				{{ message }}
+			</h2>
+		</div>
+		{% endfor %}
+		{% endif %}
 		{% endwith %}
 	</div>
 
+	<!-- MAIN BLOCK CONTENT EXTENDS ALL TEMPLATE PAGES -->
 	<main class="container-fluid">
-	{% block content %}
-	{% endblock %}
+		{% block content %}
+		{% endblock %}
 	</main>
 
+	<!-- BACK TO TOP BUTTON -->
 	<button onclick="topFunction()" id="myBtn" title="Back To Top">
 		<i class="fas fa-chevron-up"></i>
 	</button>
 
+	<!-- FOOTER  -->
 	<footer class="page-footer footer-container bg-color-footer">
-	<div class="container">
-		<div class="row">
-		<div class="col l6 s12">
-			<h1 class="t">Get in touch</h1>
-			<p>Email: <a href="mailto:kristoffer-heiskanen@hotmail.com">Kristoffer-heiskanen@hotmail.com</a></p>
-		</div>
-		<div class="col l4 offset-l2 s12">
-			<h1>Social Media</h1>
-			<ul>
-			<li><a href="https://github.com/Kagebounshin/Kagebounshin" target="_blank" rel="noopener" aria-label="Link To GitHub">
-				<i class="fab fa-github-square"></i>
-			</a></li>
-			<li><a href="https://se.linkedin.com/in/kristoffer-heiskanen-390739204" target="_blank" rel="noopener" aria-label="Link To	LinkedIn">
-				<i class="fab fa-linkedin"></i>
-			</a></li>
-			<li><a href="https://www.instagram.com/kagebounshin/" target="_blank" rel="noopener" aria-label="Link To Instagram">
-				<i class="fab fa-instagram-square"></i>
-			</a></li>
-			</ul>
-		</div>
-		</div>
-	</div>
-	<div class="footer-copyright">
 		<div class="container">
-		© <span class="copyright"></span> Kagebounshin
+			<div class="row">
+				<div class="col l6 s12">
+					<h1 class="t">Get in touch</h1>
+					<p>Email: <a href="mailto:kristoffer-heiskanen@hotmail.com">Kristoffer-heiskanen@hotmail.com</a></p>
+				</div>
+				<div class="col l4 offset-l2 s12">
+					<h1>Social Media</h1>
+					<ul>
+						<li><a href="https://github.com/Kagebounshin/Kagebounshin" target="_blank" rel="noopener"
+								aria-label="Link To GitHub">
+								<i class="fab fa-github-square"></i>
+							</a></li>
+						<li><a href="https://se.linkedin.com/in/kristoffer-heiskanen-390739204" target="_blank"
+								rel="noopener" aria-label="Link To	LinkedIn">
+								<i class="fab fa-linkedin"></i>
+							</a></li>
+						<li><a href="https://www.instagram.com/kagebounshin/" target="_blank" rel="noopener"
+								aria-label="Link To Instagram">
+								<i class="fab fa-instagram-square"></i>
+							</a></li>
+					</ul>
+				</div>
+			</div>
 		</div>
-	</div>
-</footer>
-
+		<div class="footer-copyright">
+			<div class="container">
+				© <span class="copyright"></span> Kagebounshin
+			</div>
+		</div>
+	</footer>
+	<!-- SCRIPTS -->
 	<script src="https://kit.fontawesome.com/0030311fd7.js"></script>
-	<script
-src="https://code.jquery.com/jquery-3.6.0.min.js"
-integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
 	{% block scripts %}
 	{% endblock %}
 </body>
+
 </html>

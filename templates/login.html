@@ -1,28 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- SIGN IN -->
 <div class="row login-container bg-color-login">
     <form class="col s12 m8 offset-m2 l6 offset-l3" method="POST" action="{{ url_for('log_in') }}">
         <div class="card-panel">
-          	<div class="row">
-            	<div class="col s12">
-              		<h1 class="center-align">
-                		Sign In
-					</h1>
-				</div>
-			</div>
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align">
+                        Sign In
+                    </h1>
+                </div>
+            </div>
             <!-- USERNAME -->
-          	<div class="row">
-              	<div class="input-field col s10 offset-s1">
-                  	<input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                  	<label for="username">Username</label>
+            <div class="row">
+                <div class="input-field col s10 offset-s1">
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="username">Username</label>
                 </div>
             </div>
             <!-- PASSWORD -->
             <div class="row">
-              	<div class="input-field col s10 offset-s1">
-					<input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-					<label for="password">Password</label>
-              	</div>
+                <div class="input-field col s10 offset-s1">
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15"
+                        pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
+                    <label for="password">Password</label>
+                </div>
             </div>
             <!-- SIGN IN BUTTON -->
             <div class="row center-align">
@@ -30,9 +33,10 @@
                     Sign In
                 </button>
             </div>
+            <!-- LING TO SIGN UP -->
             <div class="row center-align">
-                <p>Not a member? 
-                  <a href="{{ url_for('register') }}">Create Account</a>
+                <p>Not a member?
+                    <a href="{{ url_for('register') }}">Create Account</a>
                 </p>
             </div>
         </div>

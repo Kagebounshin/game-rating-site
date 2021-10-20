@@ -1,49 +1,54 @@
 {% extends "base.html" %}
 {% block content %}
 {% for review in reviews %}
+<!-- FULL REVIEWS -->
 <div class="row fullreview-container bg-color-fullreviews left-align">
+    <!-- REVIEW IMAGE -->
     <div class="col s12 s12 m8 offset-m2">
         <img src="{{ review.photo_url }}" alt=" image">
     </div>
+    <!-- REVIEW TITLE -->
     <div class="col s12 s12 m8 offset-m2">
         <h1 class="center-align">
             {{ review.review_name }}
         </h1>
     </div>
+    <!-- PLATFORM, GENRE, DEVELOPER, DURATION, REVIEW TEXT, RATING, AND REVIEW BY -->
     <div class="col s12 s12 m8 offset-m2">
         <p class="inline">
-            <span>Platform:</span> 
-                {{ review.platform_name }} 
+            <span>Platform:</span>
+            {{ review.platform_name }}
             <span>|</span>
         </p>
         <p class="inline">
             <span>Genre:</span>
-                {{ review.genre_name }} 
+            {{ review.genre_name }}
             <span>|</span>
         </p>
         <p class="inline">
-            <span>Developer:</span> 
-                {{ review.developer_name }} 
+            <span>Developer:</span>
+            {{ review.developer_name }}
             <span>|</span>
         </p>
         <p class="inline">
-            <span>Duration:</span> 
-                {{ review.duration }} Hours
+            <span>Duration:</span>
+            {{ review.duration }} Hours
         </p>
         <hr class="hr-fullreview">
         <p class="review_text">
             {{ review.review_text }}
         </p>
         <p class="inline rating">
-            <span>Rating: </span> 
+            <span>Rating: </span>
             {{ review.rating_nr }}/5
         </p>
         <br>
         <p class="inline">
-        <span>By: {{ review.review_by }}</span> 
+            <span>By: {{ review.review_by }}</span>
         </p>
         <hr class="hr-fullreview">
     </div>
+    <!-- LINK BACK TO REVIEW PAGE -->
     <div class="col s12 s12 m8 offset-m2 center-align">
         <a href="{{ url_for('reviews') }}">Back To Reviews</a>
         <hr class="hr-fullreview">

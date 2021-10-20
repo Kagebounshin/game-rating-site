@@ -1,83 +1,85 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row profile-container bg-color-profile">
-        <div class="col s12 m8 offset-m2 l8 offset-l2">
-            <h1 class="center-align capitilize profile-header">
-                {{ username }}'s Games
-                <hr class="hr-profile">
-            </h1>
-        </div>
-<!-- Show this if you havn't added to your list -->
+<!-- PROFILE PAGE -->
+<div class="row profile-container bg-color-profile">
+    <div class="col s12 m8 offset-m2 l8 offset-l2">
+        <h1 class="center-align capitilize profile-header">
+            {{ username }}'s Games
+            <hr class="hr-profile">
+        </h1>
+    </div>
+    <!-- SHOWS IF USER DONT HAVE A BACKLOG -->
     {% if backlogs|length == 0 %}
-        <div class="log-pending-container bg-color-backlog center-align">
-            <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
-                <p>
-                    You don't have any games in your backlog!
-                </p>
-                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">
-                    Add to Backlog
-                </a>
-            </div>
+    <div class="log-pending-container bg-color-backlog center-align">
+        <div class="col s12 m10 offset-m1 l8 offset-l2 xl4 offset-xl2">
+            <p>
+                You don't have any games in your backlog!
+            </p>
+            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">
+                Add to Backlog
+            </a>
         </div>
+    </div>
     {% endif %}
-<!-- Show this if you have added to your list -->
+    <!-- SHOWS IF USER HAVE A BACKLOG -->
     {% if backlogs|length != 0 %}
-        <div class="backlog-container center-align">
-            <div class="col s12 m8 offset-m2 l8 offset-l2 xl4 offset-xl2">
-                <div class="row">
-                    <div class="col s12">
-                        <h1 class="center-align profile-header">
-                            Backlog
-                        </h1>      
+    <div class="backlog-container center-align">
+        <div class="col s12 m8 offset-m2 l8 offset-l2 xl4 offset-xl2">
+            <div class="row">
+                <div class="col s12">
+                    <h1 class="center-align profile-header">
+                        Backlog
+                    </h1>
+                </div>
+            </div>
+            <div class="card-panel left-align backlog">
+                {% for backlog in backlogs %}
+                <p class="capitilize games">
+                    <a class="title"
+                        href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
+                    </a>
+                    <a class="modal-trigger" href="#modal1{{loop.index}}">
+                        <i class="fas fa-times "></i>
+                    </a>
+                    <a href="{{ url_for('finished_backlog',  backlog_id=backlog._id ) }}">
+                        <i class="fas fa-check "></i>
+                    </a>
+                </p>
+                <br>
+                <!-- MODAL TO AVOID ACCIDENTAL DELETION -->
+                <div id="modal1{{loop.index}}" class="modal">
+                    <div class="modal-content center-align">
+                        <h4>Have you thought this through?</h4>
+                        <p>Do you really to delete this game from your backlog?</p>
+                    </div>
+                    <div class="row modal-footer">
+                        <div class="col s12 center-align">
+                            <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}"
+                                class="modal-close btn waves-effect waves-light btn-small">Yes</a>
+                            <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
+                        </div>
                     </div>
                 </div>
-                <div class="card-panel left-align backlog">
-                    {% for backlog in backlogs %}
-                        <p class="capitilize games">
-                            <a class="title" href="{{ url_for('edit_backlog',  backlog_id=backlog._id ) }}">{{ backlog.backlog_name }}
-                            </a>
-                            <a class="modal-trigger" href="#modal1{{loop.index}}">
-                                <i class="fas fa-times "></i>
-                            </a>
-                            <a href="{{ url_for('finished_backlog',  backlog_id=backlog._id ) }}">
-                                <i class="fas fa-check "></i>
-                            </a>
-                        </p>
-                        <br>
-                        <!-- Modal Structure to avoid accidental deletion -->
-                            <div id="modal1{{loop.index}}" class="modal">
-                                <div class="modal-content center-align">
-                                    <h4>Have you thought this through?</h4>
-                                    <p>Do you really to delete this game from your backlog?</p>
-                                </div>
-                            <div class="row modal-footer">
-                                <div class="col s12 center-align">
-                                    <a href="{{ url_for('delete_backlog',  backlog_id=backlog._id ) }}"
-                                        class="modal-close btn waves-effect waves-light btn-small">Yes</a>
-                                    <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
-                                </div>
-                            </div>
-                        </div>
-                    {% endfor %}
-                </div>
-                <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">Add to Backlog</a>
+                {% endfor %}
             </div>
+            <a href="{{ url_for('add_backlog') }}" class="btn waves-effect waves-light btn-small">Add to Backlog</a>
         </div>
+    </div>
     {% endif %}
-<!-- Show this if you havn't finished any games -->
+    <!-- SHOW THIS IF USER HAVEN'T FINISHED ANY GAMES -->
     {% if finish|length == 0 %}
-        <div class="fin-pending-container bg-color-backlog center-align">
-            <div class="col s12 m10 offset-m1 l8 offset-l2 xl4">
-                <p>
-                    You haven't finished any games yet!
-                </p>
-                <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-small">
-                    Add to Finished
-                </a>
-            </div>
+    <div class="fin-pending-container bg-color-backlog center-align">
+        <div class="col s12 m10 offset-m1 l8 offset-l2 xl4">
+            <p>
+                You haven't finished any games yet!
+            </p>
+            <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-small">
+                Add to Finished
+            </a>
         </div>
+    </div>
     {% endif %}
-<!-- Show this if you have finshed a game -->
+    <!-- SHOW THIS IF USER HAVE FINISHED ANY GAME -->
     {% if finish|length != 0 %}
     <div class="finished-container center-align">
         <div class="col s12 m8 offset-m2 l8 offset-l2 xl4">
@@ -85,17 +87,17 @@
                 <div class="col s12">
                     <h1 class="center-align profile-header">
                         Finished
-                    </h1>      
+                    </h1>
                 </div>
             </div>
             <div class="card-panel left-align finished-backlog">
                 {% for finished in finish %}
-                    <p class="capitilize games inline">
-                        <a class ="hover-effect" href="{{ url_for('add_review',  finished_id=finished._id) }}">
-                           {{ finished.backlog_name }} 
-                        </a>
-                        <span>|</span>
-                    </p>
+                <p class="capitilize games inline">
+                    <a class="hover-effect" href="{{ url_for('add_review',  finished_id=finished._id) }}">
+                        {{ finished.backlog_name }}
+                    </a>
+                    <span>|</span>
+                </p>
                 {% endfor %}
             </div>
             <a href="{{ url_for('add_finished') }}" class="btn waves-effect waves-light btn-small">
@@ -104,7 +106,7 @@
         </div>
     </div>
     {% endif %}
-
+    <!-- SHOW THIS IF NO USER REVIEWS -->
     {% if reviews|length == 0 %}
     <div class="row rev-pending-container">
         <div class="col s12 m8 offset-m2 center-align">
@@ -115,11 +117,11 @@
         </div>
     </div>
     {% endif %}
-
+    <!-- USERS REVIEWS -->
     {% if reviews|length != 0 %}
     <div class="col s12 m8 offset-m2 center-align">
         <h1 class="profile-header">
-            Your Reviews! 
+            Your Reviews!
         </h1>
         <hr class="hr-review">
     </div>
@@ -127,59 +129,67 @@
     <div class="col s12 m12 l8 offset-l2">
         <div>
             <div class="row review-inner">
+                <!-- REVIEW IMAGE -->
                 <div class="col s12 m6 l5 xl4">
-                    <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}" alt="image for game review"></a>
+                    <a href="{{ url_for('full_review', review_id=review._id) }}"><img src="{{ review.photo_url }}"
+                            alt="image for game review"></a>
                 </div>
+                <!-- REVIEW INFO -->
                 <div class="col s12 m6 l7 xl8">
                     <a class="link" href="{{ url_for('reviews') }}">Reviews</a>
-                    <a class="title" href="{{ url_for('full_review', review_id=review._id) }}"><h1>{{ review.review_name }}</h1></a>
-                <p class="inline">
-                    <span>Platform:</span> 
-                        {{ review.platform_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Genre:</span>
-                        {{ review.genre_name }} 
-                    <span>|</span>
-                </p>
-                <p class="inline">
-                    <span>Developer:</span> 
-                        {{ review.developer_name }} 
-                </p>
-                <p>
-                    <i>"{{ review.review_capture }}"</i>
-                </p>
-                <p class="inline review-by">
-                    <span>By: {{ review.review_by }}</span> 
-                    {% if session.user|lower == review.review_by|lower %}
-                <span>|</span>
-                <a class="edit" href="{{ url_for('edit_review', review_id=review._id) }}">EDIT</a>
-                <span>|</span>
-                <a class="modal-trigger delete" href="#modal2{{loop.index}}">DELETE</a>
-                <!-- Modal Structure to avoid accidental deletion -->
-                <div id="modal2{{loop.index}}" class="modal">
-                    <div class="modal-content center-align">
-                        <h4>Have you thought this through?</h4>
-                        <p>Do you really to delete this Review?</p>
-                    </div>
-                <div class="row modal-footer">
-                    <div class="col s12 center-align">
-                        <a href="{{ url_for('delete_review', review_id=review._id) }}"
-                            class="modal-close btn waves-effect waves-light btn-small">Yes</a>
-                        <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
-                    </div>
+                    <a class="title" href="{{ url_for('full_review', review_id=review._id) }}">
+                        <h1>{{ review.review_name }}</h1>
+                    </a>
+                    <p class="inline">
+                        <span>Platform:</span>
+                        {{ review.platform_name }}
+                        <span>|</span>
+                    </p>
+                    <p class="inline">
+                        <span>Genre:</span>
+                        {{ review.genre_name }}
+                        <span>|</span>
+                    </p>
+                    <p class="inline">
+                        <span>Developer:</span>
+                        {{ review.developer_name }}
+                    </p>
+                    <p>
+                        <i>"{{ review.review_capture }}"</i>
+                    </p>
+                    <p class="inline review-by">
+                        <span>By: {{ review.review_by }}</span>
+                        <!-- SHOWS IF USER MADE THE REVIEW -->
+                        {% if session.user|lower == review.review_by|lower %}
+                        <span>|</span>
+                        <!-- EDIT LINK -->
+                        <a class="edit" href="{{ url_for('edit_review', review_id=review._id) }}">EDIT</a>
+                        <span>|</span>
+                        <!-- DELETE LINK -->
+                        <a class="modal-trigger delete" href="#modal2{{loop.index}}">DELETE</a>
+                        <!-- MODAL TO AVOID ACCIDENTAL DELETION -->
+                        <div id="modal2{{loop.index}}" class="modal">
+                            <div class="modal-content center-align">
+                                <h4>Have you thought this through?</h4>
+                                <p>Do you really to delete this Review?</p>
+                            </div>
+                            <div class="row modal-footer">
+                                <div class="col s12 center-align">
+                                    <a href="{{ url_for('delete_review', review_id=review._id) }}"
+                                        class="modal-close btn waves-effect waves-light btn-small">Yes</a>
+                                    <a href="#" class="modal-close btn waves-effect waves-light btn-small">No</a>
+                                </div>
+                            </div>
+                        </div>
+                        {% endif %}
+                    </p>
                 </div>
-            </div>
-                {% endif %}
-            </p>     
-            </div>
             </div>
             <hr class="hr-review">
         </div>
     </div>
-{% endfor %}    
-{% endif %}
+    {% endfor %}
+    {% endif %}
 </div>
 
 {% endblock %}
