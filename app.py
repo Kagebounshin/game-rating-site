@@ -316,7 +316,8 @@ def delete_review(review_id):
     """
     review_by = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     # Check if current logged in user, can delete.
-    if session["user"] != review_by["review_by"]:
+    if (session["user"] != review_by["review_by"] and
+            session["user"] != "admin"):
         flash("You don't have authorisation to delete this review!!")
         return redirect(url_for("index"))
 
