@@ -338,8 +338,7 @@ On this site you will be able to keep track on your gaming, add the games you ha
 
 ### Known Bugs 
 
-- A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png).
-
+- No known bugs for the moment. 
 
 ### Resolved Bugs
 
@@ -348,6 +347,10 @@ Becouse I didn't give each modal and a link instance a unique id, it just always
 s own unique ID.
 
 - So the first bug i've encounterd was when opening the sidenav on my iPhone X, at the users profile page. The pacman image looked like [this](static/img/img-readme/bug01.png). Only the alt text is showing. Now in late develepment I also used the pacman images as the navbrand and encountered the same problem, the navbrand image and the sidenav images dosen't show at the profile page, fullreview page, when you edit your backlog or when your about to write a review or edit your review. The difference between these pages are that these pages has an argument passed through the URL. The profile page has username, edit-backlog has backlog_id, fullreview has review_id and edit-review also has review_id passed through as an argumenet. By changing the src to the images address from my cloudninary instead of the img folder in my static files. The problem was no more. 
+
+- Edit review bugs
+    - A bug I've encountered is at the edit-review page, I've preloaded the image field with it's current [value](static/img/img-readme/bug03.png), but if I don't load the same or a new images I get an error. ["Missing required parameter - file"](static/img/img-readme/bug02.png). First I removed the choice to edit the images, but then if you edited the review, the images for the review would disappear. 
+    So I had to rewrite the code for editing the review, to just change what the user can edit. So I change my code to [this](static/img/img-readme/bugResolved02.png). Now the url for the photo is unchanged, I also removed the "review_by" because if I edited a review as the "admin", the "review_by" was set to "admin" instead of the reviews creator. 
 
 ---
 
