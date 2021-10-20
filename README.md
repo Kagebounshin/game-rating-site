@@ -1,6 +1,6 @@
 <h1 align="center">The Backlog</h1>
 
-[View the live project here.](http://backlog-gamesite.herokuapp.com/)
+[View the live project here.](https://backlog-gamesite.herokuapp.com/)
 
 On this site you will be able to keep track on your gaming, add the games you haven't played yet, or start reviewing the games you have played. Register an account and start adding to your own backlog. 
 
