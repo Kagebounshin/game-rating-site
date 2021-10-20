@@ -107,14 +107,14 @@
 
     {% if reviews|length == 0 %}
     <div class="row rev-pending-container">
-    <div class="col s12 m8 offset-m2 center-align">
-        <h1 class="profile-header">
-            Your Reviews!
-        </h1>
-        <p>Once you have reviewed any game, It will end up here.</p>
+        <div class="col s12 m8 offset-m2 center-align">
+            <h1 class="profile-header">
+                Your Reviews!
+            </h1>
+            <p>Once you have reviewed any game, It will end up here.</p>
+        </div>
     </div>
-</div>
-{% endif %}
+    {% endif %}
 
     {% if reviews|length != 0 %}
     <div class="col s12 m8 offset-m2 center-align">
@@ -172,16 +172,14 @@
                 </div>
             </div>
                 {% endif %}
-                </p>
-                
-                </div>
-                
+            </p>     
+            </div>
             </div>
             <hr class="hr-review">
         </div>
     </div>
 {% endfor %}    
-        {% endif %}
+{% endif %}
 </div>
 
 {% endblock %}

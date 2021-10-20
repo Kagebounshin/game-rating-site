@@ -168,6 +168,12 @@ def edit_backlog(backlog_id):
     """
     For Editing users backlog
     """
+    backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+    # Check if current logged in user, can edit.
+    if session["user"] != backlog["added_by"]:
+        flash("You don't have authorisation to edit this game!")
+        return redirect(url_for("index"))
+
     if request.method == "POST":
         submit = {
             "backlog_name": request.form.get("backlog_name"),
@@ -187,6 +193,12 @@ def delete_backlog(backlog_id):
     """
     For deleting a backlog object.
     """
+    backlog = mongo.db.backlog.find_one({"_id": ObjectId(backlog_id)})
+    # Check if current logged in user has the rights to delete.
+    if session["user"] != backlog["added_by"]:
+        flash("You don't have authorisation to delete this game!")
+        return redirect(url_for("index"))
+
     mongo.db.backlog.remove(
         {"_id": ObjectId(backlog_id)})
     flash("Game Successfully Deleted")
@@ -265,22 +277,28 @@ def edit_review(review_id):
     """
     For editing a user game review.
     """
+    review_by = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    # Check if current logged in user, can edit.
+    if (session["user"] != review_by["review_by"] and
+            session["user"] != "admin"):
+        flash("You don't have authorisation to edit this review!")
+        return redirect(url_for("index"))
+
     if request.method == "POST":
-        photo = request.files['photo_url']
-        photo_upload = cloudinary.uploader.upload(photo)
-        submit = {
-            "review_name": request.form.get("review_name"),
-            "review_capture": request.form.get("review_capture"),
-            "genre_name": request.form.get("genre_name"),
-            "platform_name": request.form.get("platform_name"),
-            "developer_name": request.form.get("developer_name"),
-            "duration": request.form.get("duration"),
-            "review_text": request.form.get("review_text"),
-            "rating_nr": request.form.get("rating_nr"),
-            "photo_url": photo_upload["secure_url"],
-            "review_by": session["user"]
-        }
-        mongo.db.reviews.update({"_id": ObjectId(review_id)}, submit)
+        mongo.db.reviews.update_one(
+            {"_id": ObjectId(review_id)},
+            {"$set":
+                {
+                    "review_name": request.form.get("review_name"),
+                    "review_capture": request.form.get("review_capture"),
+                    "genre_name": request.form.get("genre_name"),
+                    "platform_name": request.form.get("platform_name"),
+                    "developer_name": request.form.get("developer_name"),
+                    "duration": request.form.get("duration"),
+                    "review_text": request.form.get("review_text"),
+                    "rating_nr": request.form.get("rating_nr")
+                }
+             })
         flash("Review Successfully Updated")
     review = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
     genres = mongo.db.reviews_genre.find().sort("genre_name", 1)
@@ -296,6 +314,12 @@ def delete_review(review_id):
     """
     For deleting a user game review.
     """
+    review_by = mongo.db.reviews.find_one({"_id": ObjectId(review_id)})
+    # Check if current logged in user, can delete.
+    if session["user"] != review_by["review_by"]:
+        flash("You don't have authorisation to delete this review!")
+        return redirect(url_for("index"))
+
     mongo.db.reviews.remove({"_id": ObjectId(review_id)})
     flash("Review Successfully Deleted")
     return redirect(url_for("profile", username=session["user"]))

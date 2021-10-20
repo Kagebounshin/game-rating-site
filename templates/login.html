@@ -16,9 +16,9 @@
                   	<input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
                   	<label for="username">Username</label>
                 </div>
-          </div>
-          <!-- PASSWORD -->
-          <div class="row">
+            </div>
+            <!-- PASSWORD -->
+            <div class="row">
               	<div class="input-field col s10 offset-s1">
 					<input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
 					<label for="password">Password</label>
@@ -31,7 +31,9 @@
                 </button>
             </div>
             <div class="row center-align">
-              <p>Not a member? <a href="{{ url_for('register') }}">Create Account</a></p>
+                <p>Not a member? 
+                  <a href="{{ url_for('register') }}">Create Account</a>
+                </p>
             </div>
         </div>
     </form>
