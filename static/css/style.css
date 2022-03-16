@@ -288,6 +288,10 @@ a.sidenav-trigger.left {
     text-transform: capitalize;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
 .review-inner {
     position: relative;
     margin: 0;
